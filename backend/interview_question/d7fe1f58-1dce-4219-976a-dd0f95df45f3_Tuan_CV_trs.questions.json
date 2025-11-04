@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "question": "Le Minh Tuan, please start by telling me a little bit about yourself and your journey so far.",
+    "category": "opening",
+    "purpose": "Allow the candidate to introduce themselves, set the stage, and assess their communication skills."
+  },
+  {
+    "id": 2,
+    "question": "Can you share what you consider to be your greatest strengths that would make you successful in a professional role, and also describe an area where you're actively working to improve?",
+    "category": "opening",
+    "purpose": "Assess self-awareness, identify key transferable skills, and evaluate openness to growth and feedback."
+  },
+  {
+    "id": 3,
+    "question": "Given your background in Information Technology & Data Transformation, with experience in data engineering, what specifically attracts you to a Lead Frontend Developer position, and why do you believe your skills align with this senior-level role?",
+    "category": "opening",
+    "purpose": "Understand the candidate's motivation for this specific role and seniority level, and their understanding of the position requirements given their current experience."
+  },
+  {
+    "id": 4,
+    "question": "As a Lead, you'll often be responsible for guiding and mentoring junior team members. Can you describe a situation where you've had to help someone on your team overcome a technical challenge or develop a new skill? What was your approach, and what was the outcome?",
+    "category": "behavioral",
+    "purpose": "Assess leadership, mentorship, and interpersonal skills, crucial for a Lead role."
+  },
+  {
+    "id": 5,
+    "question": "Tell me about a time you encountered a significant roadblock or setback on a project. How did you respond to this challenge, and what steps did you take to resolve it or move forward? What did you learn from that experience?",
+    "category": "behavioral",
+    "purpose": "Evaluate problem-solving abilities, resilience, and capacity for learning from difficult situations under pressure."
+  },
+  {
+    "id": 6,
+    "question": "You've listed HTML as a skill. As a Lead Frontend Developer, how do you ensure that the HTML codebase developed by your team is not just functional but also highly semantic, accessible (e.g., WCAG compliance), and maintainable for large-scale, enterprise-level applications?",
+    "category": "technical",
+    "purpose": "Assess in-depth knowledge of web standards beyond basic syntax, understanding of accessibility, and leadership in enforcing best practices relevant to frontend development.",
+    "focus": "HTML Best Practices, Accessibility, Code Quality"
+  },
+  {
+    "id": 7,
+    "question": "Imagine you are leading the frontend development for a new, complex interactive web application in the travel industry, perhaps a dynamic itinerary builder or a real-time booking platform. How would you approach designing the overall frontend architecture to ensure it's scalable, performant, and provides a good developer experience for your team, even if you were to use modern frameworks not explicitly listed in your CV?",
+    "category": "technical",
+    "purpose": "Evaluate strategic thinking, architectural design skills, and understanding of key frontend principles (scalability, performance, maintainability) at a Lead level.",
+    "focus": "Frontend Architecture, Scalability, Performance, Developer Experience"
+  },
+  {
+    "id": 8,
+    "question": "As a Lead, you're often tasked with making critical technical decisions, sometimes involving trade-offs. If your team had to decide on incorporating a new third-party UI component library into your project, what evaluation criteria would you establish, and how would you lead your team through the decision-making process to ensure a well-informed choice?",
+    "category": "technical",
+    "purpose": "Assess leadership in technical decision-making, ability to evaluate tools/technologies, and facilitate team consensus.",
+    "focus": "Technology Evaluation, Technical Leadership, Decision Making"
+  },
+  {
+    "id": 9,
+    "question": "In your 'Travel Destination Research Tracker' project, you mentioned using Python for web scraping and Airtable for organizing data. Can you elaborate on any challenges you faced during the web scraping process, particularly with handling dynamic content or anti-scraping measures, and how you ensured the data you collected was reliable for users to compare and choose destinations?",
+    "category": "cv_based",
+    "purpose": "Deep dive into project experience, assess problem-solving in a practical context, and understand data integrity considerations."
+  },
+  {
+    "id": 10,
+    "question": "Your work experience at FSS - Financial Software Solutions involved data engineering, including creating data pipelines and supporting data extraction. How do you see the skills and insights you gained from this data-focused experience, particularly related to data security and ETL workflows, being valuable and transferable to a Lead Frontend Developer role?",
+    "category": "cv_based",
+    "purpose": "Understand the candidate's ability to connect seemingly disparate experiences, identify transferable skills, and demonstrate strategic thinking about their career path."
+  },
+  {
+    "id": 11,
+    "question": "Imagine your team is developing a new feature for a travel website that allows users to build highly personalized travel itineraries. However, a critical third-party API for destination recommendations suddenly becomes unreliable, causing frequent errors. As the Lead Frontend Developer, how would you approach diagnosing the issue, mitigating its impact on users, communicating with stakeholders, and developing a long-term solution, all while keeping your team motivated?",
+    "category": "creative",
+    "purpose": "Test problem-solving under pressure, critical thinking, incident management, communication skills, and leadership in a crisis scenario."
+  }
+]

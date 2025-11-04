@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "question": "Thank you for coming in today, Le Minh Tuan. To start, please tell us a little bit about yourself and what brought you here to apply for the Data Analyst position.",
+    "category": "opening",
+    "purpose": "Allow the candidate to introduce themselves and understand their initial motivation."
+  },
+  {
+    "id": 2,
+    "question": "Everyone has unique strengths and areas they're working on. Can you share with us what you consider to be your greatest strengths that would make you successful in a Data Analyst role, and perhaps one area you're actively looking to improve?",
+    "category": "opening",
+    "purpose": "Assess self-awareness, alignment of strengths with the role, and willingness for self-improvement."
+  },
+  {
+    "id": 3,
+    "question": "You're a second-year student with a background in IT and data transformation. What specifically about the Data Analyst role interests you, and why do you believe you're a good fit for this position at this stage of your career?",
+    "category": "opening",
+    "purpose": "Understand the candidate's motivation for the specific role and their understanding of how their current skills and aspirations align with it."
+  },
+  {
+    "id": 4,
+    "question": "Your CV mentions you're comfortable working in team environments and collaborating. Could you describe a time when you worked on a project where team members had different ideas or approaches, and how you contributed to reaching a consensus or a successful outcome?",
+    "category": "behavioral",
+    "purpose": "Evaluate teamwork, collaboration, and conflict resolution skills, which are crucial for a Data Analyst working with various stakeholders."
+  },
+  {
+    "id": 5,
+    "question": "You listed 'self-learning' and 'eager to learn and open to feedback' as strengths. Can you give an example of a time when you encountered a technical challenge or needed to learn a new tool or skill quickly for a project? How did you approach it, and what was the outcome?",
+    "category": "behavioral",
+    "purpose": "Assess adaptability, initiative in learning, and problem-solving through self-education, which is vital in a dynamic data field."
+  },
+  {
+    "id": 6,
+    "question": "You've worked with SQL, including Oracle, and mentioned data querying and cleaning. Can you explain the difference between a `LEFT JOIN` and an `INNER JOIN` in SQL, and when you would choose to use each? Also, briefly describe a common data cleaning task you might perform using SQL and why it's important.",
+    "category": "technical",
+    "purpose": "Assess foundational SQL knowledge relevant to data extraction, manipulation, and initial cleaning, suitable for a Junior Data Analyst.",
+    "focus": "SQL (Joins, Data Cleaning)"
+  },
+  {
+    "id": 7,
+    "question": "Your CV lists Power BI and Google Sheets as data tools you've used for visualization. Imagine you've analyzed a dataset and found a key insight. How would you decide whether to use Power BI or Google Sheets to visualize and present this insight to different stakeholders, like a business manager versus a technical team member?",
+    "category": "technical",
+    "purpose": "Evaluate understanding of data visualization tools, their respective strengths, and the ability to tailor communication based on the audience for a Junior Data Analyst.",
+    "focus": "Data Visualization (Power BI, Google Sheets)"
+  },
+  {
+    "id": 8,
+    "question": "At FSS, you gained knowledge of ETL workflows and created data pipelines. Could you describe the typical stages of an ETL (Extract, Transform, Load) process at a high level? From your experience, what is one common challenge you might encounter during the 'Transformation' phase, and how would you generally approach resolving it?",
+    "category": "technical",
+    "purpose": "Gauge understanding of data processing pipelines and potential issues, which is foundational for understanding data flow in a Data Analyst role.",
+    "focus": "ETL Workflows, Data Transformation"
+  },
+  {
+    "id": 9,
+    "question": "Your 'Travel Destination Research Tracker' project involved web scraping with Python, cleaning data in Excel, and organizing it in Airtable. Can you walk me through the entire process for this project, from conception to completion? What was the most challenging part, and how did you ensure the data was accurate and useful for users?",
+    "category": "cv_based",
+    "purpose": "Understand their end-to-end project execution, problem-solving, and data quality considerations for a specific, relevant project involving multiple tools."
+  },
+  {
+    "id": 10,
+    "question": "At FSS, you mentioned creating data pipelines using SQL Oracle and supporting data extraction and reporting. Could you elaborate on a specific task or project you worked on during that experience? What was the goal, what was your specific contribution, and what did you learn from that professional environment?",
+    "category": "cv_based",
+    "purpose": "Delve deeper into their practical work experience, understanding specific responsibilities, contributions, and learning outcomes in a professional setting."
+  },
+  {
+    "id": 11,
+    "question": "Imagine our company has noticed a sudden 20% drop in website traffic to our main product page over the last three days, and there's no obvious technical issue reported. As a Junior Data Analyst, how would you start investigating this problem? What data sources would you initially look at, and what would be your first few steps to frame the analysis?",
+    "category": "creative",
+    "purpose": "Assess problem-solving approach, critical thinking, and ability to formulate an analytical plan when faced with an ambiguous business problem requiring data investigation."
+  }
+]

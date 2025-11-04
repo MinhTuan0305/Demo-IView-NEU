@@ -1,0 +1,62 @@
+{
+    "candidate_name": "Tuấn Lê",
+    "id": "1234",
+    "interview_date": "2025-11-04 16:20:39",
+    "responses": [
+        {
+            "id": 1,
+            "question": "Good morning Le Minh Tuan. To start, please introduce yourself and tell me a bit about your background and what brings you here today.",
+            "response": "Good morning! I'm Le Minh Tuan, a second-year student majoring in Information Technology & Data Transformation. I'm here today to explore opportunities to apply my data skills in a real-world setting and grow as a future data analyst."
+        },
+        {
+            "id": 2,
+            "question": "Every individual has unique strengths and areas for development. Could you share what you consider to be your greatest strengths, and an area you are actively working on to improve?",
+            "response": "My greatest strength is analytical thinking and proficiency in tools like SQL and Python. I'm actively working on improving my data visualization skills using Power BI and Tableau."
+        },
+        {
+            "id": 3,
+            "question": "You're a third-year student with experience in data engineering. What specifically attracts you to this Data Analyst position, and why do you believe it's the right fit for you at this stage of your career?",
+            "response": "I'm drawn to this Data Analyst position because it allows me to apply my data engineering background to generate insights and support decision-making. At this stage, it's the perfect opportunity to bridge technical skills with business impact and grow into a well-rounded data professional."
+        },
+        {
+            "id": 4,
+            "question": "Your CV mentions you are comfortable working in team environments. Can you describe a specific situation from your internship or a project where you had to collaborate closely with others to achieve a common goal? What was your role, and what was the outcome?",
+            "response": "During my internship at FSS, I worked with a team to build a data pipeline that integrated multiple sources into a central dashboard. My role was to write SQL scripts for data cleaning, and thanks to our collaboration, we delivered a reliable system that improved reporting efficiency."
+        },
+        {
+            "id": 5,
+            "question": "You list 'self-learning' and being 'quick to learn new systems' as strengths, and you're currently learning Airtable. Can you tell me about a time you encountered a significant technical challenge or had to learn a completely new tool or concept quickly for a project or task? How did you approach it, and what did you learn from the experience?",
+            "response": "During my internship at FSS, I worked with a team to build a data pipeline that integrated multiple sources into a central dashboard. My role was to write SQL scripts for data cleaning, and thanks to our collaboration, we delivered a reliable system that improved reporting efficiency."
+        },
+        {
+            "id": 6,
+            "question": "In your Data Engineering Intern role, you mentioned creating data pipelines using SQL (Oracle) to collect, clean, and transform raw data. Can you elaborate on a common data cleaning challenge you encountered while working with raw data, and how you used SQL queries to resolve it effectively?",
+            "response": "One common challenge was handling inconsistent date formats across different data sources. I used Oracle SQL functions like `TO_DATE()` and `REGEXP_REPLACE` to standardize the formats, ensuring smooth downstream processing and accurate reporting."
+        },
+        {
+            "id": 7,
+            "question": "You've used Excel for data visualization in your 'Pizza Sales Data Visualization' project and Power BI is listed in your skills. As a Data Analyst, when would you choose to use a tool like Excel for presenting insights, versus a more dedicated business intelligence tool like Power BI? Could you give an example scenario for each?",
+            "response": "I’d use **Excel** for quick, ad-hoc analysis or when sharing simple charts in small teams—for example, summarizing weekly pizza sales by category.  \nI’d choose **Power BI** for interactive dashboards and deeper insights—like tracking monthly trends across multiple branches with drill-down capabilities and automated updates."
+        },
+        {
+            "id": 8,
+            "question": "Your 'Travel Destination Research Tracker' project involved web scraping with Python to collect data. Beyond just scraping, how do you see Python being utilized by a Data Analyst for typical tasks such as further data cleaning, manipulation, or basic statistical analysis before the data is ingested into a database or used in a BI tool?",
+            "response": "Python is highly useful for cleaning messy data with Pandas, transforming it into structured formats, and performing basic statistical analysis like mean, median, or correlation. These steps ensure the data is accurate and insightful before loading into BI tools like Power BI or Tableau."
+        },
+        {
+            "id": 9,
+            "question": "During your Data Engineering Intern role at FSS, you mentioned gaining foundational knowledge of financial and banking operations. How did understanding these specific industry operations help you in your tasks, such as creating data pipelines or supporting data extraction and reporting, particularly in making your outputs more relevant or accurate?",
+            "response": "Understanding financial operations helped me identify key data fields like transaction types, timestamps, and account hierarchies, which improved the accuracy of my SQL queries and ensured the pipeline delivered clean, relevant data for reporting. It also allowed me to align outputs with business needs, such as compliance and audit tracking."
+        },
+        {
+            "id": 10,
+            "question": "Let's discuss your 'Travel Destination Research Tracker' project. You mentioned importing and organizing data in Airtable using custom views and tags to help users compare and choose destinations. Could you elaborate on your thought process behind designing these custom views and tags? What specific user pain points were you trying to address, and how successful was your solution?",
+            "response": "I designed custom views and tags in Airtable to address users’ need for quick filtering by budget, climate, and travel season. By tagging destinations with attributes like “Budget-Friendly” or “Warm Weather,” users could instantly compare options that matched their preferences. This made the tool intuitive and helped users save time in planning, and feedback showed it significantly improved decision-making."
+        },
+        {
+            "id": 11,
+            "question": "Imagine you're asked to analyze customer feedback data for a new travel package, but the data is collected from various sources – social media comments, survey free-text fields, and email responses. This data is largely unstructured and inconsistent. As a Fresher Data Analyst, how would you approach this problem to extract meaningful insights and present them in a structured way?",
+            "response": "I’d start by consolidating all feedback into one dataset and use Python (with Pandas and NLP libraries like spaCy or NLTK) to clean and standardize the text. Then, I’d apply keyword extraction or sentiment analysis to identify common themes, and organize the insights into structured categories—like pros, cons, and suggestions—for easy visualization in Excel or Power BI."
+        }
+    ]
+}

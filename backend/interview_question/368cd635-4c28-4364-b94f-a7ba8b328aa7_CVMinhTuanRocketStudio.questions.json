@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "question": "Good morning/afternoon, Minh Tuan. Thank you for coming in today. Could you please start by telling us a bit about yourself and your background?",
+    "category": "opening",
+    "purpose": "Allow the candidate to introduce themselves and set the stage for the interview."
+  },
+  {
+    "id": 2,
+    "question": "Building on that, could you share what you consider to be your greatest strengths that would make you successful in a Data Analyst role, and what areas you are looking to develop or improve upon?",
+    "category": "opening",
+    "purpose": "Assess self-awareness, identify key transferable skills, and evaluate potential growth areas."
+  },
+  {
+    "id": 3,
+    "question": "Thank you. Now, could you tell us what specifically attracted you to this Data Analyst position and why you believe it's the right fit for your career aspirations?",
+    "category": "opening",
+    "purpose": "Understand the candidate's motivation, alignment with the role, and their understanding of the Data Analyst function, especially considering the discrepancy with the CV's game testing focus."
+  },
+  {
+    "id": 4,
+    "question": "Your CV mentions you are comfortable working in team environments. Could you describe a time when you had to collaborate closely with others on a data-related project or task? What was your role, and what was the outcome of the team's effort?",
+    "category": "behavioral",
+    "purpose": "Assess teamwork, collaboration skills, and ability to contribute to a shared goal."
+  },
+  {
+    "id": 5,
+    "question": "You've listed problem-solving as a strength. Can you tell me about a time during your FSS internship or academic projects when you faced a significant data-related challenge or ambiguity, and how you approached resolving it?",
+    "category": "behavioral",
+    "purpose": "Evaluate problem-solving methodology, critical thinking under pressure, and learning from experience."
+  },
+  {
+    "id": 6,
+    "question": "You have experience creating data pipelines using SQL Oracle. Could you explain the difference between a `LEFT JOIN` and an `INNER JOIN` in SQL, and provide a simple scenario where each would be most appropriate for a Data Analyst's task?",
+    "category": "technical",
+    "purpose": "Assess fundamental SQL knowledge and practical application for data retrieval and analysis.",
+    "focus": "SQL"
+  },
+  {
+    "id": 7,
+    "question": "At FSS, you mentioned developing knowledge of ETL workflows and creating data pipelines. For a fresher, can you briefly describe the main stages of an ETL (Extract, Transform, Load) process and give an example of a data transformation you might perform?",
+    "category": "technical",
+    "purpose": "Evaluate understanding of core data processing concepts and practical application within data engineering/analysis.",
+    "focus": "ETL/Data Pipelines"
+  },
+  {
+    "id": 8,
+    "question": "You've listed Power BI and Google Sheets as data tools. When you need to present analytical findings to a non-technical audience, how would you decide which type of chart or visualization (e.g., bar chart, line graph, pie chart) to use to best convey a specific insight?",
+    "category": "technical",
+    "purpose": "Assess understanding of data visualization principles and ability to communicate effectively with data.",
+    "focus": "Data Visualization/Power BI"
+  },
+  {
+    "id": 9,
+    "question": "During your internship at FSS, you supported data extraction and reporting. Can you elaborate on a specific data extraction task you performed? How did you ensure the accuracy of the extracted data, and what considerations did you have regarding data security?",
+    "category": "cv_based",
+    "purpose": "Deep dive into practical experience from the FSS internship, focusing on data extraction, accuracy, and security practices mentioned in the CV."
+  },
+  {
+    "id": 10,
+    "question": "Your CV highlights your 'Travel Destination Research Tracker' project, where you used Python for web scraping and data cleaning. Can you walk us through the process you followed for scraping the data, the challenges you faced, and how you cleaned the data to make it usable for analysis?",
+    "category": "cv_based",
+    "purpose": "Understand the candidate's practical experience with Python for data acquisition and cleaning, and their problem-solving approach in a project context."
+  },
+  {
+    "id": 11,
+    "question": "Imagine you're tasked with analyzing customer feedback from a survey, but the open-ended text responses contain a lot of slang, typos, and inconsistent phrasing. How would you approach preparing this 'messy' text data for analysis to extract meaningful insights about customer sentiment?",
+    "category": "creative",
+    "purpose": "Test problem-solving skills, critical thinking for unstructured data, and a practical approach to data quality challenges."
+  }
+]

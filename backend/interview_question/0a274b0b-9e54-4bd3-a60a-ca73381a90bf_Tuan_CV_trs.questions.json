@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "question": "Could you please start by introducing yourself and telling us a bit about your background and what led you to pursue a career in data?",
+    "category": "opening",
+    "purpose": "Allow the candidate to present themselves, observe communication skills, and understand their initial motivation for the field."
+  },
+  {
+    "id": 2,
+    "question": "What do you consider your greatest strengths and weaknesses, especially as they relate to a Data Analyst role at a fresher level?",
+    "category": "opening",
+    "purpose": "Assess self-awareness, suitability for the role, and honesty. Helps to identify areas for growth."
+  },
+  {
+    "id": 3,
+    "question": "You're a second-year student with a strong interest in applying technology and data to the travel and tourism industry. Can you tell us why you're specifically applying for this Data Analyst position?",
+    "category": "opening",
+    "purpose": "Gauge motivation, understanding of the role, and alignment with the potential company or industry interests."
+  },
+  {
+    "id": 4,
+    "question": "Your CV highlights 'self-learning' and being 'quick to learn new systems'. Can you describe a specific situation where you had to quickly learn a new data tool or programming language to solve a problem or complete a project? What was the challenge, and how did you approach the learning process?",
+    "category": "behavioral",
+    "purpose": "Assess adaptability, initiative in learning, and problem-solving skills in a practical context, relevant for a fresher role."
+  },
+  {
+    "id": 5,
+    "question": "You mentioned being comfortable working in team environments. Can you recall a time, perhaps from your university projects or your FSS experience, where you faced a disagreement or challenge within a team? How did you contribute to resolving it, and what was the outcome?",
+    "category": "behavioral",
+    "purpose": "Evaluate teamwork, conflict resolution, communication, and contribution to group dynamics."
+  },
+  {
+    "id": 6,
+    "question": "You've worked with SQL in your FSS experience and projects like 'Pizza Sales Data Visualization'. As a Fresher Data Analyst, how would you explain the concept of aggregation functions (like COUNT, SUM, AVG) in SQL, and when would you use them to extract meaningful insights from a dataset?",
+    "category": "technical",
+    "purpose": "Assess fundamental SQL understanding, crucial for basic data summarization and analysis relevant to a fresher role.",
+    "focus": "SQL / Aggregate Functions"
+  },
+  {
+    "id": 7,
+    "question": "Your CV mentions 'creating data pipelines to collect, clean, and transform raw data' at FSS, and 'cleaning data in Excel' for your projects. From a Data Analyst's perspective, what are some common data quality issues you've encountered or would anticipate, and what methods or tools would you use to address them, especially with your listed skills in Python, SQL, and Excel?",
+    "category": "technical",
+    "purpose": "Evaluate understanding of data quality and practical data cleaning techniques, connecting to the candidate's existing experience and tools.",
+    "focus": "Data Cleaning / Data Quality"
+  },
+  {
+    "id": 8,
+    "question": "You've listed Power BI, Google Sheets, and Python for data handling and visualization. Imagine you are given a dataset of customer reviews for different travel destinations. How would you use one of these tools to identify common themes, sentiments, or key trends in the reviews to help improve future travel packages?",
+    "category": "technical",
+    "purpose": "Assess the practical application of visualization and data handling tools for a specific analytical task, demonstrating analytical thinking.",
+    "focus": "Data Visualization / Data Analysis Tools (Power BI/Python/Google Sheets)"
+  },
+  {
+    "id": 9,
+    "question": "Regarding your 'Travel Destination Research Tracker' project, you used Python for web scraping and Airtable for organization. Could you walk me through the specific steps you took to web scrape the data, and what was the biggest technical challenge you faced during this process? How did you overcome it?",
+    "category": "cv_based",
+    "purpose": "Deep dive into a specific project to understand technical execution, problem-solving abilities, and practical application of skills."
+  },
+  {
+    "id": 10,
+    "question": "During your experience at FSS - Financial Software Solutions, you mentioned gaining 'foundational knowledge of financial and banking operations' and creating data pipelines using SQL Oracle. Can you describe a specific task or challenge where understanding the financial context was crucial to effectively collecting or transforming the data?",
+    "category": "cv_based",
+    "purpose": "Explore the practical application of internship experience, linking technical skills with business domain knowledge, and understanding his contribution."
+  },
+  {
+    "id": 11,
+    "question": "Our company is looking to optimize its marketing spend for a new product launch. As a Fresher Data Analyst, how would you approach identifying which marketing channels are most effective, given you have access to sales data, marketing campaign data (e.g., ad spend per channel), and basic customer demographic information?",
+    "category": "creative",
+    "purpose": "Test problem-solving, critical thinking, and the ability to structure an analytical approach to a business problem with given data, relevant to a data analyst's role."
+  }
+]

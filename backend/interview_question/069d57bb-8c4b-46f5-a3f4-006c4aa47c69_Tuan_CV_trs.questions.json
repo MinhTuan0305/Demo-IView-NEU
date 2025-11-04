@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "question": "Good morning, Le Minh Tuan. Thank you for coming in today. Could you please start by introducing yourself and telling us a bit about your academic and professional background?",
+    "category": "opening",
+    "purpose": "Allow the candidate to introduce themselves and provide an overview of their background."
+  },
+  {
+    "id": 2,
+    "question": "Based on your experiences, what would you consider your greatest strengths that would make you a good fit for this Data Analyst Intern role, and what areas do you believe you need to develop further?",
+    "category": "opening",
+    "purpose": "Understand the candidate's self-awareness regarding their capabilities and areas for growth relevant to the role."
+  },
+  {
+    "id": 3,
+    "question": "You're currently a second-year student in Information Technology & Data Transformation. What specifically drew you to apply for a Data Analyst Intern position, and what do you hope to achieve during this internship?",
+    "category": "opening",
+    "purpose": "Assess the candidate's motivation for the role, their understanding of a Data Analyst's responsibilities, and their career aspirations."
+  },
+  {
+    "id": 4,
+    "question": "Your CV mentions you are comfortable working in team environments. Can you describe a specific situation where you had to collaborate with a team to complete a project or solve a problem? What was your role, and what was the outcome?",
+    "category": "behavioral",
+    "purpose": "Evaluate teamwork skills, collaboration style, and ability to contribute effectively within a group setting."
+  },
+  {
+    "id": 5,
+    "question": "As an eager learner and someone open to feedback, can you share an example of a time you faced a significant challenge or made a mistake in an academic project or previous work experience? How did you approach it, and what did you learn from that experience?",
+    "category": "behavioral",
+    "purpose": "Assess problem-solving abilities, resilience, learning from failures, and ability to incorporate feedback."
+  },
+  {
+    "id": 6,
+    "question": "You have experience with SQL, including Oracle SQL and MS SQL. For an intern-level data analyst, could you explain the difference between a LEFT JOIN and an INNER JOIN, and provide a simple scenario where you would use each?",
+    "category": "technical",
+    "purpose": "Assess fundamental SQL knowledge crucial for data querying and manipulation, tailored to an intern's expected understanding.",
+    "focus": "SQL"
+  },
+  {
+    "id": 7,
+    "question": "Your projects involve cleaning and transforming data using Python and Excel. Imagine you have a dataset with customer names, but some entries are inconsistent (e.g., 'John Doe', 'john doe', 'J. Doe'). How would you approach cleaning this data to ensure consistency, and what tools from your skill set would you prioritize?",
+    "category": "technical",
+    "purpose": "Evaluate practical data cleaning skills and understanding of data quality issues, utilizing listed tools.",
+    "focus": "Data Cleaning / Python / Excel"
+  },
+  {
+    "id": 8,
+    "question": "You listed Power BI and Google Sheets as data tools. For a Data Analyst Intern, what do you understand as the main purpose of data visualization, and what are some key considerations you keep in mind when creating a dashboard or report using tools like Power BI to make it effective for decision-making?",
+    "category": "technical",
+    "purpose": "Assess understanding of data visualization principles and practical application with BI tools, relevant for an intern.",
+    "focus": "Data Visualization / Power BI"
+  },
+  {
+    "id": 9,
+    "question": "During your 'Data Engineering' experience at FSS, you mentioned creating data pipelines using SQL Oracle to collect, clean, and transform raw data. Could you elaborate on a specific task or challenge you encountered while building or maintaining one of these pipelines, and how you addressed it?",
+    "category": "cv_based",
+    "purpose": "Gain deeper insight into the candidate's practical experience with data pipelines and problem-solving in a real-world setting.",
+    "focus": "ETL / Data Pipelines"
+  },
+  {
+    "id": 10,
+    "question": "Your 'Travel Destination Research Tracker' project involved web scraping with Python, cleaning data in Excel, and organizing it in Airtable. Can you walk me through the most interesting insight or challenge you faced during the web scraping phase, and how the structured data in Airtable ultimately helped users?",
+    "category": "cv_based",
+    "purpose": "Understand the candidate's project execution, technical challenges, and the impact of their work on end-users.",
+    "focus": "Web Scraping / Data Organization"
+  },
+  {
+    "id": 11,
+    "question": "Imagine you are given a dataset related to user engagement on a new travel booking feature. Your manager asks you to provide insights, but the data seems to have some missing values and doesn't immediately show a clear trend. How would you approach this task from start to finish to provide valuable recommendations, even with imperfect data?",
+    "category": "creative",
+    "purpose": "Test problem-solving, critical thinking, and structured approach to data analysis in an ambiguous scenario, relevant to a data analyst role."
+  }
+]

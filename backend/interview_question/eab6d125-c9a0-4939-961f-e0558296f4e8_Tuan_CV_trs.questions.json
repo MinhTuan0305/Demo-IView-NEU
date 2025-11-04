@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "question": "Le Minh Tuan, thank you for coming in today. Can you start by telling me a bit about yourself and your background?",
+    "category": "opening",
+    "purpose": "Initiate conversation, allow candidate to present themselves, assess communication skills."
+  },
+  {
+    "id": 2,
+    "question": "Everyone has areas where they excel and areas they're working to improve. Could you share what you consider your greatest strengths and a weakness you've been actively addressing?",
+    "category": "opening",
+    "purpose": "Assess self-awareness, honesty, and ability to articulate personal attributes."
+  },
+  {
+    "id": 3,
+    "question": "You're a second-year student with experience in Data Engineering. What specifically attracted you to this Data Analyst position, and why do you think you'd be a good fit for this role?",
+    "category": "opening",
+    "purpose": "Understand candidate's motivation, career goals, and how they align with the Data Analyst role."
+  },
+  {
+    "id": 4,
+    "question": "Your CV mentions comfortable working in team environments. Can you describe a time when you worked effectively as part of a team to achieve a common goal, perhaps during your FSS internship or a project?",
+    "category": "behavioral",
+    "purpose": "Assess teamwork skills, ability to collaborate, and contribution to group success."
+  },
+  {
+    "id": 5,
+    "question": "Data analysis often involves encountering new tools or complex problems without immediate solutions. Can you tell me about a time you faced a significant challenge or a new technology you had to learn quickly, and how you approached it?",
+    "category": "behavioral",
+    "purpose": "Evaluate self-learning ability, problem-solving approach, and adaptability."
+  },
+  {
+    "id": 6,
+    "question": "In your 'Pizza Sales Data Visualization' project, you used SQL for cleaning and analyzing data. Could you explain the difference between a `LEFT JOIN` and an `INNER JOIN` in SQL, and when you would choose one over the other in a data analysis context?",
+    "category": "technical",
+    "purpose": "Assess fundamental SQL knowledge, specifically join types, which are critical for data manipulation.",
+    "focus": "SQL - Joins"
+  },
+  {
+    "id": 7,
+    "question": "You've worked on creating data pipelines to collect, clean, and transform raw data. Could you describe a common data quality issue you've encountered in a dataset, and what steps you would take to clean or transform that data using either SQL or Python?",
+    "category": "technical",
+    "purpose": "Evaluate practical understanding of data cleaning techniques and problem-solving with data quality.",
+    "focus": "Data Cleaning & Transformation"
+  },
+  {
+    "id": 8,
+    "question": "You have experience with Power BI and Google Sheets for data visualization. When preparing a report for stakeholders, what are a few key principles you follow to ensure the visualizations are clear, insightful, and actionable?",
+    "category": "technical",
+    "purpose": "Assess understanding of effective data visualization principles and ability to communicate insights.",
+    "focus": "Data Visualization & Reporting"
+  },
+  {
+    "id": 9,
+    "question": "During your time at FSS - Financial Software Solutions, you mentioned gaining foundational knowledge of financial and banking operations and developing knowledge of ETL workflows. Can you elaborate on a specific task or project where you applied your understanding of ETL and how it contributed to the data pipeline or reporting process?",
+    "category": "cv_based",
+    "purpose": "Probe specific work experience, assess practical application of learned concepts (ETL), and understanding of business context."
+  },
+  {
+    "id": 10,
+    "question": "Your 'Travel Destination Research Tracker' project involved web scraping with Python and organizing data in Airtable. Can you walk me through the entire process of that project, from identifying the need to the final output, and what was the most challenging part of it?",
+    "category": "cv_based",
+    "purpose": "Understand the candidate's project management, technical execution (Python web scraping, data handling), and problem-solving skills in a practical scenario."
+  },
+  {
+    "id": 11,
+    "question": "Imagine you've been asked to analyze sales data for a new product launch, but the initial reports show unusually high sales figures for one specific region, far exceeding expectations and historical data. How would you approach investigating this anomaly, and what steps would you take to determine if the data is accurate or if there's an underlying issue?",
+    "category": "creative",
+    "purpose": "Test problem-solving, analytical reasoning, and data validation skills in a realistic business scenario."
+  }
+]

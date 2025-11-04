@@ -1,0 +1,64 @@
+[
+  {
+    "id": 1,
+    "question": "Le Minh Tuan, thank you for coming in today. Could you please start by telling me a bit about yourself?",
+    "category": "opening",
+    "purpose": "Allow the candidate to introduce themselves, provide an overview of their background, and set the stage for the interview."
+  },
+  {
+    "id": 2,
+    "question": "What do you consider to be your greatest strengths, and conversely, what areas do you see as your biggest weaknesses or areas for development?",
+    "category": "opening",
+    "purpose": "Assess self-awareness, highlight key competencies, and identify areas for growth or potential challenges."
+  },
+  {
+    "id": 3,
+    "question": "Your background shows a strong foundation in data and IT, and your summary mentions a strong interest in applying data and technology to the gaming industry. Could you elaborate on what specifically attracted you to a Lead Game Dev position here, especially given your current experience level as a third-year student and intern?",
+    "category": "opening",
+    "purpose": "Understand the candidate's motivation for the specific role and company, and how they perceive their fit for a 'Lead' level position given their current academic and professional stage."
+  },
+  {
+    "id": 4,
+    "question": "Tell me about a time you had to lead a team through a significant technical challenge or disagreement on a project (academic or professional). How did you ensure the team reached a consensus and delivered a successful outcome?",
+    "category": "behavioral",
+    "purpose": "Assess leadership, conflict resolution, technical guidance, and team collaboration skills, crucial for a Lead role."
+  },
+  {
+    "id": 5,
+    "question": "Describe a time when you faced a significant challenge or setback in a project, either academic or professional. How did you approach identifying the root cause, what steps did you take to overcome it, and what did you learn from that experience?",
+    "category": "behavioral",
+    "purpose": "Evaluate problem-solving abilities, resilience, adaptability, and capacity for learning from difficult situations."
+  },
+  {
+    "id": 6,
+    "question": "As a Lead Game Developer with a focus on data, how would you architect a robust and scalable data pipeline to collect, process, and analyze real-time player telemetry and game events from a live service game? What specific considerations would you prioritize for data volume, latency, data integrity, and compliance (e.g., GDPR)?",
+    "category": "technical",
+    "purpose": "Assess the candidate's understanding of data architecture, real-time analytics, scalability, and data governance in a gaming context, applicable to a Lead role despite their intern experience.",
+    "focus": "Data Architecture, Real-time Analytics, Data Governance"
+  },
+  {
+    "id": 7,
+    "question": "Imagine you're leading a team tasked with optimizing a game's monetization strategy. How would you leverage player data, using tools like SQL and Power BI (or similar analytical tools), to identify key player segments, analyze their purchasing behavior, and propose data-driven changes to improve revenue while maintaining player satisfaction and ethical practices?",
+    "category": "technical",
+    "purpose": "Evaluate strategic thinking in applying data analysis to business goals (monetization), player segmentation, and the ability to translate data into actionable insights at a lead level.",
+    "focus": "Data-driven Monetization, Player Segmentation, Analytical Strategy"
+  },
+  {
+    "id": 8,
+    "question": "Your internship at FSS - Financial Software Solutions involved 'creating data pipelines' and developing 'knowledge of ETL workflows.' Can you describe a specific project or task during that internship where you felt you made a significant impact, detailing the challenges you faced and how you ensured the quality and security of the financial data you were handling?",
+    "category": "cv_based",
+    "purpose": "Deep dive into specific project experience, assess practical application of data engineering skills, and understanding of data quality and security principles."
+  },
+  {
+    "id": 9,
+    "question": "For your 'Travel Destination Research Tracker' project, you used Python for web scraping. Can you walk me through the process of how you approached identifying the target data, dealing with potential issues like website changes or anti-scraping measures, and how you structured the extracted data for effective use in Airtable and Excel?",
+    "category": "cv_based",
+    "purpose": "Understand the candidate's practical skills in data collection, problem-solving during web scraping, and data structuring from their project experience."
+  },
+  {
+    "id": 10,
+    "question": "You've noticed a significant drop-off in player engagement after the first 7 days in a new multiplayer online game you are leading. As a Lead, how would you use data and your analytical skills to diagnose the root cause of this drop-off and propose concrete, data-driven game design or feature changes to re-engage players?",
+    "category": "creative",
+    "purpose": "Test problem-solving, critical thinking, and the ability to apply data analysis to complex game design and player retention challenges from a leadership perspective."
+  }
+]

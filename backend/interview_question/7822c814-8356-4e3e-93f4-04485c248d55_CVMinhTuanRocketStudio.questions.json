@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "question": "Good morning, Le Minh Tuan. Thank you for coming in today. To start, please introduce yourself and tell us a bit about your academic journey and what you're passionate about.",
+    "category": "opening",
+    "purpose": "Allow the candidate to introduce themselves and set the stage for the interview."
+  },
+  {
+    "id": 2,
+    "question": "Can you highlight your top three strengths that you believe would make you a great asset to our team, and conversely, what areas are you actively working on to improve?",
+    "category": "opening",
+    "purpose": "Assess self-awareness, highlight relevant strengths for the role, and identify areas for development."
+  },
+  {
+    "id": 3,
+    "question": "Your cover letter mentions applying for a 'Tester Intern' position, but our current opening is for a Junior Game Developer. Could you explain your interest in a Game Dev role and how your skills and aspirations align with it?",
+    "category": "opening",
+    "purpose": "Clarify candidate's understanding of the role, gauge genuine interest in Game Dev, and see how they bridge their testing experience with development."
+  },
+  {
+    "id": 4,
+    "question": "Tell me about a time when you were part of a team project, and you encountered a significant disagreement or challenge among team members. How did you contribute to resolving it, and what was the outcome?",
+    "category": "behavioral",
+    "purpose": "Assess teamwork, communication, conflict resolution, and collaboration skills.",
+    "focus": "Teamwork / Conflict Resolution"
+  },
+  {
+    "id": 5,
+    "question": "You mentioned 'Self-learning' and 'quick to learn new systems' as strengths. Could you describe a situation where you had to quickly learn a completely new technology or tool for a project or task? What was your approach, and what did you achieve?",
+    "category": "behavioral",
+    "purpose": "Evaluate adaptability, proactive learning, and problem-solving through self-education.",
+    "focus": "Adaptability / Learning Agility"
+  },
+  {
+    "id": 6,
+    "question": "You have 'Basic C++/C#' listed in your skills. In game development, object-oriented programming (OOP) is fundamental. Can you explain what polymorphism is in C++ or C# and provide a simple example of how it might be used in a game context (e.g., handling different types of enemies or items)?",
+    "category": "technical",
+    "purpose": "Evaluate understanding of core OOP principles relevant to game development with their stated languages.",
+    "focus": "C++/C#, OOP, Polymorphism"
+  },
+  {
+    "id": 7,
+    "question": "You have experience with Python for web scraping and data processing. While not typically used for core game engines, Python is widely used for game development tools and backend services. How do you envision leveraging your Python skills in a game development studio, perhaps for scripting, automation, or analytics?",
+    "category": "technical",
+    "purpose": "Assess practical application of Python skills in a game development context beyond their direct experience, showing adaptability.",
+    "focus": "Python, Game Development Tools"
+  },
+  {
+    "id": 8,
+    "question": "Your 'Hotel Booking System Testing' personal project involved creating test documentation and executing manual test cases. If you were given a new game feature, say a new character ability, how would you approach designing test cases to ensure it's not only functional but also contributes to a good player experience?",
+    "category": "technical",
+    "purpose": "Assess their understanding of software testing principles and ability to apply them to game-specific scenarios, linking their testing experience to game development QA.",
+    "focus": "Software Testing, QA in Games"
+  },
+  {
+    "id": 9,
+    "question": "Your work experience at FSS involved 'creating data pipelines to collect, clean, and transform raw data (SQL Oracle)'. Can you describe a specific challenge you faced during this process, and how you ensured data accuracy or integrity?",
+    "category": "cv_based",
+    "purpose": "Understand the depth of their data engineering experience, problem-solving in data processing, and relevance to potential backend game services or analytics.",
+    "focus": "Data Engineering, SQL, Data Integrity"
+  },
+  {
+    "id": 10,
+    "question": "In your 'Hotel Booking System Testing' project, you mentioned drawing user flow using Figma. Can you walk me through the process of how you approached defining user flows for testing, and how that helped in identifying potential test cases or user experience issues?",
+    "category": "cv_based",
+    "purpose": "Explore their understanding of user experience design, its relation to testing, and their practical application of tools like Figma.",
+    "focus": "User Flow, UX, Test Case Generation"
+  },
+  {
+    "id": 11,
+    "question": "Imagine you are developing a new indie game, and you've just released an early access version. Players are reporting that the game's difficulty feels 'unfair' or 'unbalanced' even though all mechanics work as intended. How would you investigate this subjective feedback, and what steps would you take to address it as a junior developer?",
+    "category": "creative",
+    "purpose": "Test problem-solving, critical thinking, empathy for players, and iterative development approach in a game context."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "question": "Le Minh Tuan, thank you for coming in today. Could you please start by introducing yourself and tell us a bit about your background and what led you to apply for a Data Analyst role?",
+    "category": "opening",
+    "purpose": "Allow the candidate to introduce themselves, articulate their journey, and demonstrate initial communication skills."
+  },
+  {
+    "id": 2,
+    "question": "In your own words, what would you consider to be your top three strengths that would make you successful in a Senior Data Analyst role, and conversely, what is one area you are actively working to improve?",
+    "category": "opening",
+    "purpose": "Assess self-awareness, highlight relevant strengths for the role, and identify areas for development."
+  },
+  {
+    "id": 3,
+    "question": "You've expressed a strong interest in applying technology and data, especially within the travel and tourism industry. Given your current academic status and previous internship, what specifically attracts you to a Senior Data Analyst position at our company, and how do you envision contributing at this level?",
+    "category": "opening",
+    "purpose": "Gauge the candidate's specific motivation for this role and company, and understand their perception of a 'Senior' contribution despite their current academic standing."
+  },
+  {
+    "id": 4,
+    "question": "As a Senior Data Analyst, you're often expected to communicate complex analytical insights to non-technical stakeholders, including senior management. Can you describe a situation from your experience where you had to simplify complex data findings for a non-technical audience? What strategies did you employ to ensure clarity and impact?",
+    "category": "behavioral",
+    "purpose": "Assess communication skills, ability to translate technical information, and influence decision-making – critical for a senior role."
+  },
+  {
+    "id": 5,
+    "question": "Describe a time when you encountered a significant roadblock or an ambiguous problem in a data project. How did you approach defining the problem, exploring solutions, and ultimately overcoming the challenge? What did you learn from that experience?",
+    "category": "behavioral",
+    "purpose": "Evaluate problem-solving skills, resilience, adaptability, and ability to handle ambiguity, which are key for senior roles."
+  },
+  {
+    "id": 6,
+    "question": "Given your experience with SQL and data pipelines from your internship, how would you approach designing a robust data quality framework for a critical reporting dashboard that pulls data from multiple, potentially disparate, operational source systems? Discuss specific checks, monitoring mechanisms, and resolution strategies you would implement at a senior level.",
+    "category": "technical",
+    "purpose": "Assess understanding of data quality principles, design thinking, and the ability to implement comprehensive solutions for complex data environments, relevant for a Senior DA.",
+    "focus": "Data Quality, ETL/Data Pipelines"
+  },
+  {
+    "id": 7,
+    "question": "You've listed Power BI and Excel for data visualization. As a Senior Data Analyst, when faced with a new business question, how do you determine the most appropriate visualization type and tool to use? Can you provide an example where choosing the wrong visualization could lead to significant misinterpretation or a poor business decision?",
+    "category": "technical",
+    "purpose": "Evaluate critical thinking in visualization, understanding of audience and purpose, and the impact of data presentation on business outcomes, expected at a senior level.",
+    "focus": "Data Visualization, Power BI"
+  },
+  {
+    "id": 8,
+    "question": "Discuss the trade-offs between a highly normalized and a denormalized data model. As a Senior Data Analyst working on developing analytical solutions, when would you advocate for one approach over the other, and what specific factors would drive your decision?",
+    "category": "technical",
+    "purpose": "Gauge understanding of data modeling principles, architectural considerations, and the ability to make informed design decisions based on performance, scalability, and reporting needs, crucial for senior roles.",
+    "focus": "Data Modeling, SQL"
+  },
+  {
+    "id": 9,
+    "question": "In your 'Travel Destination Research Tracker' project, you web scraped data using Python. If this project were to evolve into a production-level application for a large travel company, what architectural changes would you propose to handle increased data volume, ensure data freshness, and improve overall scalability, reliability, and error handling?",
+    "category": "cv_based",
+    "purpose": "Explore the candidate's ability to think beyond a project's initial scope, demonstrating architectural and scalability considerations relevant for a Senior DA.",
+    "focus": "Python, Web Scraping, Scalability"
+  },
+  {
+    "id": 10,
+    "question": "During your Data Engineering Internship at FSS, you mentioned creating data pipelines using SQL Oracle. Can you walk me through a specific challenging data transformation task you encountered within one of these pipelines? How did you identify the issue, and what steps did you take to resolve it and ensure the accuracy and completeness of the transformed data for downstream reporting?",
+    "category": "cv_based",
+    "purpose": "Delve into the candidate's practical experience with ETL and SQL, focusing on problem-solving in a real-world data engineering context, and their understanding of data integrity."
+  },
+  {
+    "id": 11,
+    "question": "Imagine you've discovered a significant, unexpected anomaly in our core customer data that, if true, could drastically change our understanding of a key customer segment and impact upcoming strategic decisions. However, initial reactions from some stakeholders are skeptical. As a Senior Data Analyst, what steps would you take to validate your findings, communicate this critical insight effectively, and influence stakeholders towards a data-driven course of action?",
+    "category": "creative",
+    "purpose": "Test critical thinking, data validation, stakeholder management, and the ability to drive action based on insights in a high-stakes, ambiguous scenario, which is common for senior roles."
+  }
+]

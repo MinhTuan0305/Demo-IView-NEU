@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "question": "Please start by introducing yourself and tell us a bit about your academic background and professional aspirations.",
+    "category": "opening",
+    "purpose": "Allow the candidate to introduce themselves and set the stage for the interview."
+  },
+  {
+    "id": 2,
+    "question": "Can you share what you consider to be your greatest strengths that would make you successful in a leadership role, and also an area you're actively working on improving?",
+    "category": "opening",
+    "purpose": "Assess self-awareness, highlight key attributes relevant to a Lead role, and identify areas for development."
+  },
+  {
+    "id": 3,
+    "question": "What specifically attracted you to the Lead Data Analyst position, especially given your current academic standing, and what do you hope to achieve in this role?",
+    "category": "opening",
+    "purpose": "Understand the candidate's motivation, career goals, and perception of a leadership role at this stage of their career."
+  },
+  {
+    "id": 4,
+    "question": "As a Lead Data Analyst, you would often be responsible for guiding junior team members and managing projects. Describe a situation where you successfully led a team or took initiative to mentor someone, even in an academic or extracurricular setting. What was the outcome?",
+    "category": "behavioral",
+    "purpose": "Evaluate leadership potential, mentorship skills, and ability to influence others, even without formal 'lead' experience."
+  },
+  {
+    "id": 5,
+    "question": "Tell us about a time when you encountered a significant roadblock or challenge in a data-related project, perhaps where initial approaches failed. How did you, as a leader or key contributor, strategize to overcome it, and what did you learn from that experience?",
+    "category": "behavioral",
+    "purpose": "Assess problem-solving skills, resilience, strategic thinking under pressure, and the ability to learn from setbacks."
+  },
+  {
+    "id": 6,
+    "question": "As a Lead Data Analyst, you'd be responsible for defining best practices and architectural decisions. How would you approach designing a robust and scalable data warehouse schema to support complex analytics and reporting for a growing business, considering both normalized and denormalized structures?",
+    "category": "technical",
+    "purpose": "Evaluate understanding of data modeling principles, scalability considerations, and strategic data architecture relevant for a Lead role.",
+    "focus": "SQL/Data Modeling/Architecture"
+  },
+  {
+    "id": 7,
+    "question": "Your CV mentions 'creating data pipelines to collect, clean, and transform raw data (SQL Oracle)'. As a Lead, how would you establish a comprehensive ETL strategy for a critical business function, ensuring data quality, error handling, performance optimization, and effective monitoring across a team?",
+    "category": "technical",
+    "purpose": "Assess strategic thinking around ETL processes, data governance, and operational considerations at a leadership level.",
+    "focus": "ETL/Data Governance"
+  },
+  {
+    "id": 8,
+    "question": "With your experience in Power BI, how would you, as a Lead Data Analyst, guide a team in developing and deploying dashboards that not only provide insights but also enforce data governance, ensure consistency, and drive user adoption across multiple business units?",
+    "category": "technical",
+    "purpose": "Probe for strategic understanding of BI tool implementation, team leadership in reporting, and data visualization best practices for organizational impact.",
+    "focus": "Power BI/Data Visualization Strategy"
+  },
+  {
+    "id": 9,
+    "question": "Could you walk us through your 'Travel Destination Research Tracker' project? Specifically, if you were leading a team on this, how would you have planned for data validation, scalability to include more sources, and long-term maintenance of the web scraping component?",
+    "category": "cv_based",
+    "purpose": "Deep dive into the project's details, assess practical application of skills, and evaluate strategic thinking for project leadership and scalability."
+  },
+  {
+    "id": 10,
+    "question": "Regarding your 'FSS - Financial Software Solutions' experience, you mentioned gaining exposure to a professional work environment. From a Lead Data Analyst perspective, how would you have contributed to improving data security considerations or optimizing ETL workflows within that environment, if you had the opportunity to lead those initiatives?",
+    "category": "cv_based",
+    "purpose": "Gauge the candidate's ability to reflect on past experiences with a leadership mindset, identifying opportunities for improvement and strategic input."
+  },
+  {
+    "id": 11,
+    "question": "Imagine you are leading a data project where a critical dataset provided by an external vendor is found to have significant quality issues, impacting several ongoing reports and models. Stakeholders are demanding immediate fixes and accurate results. As the Lead Data Analyst, how would you approach this situation, from communication with stakeholders to technical resolution and prevention of future occurrences?",
+    "category": "creative",
+    "purpose": "Test problem-solving, stakeholder management, critical thinking, and strategic planning in a high-pressure, realistic scenario for a Lead role."
+  }
+]

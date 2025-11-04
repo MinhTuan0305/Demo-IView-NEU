@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "question": "Le Minh Tuan, please start by telling me a bit about yourself.",
+    "category": "opening",
+    "purpose": "Allow the candidate to introduce themselves and set the stage for the interview."
+  },
+  {
+    "id": 2,
+    "question": "Could you share with me what you consider your greatest strengths are, and also an area you're actively working to improve as a Data Analyst?",
+    "category": "opening",
+    "purpose": "Assess self-awareness, relevant skills, and a growth mindset."
+  },
+  {
+    "id": 3,
+    "question": "What specifically interests you in the Data Analyst Intern position, and why do you believe you're a good fit for this role?",
+    "category": "opening",
+    "purpose": "Understand the candidate's motivation, career aspirations, and perceived alignment with the role and company."
+  },
+  {
+    "id": 4,
+    "question": "In your FSS experience, you mentioned exposure to a professional work environment and being comfortable working in team environments. Can you tell me about a time you had to collaborate closely with a team member or a different department to achieve a data-related goal? What was your role and the outcome?",
+    "category": "behavioral",
+    "purpose": "Assess teamwork, collaboration skills, and ability to work effectively within a professional setting.",
+    "focus": "Teamwork/Collaboration"
+  },
+  {
+    "id": 5,
+    "question": "As an intern, you'll often encounter new tools or unexpected challenges. Can you describe a situation where you faced a significant technical challenge or had to learn a new tool or system quickly for a project? How did you approach it, and what was the result?",
+    "category": "behavioral",
+    "purpose": "Evaluate problem-solving, self-learning, adaptability, and resilience, which are key for an intern.",
+    "focus": "Adaptability/Learning"
+  },
+  {
+    "id": 6,
+    "question": "In your FSS role, you mentioned creating data pipelines and using SQL Oracle for data collection, cleaning, and transformation. Could you walk me through a simple example of how you would identify and handle common data quality issues like missing values or inconsistent formats using SQL?",
+    "category": "technical",
+    "purpose": "Assess practical SQL skills for data cleaning and understanding of data quality concepts, directly relevant to FSS experience.",
+    "focus": "SQL/Data Cleaning"
+  },
+  {
+    "id": 7,
+    "question": "You've listed Power BI as a data tool. If you were given a dataset of customer feedback, what key metrics would you consider important to visualize to understand overall customer sentiment, and how would you structure a basic Power BI dashboard to present these insights?",
+    "category": "technical",
+    "purpose": "Evaluate understanding of data visualization principles and practical application of Power BI for generating business insights.",
+    "focus": "Power BI/Data Visualization"
+  },
+  {
+    "id": 8,
+    "question": "You mentioned developing knowledge of ETL workflows. For an intern, can you briefly explain the purpose of each stage (Extract, Transform, Load) in an ETL process, and why data transformation is a critical step before loading data into a final destination?",
+    "category": "technical",
+    "purpose": "Assess foundational understanding of data pipeline concepts and the importance of ETL processes in data analysis.",
+    "focus": "ETL Concepts"
+  },
+  {
+    "id": 9,
+    "question": "Let's talk about your 'Travel Destination Research Tracker' project. Could you elaborate on the specific challenges you faced when web scraping the tourism website data using Python, and how you ensured the data was accurately cleaned and then organized effectively in Airtable using custom views and tags?",
+    "category": "cv_based",
+    "purpose": "Dive deeper into project specifics, assess problem-solving in a practical context, and validate Python/Airtable application skills.",
+    "focus": "Project Specifics/Python/Airtable"
+  },
+  {
+    "id": 10,
+    "question": "Your FSS experience involved 'supporting data extraction and reporting' and gaining 'foundational knowledge of financial and banking operations'. Can you describe a specific instance where you extracted data for a report, and how understanding the business context (finance/banking) helped you ensure the report was accurate and meaningful for its audience?",
+    "category": "cv_based",
+    "purpose": "Understand the practical application of work experience, the connection between data and business context, and reporting skills.",
+    "focus": "Work Experience/Business Acumen"
+  },
+  {
+    "id": 11,
+    "question": "Given your strong interest in the travel and tourism industry, imagine a scenario where a hotel chain wants to understand why their customer satisfaction scores have dropped by 15% in the last quarter. What initial steps would you take as a Data Analyst Intern to investigate this problem, and what kind of data would you look for to begin your analysis?",
+    "category": "creative",
+    "purpose": "Assess problem-solving, critical thinking, and the ability to frame a data-driven investigation in a relevant industry context.",
+    "focus": "Problem Solving/Data Strategy"
+  }
+]
