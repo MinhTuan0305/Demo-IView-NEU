@@ -145,13 +145,21 @@ SYSTEM_PROMPT = (
 )
 
 
-def build_prompt(cv_text: str, job_title: str, level: str) -> str:
-	return (
-		SYSTEM_PROMPT
-			.replace("[CV_TEXT]", cv_text.strip()[:40000])
-			.replace("[JOB_TITLE]", job_title)
-			.replace("[LEVEL]", level)
-	)
+def build_prompt(cv_text: str, job_title: str, level: str, jd_text: Optional[str] = None) -> str:
+    base = (
+        SYSTEM_PROMPT
+            .replace("[CV_TEXT]", cv_text.strip()[:40000])
+            .replace("[JOB_TITLE]", job_title)
+            .replace("[LEVEL]", level)
+    )
+    if jd_text and jd_text.strip():
+        extra = (
+            "\nAdditionally, here is the Job Description (JD) provided by the recruiter. "
+            "Please tailor technical/behavioral questions to assess the candidate's fit for the JD when relevant.\n\n"
+            "[JD_TEXT]\n\n"
+        )
+        base = base + extra.replace("[JD_TEXT]", jd_text.strip()[:20000])
+    return base
 
 
 def call_gemini_text(prompt: str) -> str:
@@ -234,13 +242,13 @@ def try_parse_json(s: str) -> Optional[List[dict]]:
 	return None
 
 
-def process_file(file_path: Path, job_title: str, level: str, out_dir: Path) -> None:
+def process_file(file_path: Path, job_title: str, level: str, out_dir: Path, jd_text: Optional[str] = None) -> None:
 	print(f"Processing: {file_path}")
 	cv_text = extract_text_from_cv(file_path)
 	prompt: Optional[str] = None
 	raw: str = ""
 	if cv_text.strip():
-		prompt = build_prompt(cv_text=cv_text, job_title=job_title, level=level)
+		prompt = build_prompt(cv_text=cv_text, job_title=job_title, level=level, jd_text=jd_text)
 		raw = call_gemini_text(prompt)
 	else:
 		if file_path.suffix.lower() in {".png", ".jpg", ".jpeg", ".bmp", ".tiff", ".tif"}:

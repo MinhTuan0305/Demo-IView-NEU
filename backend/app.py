@@ -8,12 +8,14 @@ from werkzeug.utils import secure_filename
 import sys
 from unicodedata import normalize as uni_normalize
 import re
+import threading
 
 # Import các module từ thư mục src
 sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
 from interview.generate_questions import process_file, read_env
 from interview.ask import run_interactive_interview_from_json
 from interview.evaluate import main as evaluate_interview
+from interview.generate_questions import extract_text_from_pdf
 import traceback
 import sys
 import re
@@ -110,9 +112,23 @@ def upload_cv():
                 base_name = Path(unique_filename).stem
                 questions_file = output_dir / f"{base_name}.questions.json"
                 
+                # Đọc JD nếu có (optional)
+                jd_text = None
+                jd = request.files.get('jd_file')
+                if jd and jd.filename:
+                    jd_name = secure_filename(jd.filename)
+                    jd_path = os.path.join(app.config['UPLOAD_FOLDER'], f"{uuid.uuid4()}_{jd_name}")
+                    jd.save(jd_path)
+                    try:
+                        if jd_name.lower().endswith('.pdf'):
+                            jd_text = extract_text_from_pdf(Path(jd_path))
+                        else:
+                            jd_text = Path(jd_path).read_text(encoding='utf-8', errors='ignore')
+                    except Exception as _e:
+                        print('[JD][WARN] Cannot read JD file:', _e)
                 # Gọi hàm tạo câu hỏi
                 from interview.generate_questions import process_file
-                process_file(Path(file_path), job_title, level, output_dir)
+                process_file(Path(file_path), job_title, level, output_dir, jd_text=jd_text)
                 
                 # Tìm file câu hỏi đã được tạo (có thể có tên khác do UUID)
                 actual_questions_file = None
@@ -334,7 +350,21 @@ def api_upload_cv():
         questions_file_candidate = output_dir / f"{base_name}.questions.json"
 
         # Gọi hàm tạo câu hỏi
-        process_file(Path(file_path), job_title, level, output_dir)
+        # Nếu có JD thì đọc nội dung (txt/pdf) và truyền vào prompt
+        jd_text = None
+        jd = request.files.get('jd_file')
+        if jd and jd.filename:
+            jd_name = secure_filename(jd.filename)
+            jd_path = os.path.join(app.config['UPLOAD_FOLDER'], f"{uuid.uuid4()}_{jd_name}")
+            jd.save(jd_path)
+            try:
+                if jd_name.lower().endswith('.pdf'):
+                    jd_text = extract_text_from_pdf(Path(jd_path))
+                else:
+                    jd_text = Path(jd_path).read_text(encoding='utf-8', errors='ignore')
+            except Exception as _e:
+                print('[JD][WARN] Cannot read JD file:', _e)
+        process_file(Path(file_path), job_title, level, output_dir, jd_text=jd_text)
 
         # Tìm file câu hỏi đã được tạo
         actual_questions_file = None
@@ -480,44 +510,45 @@ def api_view_result_qs():
 
 @app.route('/api/history')
 def api_history():
-    """Danh sách các phiên phỏng vấn (bao gồm pending nếu chưa có kết quả)"""
-    logs_dir = Path('outputs/interview_logs')
-    results_dir = Path('outputs/evaluate_results')
-    items = []
-    if logs_dir.exists():
-        for log in logs_dir.glob('*.json'):
-            result_name = log.name.replace('.json', '_results.json')
-            result_path = results_dir / result_name
-            status = 'done' if result_path.exists() else 'pending'
-            entry = {
-                'log_file': log.name,
-                'result_file': result_name if result_path.exists() else None,
-                'status': status,
-                'modified': log.stat().st_mtime,
-            }
-            # Try enrich summary from result if available
-            if result_path.exists():
-                try:
-                    with open(result_path, 'r', encoding='utf-8') as fp:
-                        data = json.load(fp)
+    """Danh sách các phiên phỏng vấn (bao gồm pending nếu chưa có kết quả). Trả JSON ngay cả khi có lỗi."""
+    try:
+        logs_dir = Path('outputs') / 'interview_logs'
+        results_dir = Path('outputs') / 'evaluate_results'
+        items = []
+        if logs_dir.exists():
+            for log in logs_dir.glob('*.json'):
+                result_name = log.name.replace('.json', '_results.json')
+                result_path = results_dir / result_name
+                status = 'done' if result_path.exists() else 'pending'
+                entry = {
+                    'log_file': log.name,
+                    'result_file': result_name if result_path.exists() else None,
+                    'status': status,
+                    'modified': log.stat().st_mtime,
+                }
+                if result_path.exists():
+                    try:
+                        data = json.loads(result_path.read_text(encoding='utf-8'))
                         entry['summary'] = data.get('summary')
-                except Exception:
-                    pass
-            else:
-                # basic summary from log
-                try:
-                    with open(log, 'r', encoding='utf-8') as fp:
-                        data = json.load(fp)
+                    except Exception as e:
+                        print('[HISTORY][WARN] parse result failed', result_name, e)
+                else:
+                    try:
+                        data = json.loads(log.read_text(encoding='utf-8'))
                         entry['summary'] = {
                             'candidate_name': data.get('candidate_name'),
                             'interview_date': data.get('interview_date'),
                             'type': 'job'
                         }
-                except Exception:
-                    pass
-            items.append(entry)
-    items.sort(key=lambda x: x.get('modified', 0), reverse=True)
-    return jsonify(items)
+                    except Exception as e:
+                        print('[HISTORY][WARN] parse log failed', log.name, e)
+                items.append(entry)
+        items.sort(key=lambda x: x.get('modified', 0), reverse=True)
+        return jsonify(items)
+    except Exception as e:
+        print('[HISTORY][ERROR]', e)
+        traceback.print_exc()
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/api/result_status')
 def api_result_status():

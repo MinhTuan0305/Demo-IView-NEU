@@ -150,7 +150,11 @@ def main(input_filepath):
             print(f"Đang chấm điểm câu hỏi #{qid}...")
             res = score_answer(ans, qtext, None)
             if res:
-                per_question_results[str(qid) if qid is not None else "unknown"] = res
+                # Đính kèm cả câu hỏi & câu trả lời để lưu vào file kết quả
+                res_with_qa = dict(res)
+                res_with_qa["question"] = qtext
+                res_with_qa["answer"] = ans
+                per_question_results[str(qid) if qid is not None else "unknown"] = res_with_qa
         # Tính điểm tổng hợp đơn giản (trung bình overall_score nếu có)
         overall_scores = [v.get("overall_score", 0) for v in per_question_results.values() if isinstance(v.get("overall_score", None), (int, float))]
         summary = {

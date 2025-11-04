@@ -14,7 +14,10 @@ export const api = {
 
   async getHistory() {
     const response = await fetch(`${BASE}/api/history`, { cache: 'no-store' });
-    if (!response.ok) throw new Error('Failed to fetch history');
+    if (!response.ok) {
+      const text = await response.text();
+      throw new Error(`history status=${response.status}; body=${text.slice(0, 500)}`);
+    }
     return response.json();
   },
 

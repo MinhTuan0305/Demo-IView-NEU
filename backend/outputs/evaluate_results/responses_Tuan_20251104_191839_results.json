@@ -1,0 +1,148 @@
+{
+  "summary": {
+    "candidate_name": "Tuấn",
+    "interview_date": "2025-11-04 19:18:39",
+    "average_overall_score": 88.45,
+    "questions_scored": 11,
+    "overall_feedback": {
+      "overall_score": 92,
+      "strengths": "Tuấn thể hiện khả năng phân tích và tư duy dựa trên dữ liệu xuất sắc, kết hợp với kỹ năng giao tiếp mạnh mẽ để kết nối các bên liên quan kỹ thuật và kinh doanh. Ứng viên cho thấy sự chủ động trong học hỏi (ví dụ: tự học Figma, áp dụng vào dự án) và có tư duy hướng người dùng rõ ràng (đồng cảm với vấn đề người dùng, đề xuất giải pháp và chiến lược xác thực hiệu quả). Khả năng cộng tác, giải quyết vấn đề và sự tự nhận thức về các điểm cần cải thiện cũng là những điểm mạnh nổi bật, đặc biệt phù hợp với vai trò Quản lý sản phẩm.",
+      "weaknesses": "Mặc dù ứng viên có nền tảng vững chắc về dữ liệu và kỹ năng mềm, Tuấn tự nhận thấy cần cải thiện độ sâu về kỹ thuật (như kiến trúc hệ thống) và kỹ năng ưu tiên công việc dưới áp lực thời gian. Đây là những điểm cần phát triển thêm, nhưng ứng viên đã chủ động nhận diện và có kế hoạch cải thiện, cho thấy tinh thần học hỏi và cầu tiến.",
+      "hiring_recommendation": "Rất khuyến khích"
+    }
+  },
+  "details": {
+    "1": {
+      "correctness": 9,
+      "coverage": 8,
+      "reasoning": 5,
+      "creativity": 4,
+      "communication": 9,
+      "attitude": 9,
+      "overall_score": 78,
+      "feedback": "Ứng viên đã giới thiệu bản thân một cách rõ ràng và súc tích, bao gồm tên, tình trạng học vấn hiện tại, trường đại học và kinh nghiệm thực tập liên quan tại các công ty lớn cùng với lĩnh vực cụ thể. Câu trả lời đúng trọng tâm và cung cấp đủ thông tin ban đầu để người phỏng vấn có cái nhìn tổng quan về nền tảng của ứng viên. Tuy nhiên, để câu trả lời thêm ấn tượng, ứng viên có thể cân nhắc bổ sung thêm một câu ngắn gọn về định hướng nghề nghiệp hoặc lý do quan tâm đến vị trí/công ty.",
+      "question": "Good morning, Le Minh Tuan. Thank you for coming in today. Could you please start by introducing yourself and telling us a bit about your background?",
+      "answer": "My name is Le Minh Tuan. I'm a final-year Business Administration student at the National Economics University, with internship experience at FPT and Viettel in market research and process improvement."
+    },
+    "2": {
+      "correctness": 9,
+      "coverage": 8,
+      "reasoning": 8,
+      "creativity": 6,
+      "communication": 9,
+      "attitude": 10,
+      "overall_score": 83,
+      "feedback": "Ứng viên đã trình bày các điểm mạnh và lĩnh vực cần cải thiện một cách rõ ràng và mạch lạc. Các điểm mạnh như giao tiếp, tư duy phân tích và hợp tác nhóm đều rất phù hợp với vai trò Quản lý sản phẩm. Khả năng tự nhận thức về việc cải thiện chiều sâu kỹ thuật và kỹ năng ưu tiên, cùng với việc chủ động thực hành qua các tình huống thực tế, là những điểm cộng lớn cho thấy sự chủ động và tinh thần học hỏi. Để câu trả lời thêm ấn tượng, ứng viên có thể cân nhắc đưa ra các ví dụ cụ thể hơn về cách các điểm mạnh này đã mang lại giá trị trong các dự án trước đây, hoặc nhấn mạnh thêm về tầm nhìn chiến lược sản phẩm.",
+      "question": "Thank you for that introduction. Now, could you tell me about your key strengths that you believe would be valuable in a Product Manager role, and perhaps one or two areas where you believe you could further develop or improve?",
+      "answer": "Key strengths:\n\nStrong communication skills: I can clearly convey ideas between technical teams and business stakeholders.\n\nAnalytical mindset: I enjoy using data to understand user behavior and make informed product decisions.\n\nTeam collaboration: I work well in cross-functional teams and value diverse perspectives.\n\nAreas for improvement:\n\nI’m working on improving my technical depth, especially in areas like system architecture, to better align with engineering teams.\n\nI’d also like to enhance my prioritization skills under tight deadlines, which I’m actively practicing through case studies and simulations."
+    },
+    "3": {
+      "correctness": 9,
+      "coverage": 9,
+      "reasoning": 8,
+      "creativity": 6,
+      "communication": 9,
+      "attitude": 10,
+      "overall_score": 88,
+      "feedback": "Ứng viên đã trả lời rất tốt, thể hiện rõ sự đam mê đối với vai trò Quản lý sản phẩm và ngành du lịch. Các kỹ năng và kinh nghiệm (quản trị kinh doanh, nghiên cứu thị trường, tối ưu hóa quy trình) được kết nối logic với các yêu cầu của vị trí. Cách diễn đạt rõ ràng, mạch lạc và thái độ tích cực là những điểm cộng lớn. Để nâng cao hơn nữa, ứng viên có thể cân nhắc đưa ra một ví dụ cụ thể, dù là nhỏ, về cách họ đã áp dụng tư duy giải quyết vấn đề hoặc cải thiện trải nghiệm trong các vai trò trước đây để làm câu trả lời thêm sinh động.",
+      "question": "We're looking for a Product Manager Intern. What specifically attracted you to this role, and why do you believe you'd be a good fit for a Product Manager position, especially given your background and interest in the travel and tourism industry?",
+      "answer": "I'm excited about this Product Manager Intern role because it combines two things I’m passionate about: building user-centric solutions and the travel industry. As someone who enjoys exploring new places, I understand the pain points travelers face — from planning to booking — and I’m eager to help improve those experiences through thoughtful product design.\n\nMy background in business administration, along with internship experience in market research and process optimization, has equipped me with strong analytical and communication skills. I believe these are key to identifying user needs, collaborating with cross-functional teams, and driving product improvements. I’m also a fast learner and genuinely curious about how digital products shape customer journeys, especially in tourism."
+    },
+    "4": {
+      "correctness": 9,
+      "coverage": 8,
+      "reasoning": 8,
+      "creativity": 7,
+      "communication": 9,
+      "attitude": 10,
+      "overall_score": 85,
+      "feedback": "Ứng viên đã mô tả rõ ràng một tình huống cộng tác nhóm gặp thách thức, nêu bật được vai trò cá nhân trong việc giải quyết mâu thuẫn. Cách tiếp cận dựa trên dữ liệu (nghiên cứu thị trường và khảo sát người dùng) là một điểm cộng lớn, cho thấy khả năng đưa ra quyết định có cơ sở. Việc tái cấu trúc thời gian biểu để bù đắp thời gian bị mất cũng chứng tỏ khả năng quản lý dự án tốt. Câu trả lời mạch lạc, rõ ràng và thể hiện thái độ tích cực. Để hoàn thiện hơn, ứng viên có thể bổ sung một phần nhỏ về bài học rút ra hoặc cách kinh nghiệm này định hình phương pháp làm việc nhóm của mình trong tương lai.",
+      "question": "Your CV mentions you're comfortable working in team environments and committed to collaborative learning. Can you describe a time when you collaborated on a project (academic or work) that faced unexpected challenges or disagreements within the team? How did you contribute to resolving the situation?",
+      "answer": "During a university group project on digital marketing strategy, our team faced a disagreement over the target audience and campaign direction. Some members wanted to focus on Gen Z, while others preferred working professionals. The debate slowed our progress and created tension.\n\nI stepped in to facilitate a short brainstorming session where each member presented their rationale. Then, I suggested we validate both ideas with quick market research and user surveys. The data showed stronger engagement potential with Gen Z, which helped us align and move forward. I also helped restructure our timeline to recover lost time."
+    },
+    "5": {
+      "correctness": 10,
+      "coverage": 10,
+      "reasoning": 9,
+      "creativity": 9,
+      "communication": 10,
+      "attitude": 10,
+      "overall_score": 97,
+      "feedback": "Ứng viên đã trả lời xuất sắc, trình bày rõ ràng một ví dụ cụ thể về kỹ năng mới tự học (Figma) và cách ứng dụng nó (dự án cá nhân, cuộc thi đại học). Phần rút ra bài học lớn nhất rất ấn tượng khi không chỉ nói về công cụ mà còn liên kết trực tiếp với các điểm mạnh đã nêu là 'self-learning' và 'open to feedback', cho thấy khả năng tự nhận thức sâu sắc. Câu trả lời mạch lạc, súc tích và có tác động.",
+      "question": "You highlight 'self-learning' and being 'eager to learn and open to feedback' as strengths. Could you share an example of a new skill or technology you recently learned independently, and how you applied that learning? What was your biggest takeaway from that experience?",
+      "answer": "Recently, I taught myself how to use Figma to design wireframes and user flows. I started with online tutorials and practiced by redesigning parts of a travel booking app as a personal project. I then applied this skill during a university competition, where my team needed to present a product prototype. My Figma designs helped us communicate our ideas clearly and contributed to us winning second place.\n\nThe biggest takeaway was realizing how visual tools can bridge gaps between ideas and execution — and how self-learning, combined with feedback from teammates, can accelerate growth."
+    },
+    "6": {
+      "correctness": 9,
+      "coverage": 9,
+      "reasoning": 8,
+      "creativity": 7,
+      "communication": 9,
+      "attitude": 10,
+      "overall_score": 87,
+      "feedback": "Ứng viên đã đưa ra một câu trả lời rất toàn diện và có cấu trúc tốt. Các bước để thu thập dữ liệu bằng SQL được mô tả rõ ràng và logic, bao gồm việc xác định bảng, lọc theo loại sự kiện và thời gian, cũng như join với dữ liệu người dùng/phiên để phân đoạn. Các điểm dữ liệu được đề xuất rất phù hợp với mục tiêu hiểu hành vi người dùng đối với tính năng 'save to wishlist', bao gồm cả các chỉ số về mức độ sử dụng, tương tác, chuyển đổi và hành vi người dùng. Khả năng liên kết dữ liệu với các quyết định sản phẩm và cải tiến UX là một điểm cộng lớn. Cách trình bày rõ ràng, mạch lạc và chuyên nghiệp.",
+      "question": "As a Product Manager, you'll often need to understand user behavior and product performance through data. Given your experience with SQL and data extraction, how would you go about getting data to understand how users interact with a specific feature in a new travel application (e.g., a 'save to wishlist' button)? What kind of data points would you look for?",
+      "answer": "To understand how users interact with the ‘save to wishlist’ feature, I’d start by writing SQL queries to extract relevant event data from our analytics or tracking database.\n\n🔍 Steps to get the data:\nQuery the event logs or user actions table where interactions with the wishlist button are recorded.\n\nFilter by event type (e.g., wishlist_save) and timestamp to analyze trends over time.\n\nJoin with user profiles or session data to segment by user type, device, or location.\n\n📊 Key data points to look for:\nTotal number of saves: How often the button is used.\n\nUnique users saving items: Adoption rate across the user base.\n\nSave frequency per user: Engagement depth.\n\nConversion rate: How many saved items lead to bookings.\n\nDrop-off rate: Users who save but don’t return.\n\nTime between save and booking: Decision-making behavior.\n\nDevice and platform breakdown: Mobile vs desktop usage.\n\n💡 Takeaway:\nThis helps identify whether the feature drives meaningful engagement or needs UX improvements. It also informs prioritization for future iterations."
+    },
+    "7": {
+      "correctness": 9,
+      "coverage": 10,
+      "reasoning": 9,
+      "creativity": 8,
+      "communication": 10,
+      "attitude": 10,
+      "overall_score": 93,
+      "feedback": "Ứng viên đã trình bày một kế hoạch thiết kế dashboard rất rõ ràng, mạch lạc và toàn diện. Cách phân chia bố cục hợp lý (KPIs ở trên, xu hướng ở giữa, chi tiết ở dưới) là tiêu chuẩn và hiệu quả. Các chỉ số được chọn rất phù hợp với bối cảnh website đặt vé du lịch và ứng viên đã giải thích được tầm quan trọng cũng như cách tính toán từng chỉ số một cách chính xác. Điểm cộng lớn là phần 'Bonus Features' đã thể hiện sự chủ động và hiểu biết sâu sắc về tính tương tác và khả năng phân tích dữ liệu trên dashboard, vượt qua mong đợi cơ bản của câu hỏi. Bài trình bày rất chuyên nghiệp và dễ hiểu.",
+      "question": "Your CV mentions Power BI and your 'Pizza Sales Data Visualization' project. If you were tracking key metrics for a travel booking website (e.g., conversion rate, average booking value, popular destinations), how would you design a simple dashboard using tools like Power BI or Google Sheets to present this information to stakeholders? What are 2-3 most important metrics you'd include and why?",
+      "answer": "To design a simple dashboard in Power BI or Google Sheets for a travel booking website, I’d focus on clarity, interactivity, and actionable insights. The layout would include:\n\n📊 Dashboard Design:\nTop section: Key metrics (KPIs) in cards or summary boxes\n\nMiddle section: Trend charts (line/bar) showing performance over time\n\nBottom section: Filterable tables or maps for destination insights\n\n🔑 Key Metrics to Include:\nConversion Rate\n\nWhy: Measures how effectively the site turns visitors into bookings\n\nHow: (Total Bookings / Total Visitors) × 100\n\nAverage Booking Value (ABV)\n\nWhy: Indicates revenue per transaction and helps assess pricing strategy\n\nHow: Total Revenue / Number of Bookings\n\nTop Destinations by Booking Volume\n\nWhy: Reveals user preferences and helps tailor marketing or inventory\n\nHow: Count of bookings grouped by destination\n\n💡 Bonus Features:\nFilters by date range, device type, or user segment\n\nConditional formatting to highlight trends or anomalies\n\nInteractive slicers for region or travel season"
+    },
+    "8": {
+      "correctness": 9,
+      "coverage": 9,
+      "reasoning": 9,
+      "creativity": 8,
+      "communication": 9,
+      "attitude": 10,
+      "overall_score": 90,
+      "feedback": "Ứng viên đã trả lời xuất sắc, thể hiện sự hiểu biết sâu sắc về tầm quan trọng của chất lượng dữ liệu và tính toàn vẹn của ETL pipeline từ góc độ của một Product Manager. Các lý do được đưa ra rất thuyết phục, tập trung vào tác động trực tiếp đến việc ra quyết định sản phẩm thông qua độ chính xác, kịp thời và tính nhất quán của dữ liệu. Ứng viên đã khéo léo chỉ ra những vấn đề cụ thể của dữ liệu kém chất lượng (sự kiện bị thiếu, bản ghi trùng lặp, định dạng không nhất quán) và liên kết chúng với các chỉ số sản phẩm quan trọng (tỷ lệ chuyển đổi, giữ chân người dùng). Đặc biệt, việc ứng viên đề cập đến vai trò hợp tác chặt chẽ với kỹ sư dữ liệu và phân tích để xác thực thông tin trước khi hành động là một điểm cộng lớn, thể hiện thái độ chủ động và trách nhiệm của một PM. Câu trả lời rõ ràng, mạch lạc và đi thẳng vào vấn đề.",
+      "question": "You have experience with ETL workflows and 'creating data pipelines to collect, clean, and transform raw data.' From a Product Manager's perspective, why is data quality and the integrity of an ETL pipeline critical for making informed product decisions, even if you're not building the pipeline yourself?",
+      "answer": "As a Product Manager, I rely heavily on data to understand user behavior, measure feature performance, and guide strategic decisions. If the ETL pipeline is flawed — for example, missing events, duplicate records, or inconsistent formatting — it can lead to misleading insights and poor decisions.\n\nEven if I’m not building the pipeline myself, I need to ensure:\n\nData accuracy: So metrics like conversion rate or retention are trustworthy.\n\nTimeliness: So I can respond quickly to user trends or issues.\n\nConsistency: So dashboards and reports align across teams.\n\nUltimately, clean and reliable data builds confidence in product decisions and helps avoid costly missteps. That’s why I always collaborate closely with data engineers and analysts to validate what we’re seeing before acting on it."
+    },
+    "9": {
+      "correctness": 9,
+      "coverage": 10,
+      "reasoning": 9,
+      "creativity": 8,
+      "communication": 10,
+      "attitude": 10,
+      "overall_score": 92,
+      "feedback": "Ứng viên đã trả lời xuất sắc câu hỏi phỏng vấn. Các trải nghiệm về 'tạo pipeline dữ liệu' và 'hỗ trợ trích xuất và báo cáo dữ liệu' được mô tả rất chi tiết, kèm theo các đóng góp cụ thể và định lượng (ví dụ: giảm 40% thời gian báo cáo thủ công). Thách thức lớn nhất được nêu ra rất thực tế và cách ứng viên giải quyết vấn đề cho thấy tư duy logic và khả năng làm việc hiệu quả. Đặc biệt, phần bài học rút ra và ứng dụng vào vai trò Quản lý sản phẩm rất sâu sắc, thể hiện sự hiểu biết về tầm quan trọng của chất lượng dữ liệu, hợp tác liên phòng ban và sự đồng cảm với các ràng buộc kỹ thuật. Cách trình bày rõ ràng, mạch lạc và chuyên nghiệp.",
+      "question": "Could you tell me more about your experience at FSS - Financial Software Solutions, particularly the 'creating data pipelines' and 'supported data extraction and reporting' aspects? What was the most significant challenge you faced there, and what did you learn from it that you think could apply to a Product Management role?",
+      "answer": "At FSS – Financial Software Solutions, I worked with the data team to support ETL workflows that collected, cleaned, and transformed raw financial transaction data into structured formats for reporting. My role involved writing SQL queries to extract data, validating data integrity, and helping build automated pipelines that fed dashboards used by internal stakeholders.\n\n🔧 Key contributions:\nCreated reusable SQL scripts for extracting KPIs like transaction volume and error rates.\n\nHelped design a pipeline that reduced manual reporting time by 40%.\n\nCollaborated with analysts to ensure the data matched business logic and reporting needs.\n\n⚠️ Biggest challenge:\nOne major challenge was dealing with inconsistent data formats across multiple sources, which caused reporting discrepancies. I worked with engineers to implement validation checks and standardization rules early in the pipeline.\n\n💡 What I learned for Product Management:\nData quality is critical — flawed data leads to flawed decisions.\n\nCross-functional collaboration is key — aligning engineers, analysts, and business teams ensures the product delivers reliable insights.\n\nEmpathy for technical constraints helps PMs set realistic goals and timelines."
+    },
+    "10": {
+      "correctness": 9,
+      "coverage": 9,
+      "reasoning": 8,
+      "creativity": 7,
+      "communication": 9,
+      "attitude": 10,
+      "overall_score": 87,
+      "feedback": "Ứng viên đã trả lời xuất sắc về vấn đề người dùng và cách tiếp cận xác thực giải pháp. Phần trình bày vấn đề người dùng rất rõ ràng và dễ hiểu, chỉ ra chính xác các khó khăn mà người dùng gặp phải (quá nhiều tab, thiếu góc nhìn tập trung). Đặc biệt, việc mô tả chi tiết các bước xác thực giải pháp như phỏng vấn không chính thức, chia sẻ prototype và đưa ra kết quả cụ thể (4 người dùng) cho thấy sự chủ động và tư duy hướng người dùng mạnh mẽ. Cấu trúc câu trả lời rõ ràng, mạch lạc, dễ theo dõi với việc sử dụng các biểu tượng và gạch đầu dòng hiệu quả. Một điểm có thể cải thiện nhỏ là làm rõ hơn một chút về cách những *thông tin cụ thể* từ các cuộc phỏng vấn đã trực tiếp ảnh hưởng đến các *quyết định thiết kế* hoặc các *tính năng cụ thể* của giải pháp, thay vì chỉ liệt kê các tính năng đó.",
+      "question": "Your 'Travel Destination Research Tracker' project involved web scraping and organizing data in Airtable to help users choose destinations. Can you elaborate on the user problem you were trying to solve with this project and how you approached identifying and validating that your solution would actually be helpful to users?",
+      "answer": "The Travel Destination Research Tracker project aimed to solve a common user problem: information overload and scattered data when planning trips. Travelers often browse multiple websites for destination ideas, costs, weather, and activities — but struggle to compare options easily.\n\n🎯 User Problem:\nToo many tabs and sources\n\nNo centralized view to compare destinations\n\nDifficulty tracking preferences and budget constraints\n\n🛠️ My Approach:\nUsed web scraping to collect structured data (e.g., average costs, weather, visa info) from travel sites.\n\nOrganized it in Airtable, allowing users to filter by region, budget, and travel season.\n\nAdded tags and notes so users could personalize their shortlist.\n\n✅ Validation:\nConducted informal interviews with 5 frequent travelers to understand pain points.\n\nShared a prototype with them and got feedback on usability and usefulness.\n\n4 out of 5 said it helped them narrow down choices faster and felt more confident in their planning.\n\n💡 Key Takeaway:"
+    },
+    "11": {
+      "correctness": 9,
+      "coverage": 10,
+      "reasoning": 9,
+      "creativity": 8,
+      "communication": 10,
+      "attitude": 10,
+      "overall_score": 93,
+      "feedback": "Ứng viên đã thể hiện sự hiểu biết sâu sắc về vấn đề (nỗi lo lắng khi đi du lịch quốc tế lần đầu) và đề xuất ba tính năng MVP rất phù hợp, trực tiếp giải quyết các điểm gây lo lắng. 'Smart Travel Checklist' với khả năng cá nhân hóa và 'Arrival Guide' với hình ảnh/video là những ý tưởng đặc biệt nổi bật. Chiến lược xác thực được trình bày rất toàn diện, kết hợp cả phương pháp định tính và định lượng (khảo sát, phân tích dữ liệu, phỏng vấn người dùng) để đo lường hiệu quả giảm lo lắng và thu thập thông tin chi tiết để cải tiến. Cách trình bày rõ ràng, mạch lạc, có cấu trúc tốt và thái độ chuyên nghiệp, cho thấy tiềm năng quản lý sản phẩm mạnh mẽ.",
+      "question": "Imagine you are the Product Manager Intern for a new feature in a popular travel app that aims to reduce travel anxiety for first-time international travelers. What are three key features you would prioritize for a Minimum Viable Product (MVP), and how would you go about validating if these features are actually easing anxiety for users?",
+      "answer": "✈️ MVP Features to Reduce Travel Anxiety\nFor first-time international travelers, anxiety often stems from uncertainty, lack of information, and fear of making mistakes. I’d prioritize these three features:\n\n1. Smart Travel Checklist\nAuto-generates a personalized checklist based on destination, visa requirements, flight details, and travel dates.\n\nIncludes reminders for passport, visa, vaccinations, currency exchange, and local SIM options.\n\n2. Arrival Guide\nOffers step-by-step instructions for what to expect upon landing: immigration process, airport navigation, transport options, and local customs.\n\nIncludes visuals and short videos for clarity.\n\n3. Real-Time Chat Support or FAQ Bot\nProvides instant answers to common questions like “Do I need a visa?”, “Where do I get a SIM card?”, or “How do I get to my hotel?”\n\nReduces panic moments by offering 24/7 guidance.\n\n✅ Validation Strategy\nTo ensure these features actually reduce anxiety:\n\n1. Pre- and Post-Trip Surveys\nAsk users to rate their anxiety levels before and after using the feature.\n\nInclude qualitative questions like “What made you feel more confident?”\n\n2. Usage Analytics\nTrack engagement: how often users open the checklist, guide, or chat.\n\nLook for drop-off points or repeated queries to identify gaps.\n\n3. User Interviews\nConduct short interviews with first-time travelers to gather feedback on usefulness, clarity, and emotional impact.\n\nUse insights to iterate quickly."
+    }
+  }
+}

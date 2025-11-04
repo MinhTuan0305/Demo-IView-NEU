@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import ChatWidget from '@/components/ChatWidget';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement } from 'chart.js';
 import { Pie, Bar } from 'react-chartjs-2';
 import { api } from '@/lib/api';
@@ -147,7 +146,7 @@ export default function DashboardPage() {
                     <tr key={idx}>
                       <td className="px-6 py-4 text-sm">{title}</td>
                       <td className="px-6 py-4 text-sm">{time}</td>
-                      <td className="px-6 py-4 text-sm">{typeof avg === 'number' ? `${avg.toFixed(1)} / 10` : avg}</td>
+                      <td className="px-6 py-4 text-sm">{typeof avg === 'number' ? `${avg.toFixed(1)} / 100` : avg}</td>
                     </tr>
                   );
                 })}
@@ -158,7 +157,6 @@ export default function DashboardPage() {
       </main>
 
       <Footer />
-      <ChatWidget />
     </div>
   );
 }

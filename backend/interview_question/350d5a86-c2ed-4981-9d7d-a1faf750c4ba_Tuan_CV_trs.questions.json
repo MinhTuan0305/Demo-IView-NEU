@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "question": "Good morning, Le Minh Tuan. Thank you for coming in today. Could you please start by introducing yourself and telling us a bit about your background?",
+    "category": "opening",
+    "purpose": "To allow the candidate to introduce themselves, provide an overview of their background, and assess initial communication skills."
+  },
+  {
+    "id": 2,
+    "question": "Thank you for that introduction. Now, could you tell me about your key strengths that you believe would be valuable in a Product Manager role, and perhaps one or two areas where you believe you could further develop or improve?",
+    "category": "opening",
+    "purpose": "To assess self-awareness, alignment of strengths with the PM role, and openness to growth and feedback."
+  },
+  {
+    "id": 3,
+    "question": "We're looking for a Product Manager Intern. What specifically attracted you to this role, and why do you believe you'd be a good fit for a Product Manager position, especially given your background and interest in the travel and tourism industry?",
+    "category": "opening",
+    "purpose": "To understand the candidate's motivation for the PM role, their understanding of what the role entails, and how they connect their skills and aspirations to this specific position."
+  },
+  {
+    "id": 4,
+    "question": "Your CV mentions you're comfortable working in team environments and committed to collaborative learning. Can you describe a time when you collaborated on a project (academic or work) that faced unexpected challenges or disagreements within the team? How did you contribute to resolving the situation?",
+    "category": "behavioral",
+    "purpose": "To assess teamwork, collaboration, conflict resolution skills, and how the candidate handles challenges within a group setting."
+  },
+  {
+    "id": 5,
+    "question": "You highlight 'self-learning' and being 'eager to learn and open to feedback' as strengths. Could you share an example of a new skill or technology you recently learned independently, and how you applied that learning? What was your biggest takeaway from that experience?",
+    "category": "behavioral",
+    "purpose": "To evaluate the candidate's initiative, capacity for continuous learning, practical application of new knowledge, and ability to reflect on their learning process."
+  },
+  {
+    "id": 6,
+    "question": "As a Product Manager, you'll often need to understand user behavior and product performance through data. Given your experience with SQL and data extraction, how would you go about getting data to understand how users interact with a specific feature in a new travel application (e.g., a 'save to wishlist' button)? What kind of data points would you look for?",
+    "category": "technical",
+    "purpose": "To assess fundamental understanding of how to use data querying for product insights, ability to translate product questions into data needs, and the relevance of their SQL skills for a PM intern.",
+    "focus": "SQL / Data Analysis for Product"
+  },
+  {
+    "id": 7,
+    "question": "Your CV mentions Power BI and your 'Pizza Sales Data Visualization' project. If you were tracking key metrics for a travel booking website (e.g., conversion rate, average booking value, popular destinations), how would you design a simple dashboard using tools like Power BI or Google Sheets to present this information to stakeholders? What are 2-3 most important metrics you'd include and why?",
+    "category": "technical",
+    "purpose": "To evaluate understanding of key product metrics, ability to visualize data effectively for stakeholders, and practical application of data visualization tools.",
+    "focus": "Data Visualization / Product Metrics"
+  },
+  {
+    "id": 8,
+    "question": "You have experience with ETL workflows and 'creating data pipelines to collect, clean, and transform raw data.' From a Product Manager's perspective, why is data quality and the integrity of an ETL pipeline critical for making informed product decisions, even if you're not building the pipeline yourself?",
+    "category": "technical",
+    "purpose": "To assess the candidate's understanding of the importance of data infrastructure and data quality from a product decision-making standpoint, linking their technical background to PM responsibilities.",
+    "focus": "Data Quality / ETL / Data Governance (PM Perspective)"
+  },
+  {
+    "id": 9,
+    "question": "Could you tell me more about your experience at FSS - Financial Software Solutions, particularly the 'creating data pipelines' and 'supported data extraction and reporting' aspects? What was the most significant challenge you faced there, and what did you learn from it that you think could apply to a Product Management role?",
+    "category": "cv_based",
+    "purpose": "To deep dive into their most significant work experience, understand specific contributions, identify challenges, and extract transferable skills and learnings relevant to a PM role."
+  },
+  {
+    "id": 10,
+    "question": "Your 'Travel Destination Research Tracker' project involved web scraping and organizing data in Airtable to help users choose destinations. Can you elaborate on the user problem you were trying to solve with this project and how you approached identifying and validating that your solution would actually be helpful to users?",
+    "category": "cv_based",
+    "purpose": "To understand the project's scope, problem-solving approach, demonstrate user empathy, and assess basic validation methods, which are crucial for a PM role."
+  },
+  {
+    "id": 11,
+    "question": "Imagine you are the Product Manager Intern for a new feature in a popular travel app that aims to reduce travel anxiety for first-time international travelers. What are three key features you would prioritize for a Minimum Viable Product (MVP), and how would you go about validating if these features are actually easing anxiety for users?",
+    "category": "creative",
+    "purpose": "To test the candidate's product thinking, user empathy, feature prioritization skills for an MVP, and ability to design validation strategies in a hypothetical scenario."
+  }
+]

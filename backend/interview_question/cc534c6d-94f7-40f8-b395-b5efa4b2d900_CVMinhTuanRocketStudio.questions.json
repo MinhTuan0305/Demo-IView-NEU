@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "question": "Good morning, Minh Tuan. Thank you for coming in today. Could you please start by introducing yourself and telling us a bit about your academic background and what brings you here?",
+    "category": "opening",
+    "purpose": "Allow the candidate to introduce themselves, set a comfortable tone, and provide a general overview of their background."
+  },
+  {
+    "id": 2,
+    "question": "Every individual has unique strengths and areas for development. Could you share what you consider your greatest strengths are, and perhaps one or two areas you are actively working on improving?",
+    "category": "opening",
+    "purpose": "Assess self-awareness, highlight key competencies, and identify areas of growth mindset."
+  },
+  {
+    "id": 3,
+    "question": "Your cover letter expresses a strong passion for games and interactive software. Given your background in Information Technology and Data Transformation, why are you specifically interested in applying for a Tester Intern position within the game development industry at Rocket Studio?",
+    "category": "opening",
+    "purpose": "Understand the candidate's motivation for the specific role and industry, and how it aligns with their career aspirations."
+  },
+  {
+    "id": 4,
+    "question": "You mentioned being comfortable working in team environments in your CV. Can you describe a situation where you had to collaborate closely with a team to achieve a common goal, and what was your specific role in that team?",
+    "category": "behavioral",
+    "purpose": "Evaluate teamwork, collaboration skills, and ability to contribute effectively within a group setting.",
+    "focus": "Teamwork/Collaboration"
+  },
+  {
+    "id": 5,
+    "question": "As a self-learning and detail-oriented individual, can you tell me about a time when you encountered a particularly challenging problem or concept during your studies or personal projects, and how you approached learning and ultimately overcoming it?",
+    "category": "behavioral",
+    "purpose": "Assess problem-solving, self-learning capabilities, perseverance, and adaptability.",
+    "focus": "Problem Solving/Self-Learning"
+  },
+  {
+    "id": 6,
+    "question": "In software testing, particularly for games, understanding different types of testing is crucial. Could you explain the difference between functional testing and non-functional testing, and provide a simple example of each in the context of a game?",
+    "category": "technical",
+    "purpose": "Assess fundamental knowledge of software testing concepts relevant to game quality assurance.",
+    "focus": "Software Testing Fundamentals"
+  },
+  {
+    "id": 7,
+    "question": "Imagine you've found a bug while testing a game. What key information would you include in a bug report to ensure it's clear, reproducible, and helpful for the development team? Could you outline the typical lifecycle of that bug from discovery to resolution?",
+    "category": "technical",
+    "purpose": "Evaluate understanding of effective bug reporting practices and the software defect lifecycle.",
+    "focus": "Bug Reporting & Lifecycle"
+  },
+  {
+    "id": 8,
+    "question": "You have 'Basic C++/C#' and Python listed in your skills. While you'll primarily be testing, a basic understanding of game logic can be helpful. How would you approach writing a simple pseudo-code or outline of logic to test if a player character can successfully pick up an item in a game only if their inventory is not full?",
+    "category": "technical",
+    "purpose": "Assess basic programming logic and analytical thinking, relevant for understanding game mechanics and test case design.",
+    "focus": "Basic Programming Logic/Test Case Design"
+  },
+  {
+    "id": 9,
+    "question": "During your experience at FSS - Financial Software Solutions, you mentioned creating data pipelines to collect, clean, and transform raw data using SQL Oracle. Can you elaborate on a specific challenge you faced in this process and how your work in data transformation might be relevant to understanding game data or telemetry for a tester?",
+    "category": "cv_based",
+    "purpose": "Deepen understanding of their practical experience, problem-solving in a professional setting, and critical thinking about transferable skills.",
+    "focus": "Data Engineering Experience"
+  },
+  {
+    "id": 10,
+    "question": "For your 'Hotel Booking System Testing' personal project, you created comprehensive test documentation. Could you walk us through one of the more complex test scenarios or test cases you designed, explaining your approach and what you aimed to validate?",
+    "category": "cv_based",
+    "purpose": "Assess practical application of testing knowledge, attention to detail in test design, and understanding of user experience flows.",
+    "focus": "Manual Testing & Test Documentation"
+  },
+  {
+    "id": 11,
+    "question": "Suppose you're testing a new feature in a multiplayer online game, say a new character ability. You've followed your test plan meticulously, but during a stress test with many players, you notice an intermittent lag spike only when this specific ability is used by multiple players simultaneously. How would you approach investigating this issue to provide meaningful feedback to the developers?",
+    "category": "creative",
+    "purpose": "Test problem-solving, analytical thinking under ambiguous conditions, and the ability to strategize testing efforts in a complex environment.",
+    "focus": "Problem Solving/Critical Thinking in Testing"
+  }
+]

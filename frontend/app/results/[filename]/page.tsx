@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import ChatWidget from '@/components/ChatWidget';
 import { api } from '@/lib/api';
 
 export default function ResultDetailPage() {
@@ -33,6 +32,7 @@ export default function ResultDetailPage() {
 
   const summary = data?.summary || {};
   const details = data?.details || data?.questions || {};
+  const feedback = summary?.overall_feedback as (undefined | { overall_score?: number; strengths?: string; weaknesses?: string; hiring_recommendation?: string });
 
   return (
     <div className="min-h-screen">
@@ -74,6 +74,33 @@ export default function ResultDetailPage() {
               </div>
             </section>
 
+            {/* Overall Feedback */}
+            {feedback && (
+              <section className="bg-white rounded-lg shadow-sm p-6">
+                <h2 className="text-xl font-semibold mb-4">Đánh giá tổng thể</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
+                  <div>
+                    <div className="text-sm text-gray-500">Điểm tổng thể</div>
+                    <div className="text-2xl font-bold text-[#0065ca]">{typeof feedback.overall_score === 'number' ? `${feedback.overall_score} / 100` : '-'}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-500">Khuyến nghị</div>
+                    <div className="font-semibold">{feedback.hiring_recommendation || '-'}</div>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <div className="font-semibold mb-1">Điểm mạnh</div>
+                    <p className="text-gray-700 whitespace-pre-wrap">{feedback.strengths || '-'}</p>
+                  </div>
+                  <div>
+                    <div className="font-semibold mb-1">Điểm cần cải thiện</div>
+                    <p className="text-gray-700 whitespace-pre-wrap">{feedback.weaknesses || '-'}</p>
+                  </div>
+                </div>
+              </section>
+            )}
+
             {/* Details */}
             <section className="bg-white rounded-lg shadow-sm p-6">
               <h2 className="text-xl font-semibold mb-4">Chi tiết theo câu hỏi</h2>
@@ -93,6 +120,12 @@ export default function ResultDetailPage() {
                         <div className="font-semibold">{typeof item.overall_score === 'number' ? item.overall_score.toFixed(1) : (item.overall_score ?? '-')}</div>
                       </div>
                     </div>
+                    {item.answer && (
+                      <div className="mt-3">
+                        <div className="text-sm text-gray-500 mb-1">Câu trả lời của ứng viên</div>
+                        <div className="bg-gray-50 border border-gray-200 rounded p-3 whitespace-pre-wrap break-words text-gray-800">{item.answer}</div>
+                      </div>
+                    )}
                     {item.feedback && (
                       <div className="mt-3 text-gray-700 whitespace-pre-wrap break-words">{item.feedback}</div>
                     )}
@@ -122,7 +155,6 @@ export default function ResultDetailPage() {
       </main>
 
       <Footer />
-      <ChatWidget />
     </div>
   );
 }

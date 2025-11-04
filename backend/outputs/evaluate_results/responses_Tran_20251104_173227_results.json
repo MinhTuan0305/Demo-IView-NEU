@@ -1,0 +1,126 @@
+{
+  "summary": {
+    "candidate_name": "Trần",
+    "interview_date": "2025-11-04 17:32:27",
+    "average_overall_score": 84.27,
+    "questions_scored": 11,
+    "overall_feedback": {
+      "overall_score": 88,
+      "strengths": "Ứng viên thể hiện sự nhiệt huyết và niềm đam mê rõ rệt với ngành game, đồng thời có khả năng liên kết mạnh mẽ giữa nền tảng Công nghệ thông tin và Chuyển đổi dữ liệu của mình với vai trò Tester Intern. Minh Tuấn sở hữu tư duy phân tích nhạy bén, khả năng tự học vượt trội (minh chứng qua việc học Selenium), và kỹ năng giải quyết vấn đề có cấu trúc, đặc biệt khi đối mặt với các thách thức kỹ thuật hoặc thiết kế kiểm thử phức tạp (như xử lý dữ liệu không nhất quán, kịch bản xung đột booking, điều tra lỗi lag). Kiến thức vững chắc về quy trình QA cơ bản (báo cáo lỗi, vòng đời bug) và khả năng tư duy logic khi viết pseudo-code cũng là những điểm cộng lớn.",
+      "weaknesses": "Điểm cần cải thiện chính của ứng viên là đôi khi câu trả lời chưa hoàn chỉnh, điển hình là thiếu ví dụ cho kiểm thử phi chức năng và kết luận cho mục tiêu phản hồi trong một số câu hỏi. Mặc dù đây có thể là một phần của sự thiếu tự tin khi trình bày (như ứng viên tự nhận xét) hoặc áp lực phỏng vấn, nó cho thấy tiềm năng cần phát triển kỹ năng giao tiếp và trình bày thông tin một cách đầy đủ, mạch lạc hơn trong các tình huống quan trọng.",
+      "hiring_recommendation": "Rất khuyến khích"
+    }
+  },
+  "details": {
+    "1": {
+      "correctness": 10,
+      "coverage": 10,
+      "reasoning": 2,
+      "creativity": 3,
+      "communication": 9,
+      "attitude": 10,
+      "overall_score": 85,
+      "feedback": "Ứng viên đã giới thiệu bản thân một cách rõ ràng, ngắn gọn và đầy đủ. Các thông tin về học vấn (sinh viên năm 3, chuyên ngành Công nghệ thông tin và Chuyển đổi Dữ liệu) cùng với động lực đến phỏng vấn (đam mê phân tích dữ liệu, mong muốn áp dụng kỹ năng, phát triển và đóng góp) đều được trình bày mạch lạc và tích cực. Mặc dù câu hỏi này không yêu cầu lập luận hay sự sáng tạo đặc biệt, cách diễn đạt của ứng viên thể hiện thái độ rất chủ động và chuyên nghiệp."
+    },
+    "2": {
+      "correctness": 9,
+      "coverage": 9,
+      "reasoning": 8,
+      "creativity": 7,
+      "communication": 9,
+      "attitude": 10,
+      "overall_score": 87,
+      "feedback": "Ứng viên đã trả lời rất tốt câu hỏi, nêu bật được những thế mạnh phù hợp với vai trò kỹ thuật AI (tính thích nghi, tư duy phân tích dữ liệu) và xác định rõ ràng các lĩnh vực đang cải thiện (kỹ năng kể chuyện bằng dữ liệu, thuyết trình). Các điểm cải thiện được trình bày một cách tích cực và có định hướng phát triển, thể hiện sự hiểu biết về tầm quan trọng của việc truyền đạt thông tin hiệu quả. Câu trả lời rõ ràng, mạch lạc và chuyên nghiệp."
+    },
+    "3": {
+      "correctness": 9,
+      "coverage": 7,
+      "reasoning": 8,
+      "creativity": 5,
+      "communication": 9,
+      "attitude": 10,
+      "overall_score": 80,
+      "feedback": "Ứng viên đã trả lời rõ ràng và mạch lạc, thể hiện niềm đam mê với game và sự phù hợp với vị trí Tester Intern. Điểm mạnh là khả năng kết nối giữa nền tảng công nghệ thông tin, dữ liệu với mong muốn đóng góp vào chất lượng game và học hỏi về hệ thống tương tác. Tuy nhiên, câu trả lời còn thiếu sự cụ thể về cách kinh nghiệm về dữ liệu và IT có thể áp dụng trực tiếp vào công việc kiểm thử game (ví dụ: phân tích dữ liệu lỗi, tự động hóa kiểm thử). Ngoài ra, ứng viên chưa thể hiện được lý do cụ thể tại sao lại quan tâm đến Rocket Studio nói riêng, ngoài việc đây là nơi ứng tuyển."
+    },
+    "4": {
+      "correctness": 9,
+      "coverage": 8,
+      "reasoning": 5,
+      "creativity": 4,
+      "communication": 9,
+      "attitude": 10,
+      "overall_score": 78,
+      "feedback": "Ứng viên đã đưa ra một ví dụ rõ ràng và cụ thể về tình huống làm việc nhóm, nêu bật mục tiêu chung và vai trò cụ thể của mình. Việc đề cập đến 'viết truy vấn SQL' và 'đảm bảo độ chính xác của pipeline' cùng với 'phối hợp với đồng đội để điều chỉnh đầu ra theo yêu cầu kinh doanh' thể hiện khả năng làm việc nhóm và đóng góp cá nhân. Tuy nhiên, câu trả lời sẽ thuyết phục hơn nếu ứng viên mô tả chi tiết hơn về cách thức phối hợp diễn ra, những thách thức trong quá trình cộng tác và cách họ cùng nhau vượt qua."
+    },
+    "5": {
+      "correctness": 7,
+      "coverage": 7,
+      "reasoning": 6,
+      "creativity": 7,
+      "communication": 9,
+      "attitude": 10,
+      "overall_score": 77,
+      "feedback": "Ứng viên đưa ra một câu trả lời ngắn gọn, đi thẳng vào vấn đề, mô tả rõ ràng một thử thách cụ thể ('scraping data from JavaScript-heavy websites') và cách tiếp cận tự học ('học Selenium qua tutorials và trial-and-error'). Điều này thể hiện tốt khả năng tự học và thích nghi nhanh chóng. Ví dụ dự án cá nhân ('Travel Destination Tracker') giúp câu trả lời trở nên cụ thể và đáng tin cậy. Tuy nhiên, để thể hiện rõ hơn khía cạnh 'detail-oriented' (chú trọng chi tiết), ứng viên có thể đi sâu hơn vào các chi tiết như những thách thức cụ thể trong quá trình 'trial-and-error', hoặc giải thích rõ hơn về các bước đã thực hiện để khắc phục từng vấn đề nhỏ. Việc bổ sung thêm lý do tại sao Selenium là giải pháp tối ưu cho nội dung động, thay vì chỉ đơn thuần nêu công cụ, cũng sẽ cải thiện điểm lý luận."
+    },
+    "6": {
+      "correctness": 7,
+      "coverage": 6,
+      "reasoning": 8,
+      "creativity": 8,
+      "communication": 7,
+      "attitude": 9,
+      "overall_score": 75,
+      "feedback": "Ứng viên đã giải thích rất rõ ràng sự khác biệt giữa kiểm thử chức năng và phi chức năng, sử dụng cách diễn đạt 'những gì trò chơi thực hiện' (what the game does) và 'cách trò chơi thực hiện' (how the game performs) rất hiệu quả. Ví dụ về kiểm thử chức năng ('Save Game') cũng rất cụ thể và phù hợp với ngữ cảnh game. Tuy nhiên, ứng viên đã bỏ sót hoàn toàn phần ví dụ minh họa cho kiểm thử phi chức năng, khiến câu trả lời chưa hoàn chỉnh."
+    },
+    "7": {
+      "correctness": 10,
+      "coverage": 9,
+      "reasoning": 7,
+      "creativity": 8,
+      "communication": 10,
+      "attitude": 10,
+      "overall_score": 90,
+      "feedback": "Ứng viên đã đưa ra một câu trả lời rất toàn diện và chính xác cho cả hai phần của câu hỏi. Phần thông tin chính trong báo cáo lỗi được liệt kê đầy đủ, bao gồm các yếu tố quan trọng như tiêu đề rõ ràng, môi trường, các bước tái hiện, kết quả mong đợi và thực tế, mức độ nghiêm trọng, cùng với các tệp đính kèm và log. Đây là những thông tin thiết yếu giúp nhóm phát triển dễ dàng hiểu và khắc phục lỗi. Vòng đời của một lỗi cũng được mô tả mạch lạc, từ việc phát hiện, báo cáo, phân loại, phân công, sửa lỗi, xác minh cho đến đóng/mở lại, thể hiện sự hiểu biết sâu sắc về quy trình QA và phát triển. Ứng viên còn thể hiện sự chuyên nghiệp qua cách trình bày rõ ràng, sử dụng các ví dụ cụ thể (ví dụ tiêu đề báo cáo lỗi) và biểu tượng cảm xúc để tăng tính trực quan. Điểm duy nhất có thể cải thiện là đưa ra thêm lập luận hoặc giải thích chi tiết hơn về tầm quan trọng của từng mục, mặc dù câu hỏi không yêu cầu điều này một cách rõ ràng."
+    },
+    "8": {
+      "correctness": 9,
+      "coverage": 9,
+      "reasoning": 7,
+      "creativity": 5,
+      "communication": 10,
+      "attitude": 10,
+      "overall_score": 83,
+      "feedback": "Ứng viên đã đưa ra một đoạn mã giả (pseudo-code) rất rõ ràng và chính xác, trực tiếp giải quyết yêu cầu của câu hỏi. Logic kiểm tra dung lượng kho đồ và các hành động tương ứng (thêm vật phẩm hoặc hiển thị thông báo đầy) được trình bày đầy đủ và mạch lạc, thể hiện sự hiểu biết cơ bản vững chắc về luồng logic cần thiết. Mặc dù câu trả lời không đi sâu vào giải thích lý do hoặc các trường hợp phức tạp hơn, nó hoàn toàn đáp ứng được yêu cầu về một phác thảo logic đơn giản."
+    },
+    "9": {
+      "correctness": 9,
+      "coverage": 9,
+      "reasoning": 9,
+      "creativity": 8,
+      "communication": 9,
+      "attitude": 10,
+      "overall_score": 90,
+      "feedback": "Ứng viên đã trả lời xuất sắc cả hai phần của câu hỏi. Phần mô tả thử thách cụ thể về định dạng giao dịch không nhất quán và cách giải quyết bằng các hàm SQL Oracle (`TO_DATE`, `NVL`, `joins/unions`) rất chi tiết và chính xác, thể hiện kinh nghiệm thực tế. Khả năng liên hệ kinh nghiệm này với việc hiểu dữ liệu game telemetry cho một người kiểm thử cũng rất rõ ràng và logic, đưa ra các ví dụ cụ thể về dữ liệu game và lợi ích thực tế cho vai trò kiểm thử. Cách trình bày mạch lạc, tự tin và chuyên nghiệp."
+    },
+    "10": {
+      "correctness": 9,
+      "coverage": 9,
+      "reasoning": 9,
+      "creativity": 8,
+      "communication": 10,
+      "attitude": 10,
+      "overall_score": 92,
+      "feedback": "Ứng viên đã trình bày một kịch bản kiểm thử phức tạp rất rõ ràng và mạch lạc. Việc chọn kịch bản 'xung đột đặt phòng trong mùa cao điểm' là phù hợp, thể hiện sự hiểu biết về các vấn đề đồng thời (concurrency) trong hệ thống. Các bước kiểm thử được mô tả chi tiết, kết quả mong đợi rõ ràng và các mục tiêu xác thực (concurrency handling, real-time availability updates, user feedback) được nêu bật chính xác. Cách trình bày có cấu trúc tốt, dễ hiểu và thái độ tích cực, sẵn sàng đi sâu vào chi tiết hơn là một điểm cộng lớn."
+    },
+    "11": {
+      "correctness": 9,
+      "coverage": 9,
+      "reasoning": 9,
+      "creativity": 8,
+      "communication": 10,
+      "attitude": 10,
+      "overall_score": 90,
+      "feedback": "Ứng viên đã đưa ra một cách tiếp cận cực kỳ toàn diện và có cấu trúc để điều tra vấn đề. Các bước được trình bày rõ ràng, từ việc tái hiện lỗi trong môi trường có kiểm soát, thu thập dữ liệu chi tiết (logs, metrics hiệu suất, độ trễ mạng) cho đến việc cô lập nguyên nhân. Khả năng lập tài liệu chi tiết, bao gồm cả các bước tái hiện và bằng chứng, là rất đáng khen ngợi. Hơn nữa, việc chủ động đề xuất các lĩnh vực tiềm năng để nhà phát triển xem xét (như hiệu ứng hạt, đồng bộ hóa máy chủ, hiển thị hoạt ảnh) cho thấy sự hiểu biết sâu sắc về các thách thức phát triển trò chơi và tư duy hợp tác. Cách trình bày mạch lạc và chuyên nghiệp."
+    }
+  }
+}

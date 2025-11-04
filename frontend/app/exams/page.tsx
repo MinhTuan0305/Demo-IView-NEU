@@ -1,13 +1,20 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import ChatWidget from '@/components/ChatWidget';
+import { useRouter } from 'next/navigation';
+import Modal from '@/components/Modal';
 
 export default function ExamsPage() {
+  const router = useRouter();
   const [subjectFilter, setSubjectFilter] = useState('all');
   const [searchInput, setSearchInput] = useState('');
+  const [showMaint, setShowMaint] = useState(true);
+
+  useEffect(() => {
+    setShowMaint(true);
+  }, []);
 
   const exams = [
     { subject: 'kinhtevi', name: 'Giữa kỳ Kinh tế vi mô', title: 'Giữa kỳ - Kinh tế vi mô', date: '25/10/2025', duration: '10 phút', type: 'Giữa kỳ' },
@@ -72,7 +79,16 @@ export default function ExamsPage() {
       </main>
 
       <Footer />
-      <ChatWidget />
+      <Modal
+        open={showMaint}
+        title="Tính năng đang bảo trì"
+        description={'Chức năng Kỳ thi hiện đang được bảo trì. Vui lòng quay lại trang chủ và thử lại sau.'}
+        onClose={() => {
+          setShowMaint(false);
+          router.push('/');
+        }}
+        confirmText="Về trang chủ"
+      />
     </div>
   );
 }

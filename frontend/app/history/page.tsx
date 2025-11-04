@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import ChatWidget from '@/components/ChatWidget';
 import { api } from '@/lib/api';
 import { useRouter } from 'next/navigation';
 
@@ -32,6 +31,15 @@ export default function HistoryPage() {
     const s = it.summary || {};
     const type = s?.type || 'job';
     return filterType === 'all' || filterType === type;
+  });
+
+  // Pick the most recent completed session with overall_feedback to show at top
+  const topSummary = items.find(it => (it.status === 'done') && (it.summary && it.summary.overall_feedback));
+  const feedback = topSummary?.summary?.overall_feedback as (undefined | {
+    overall_score?: number;
+    strengths?: string;
+    weaknesses?: string;
+    hiring_recommendation?: string;
   });
 
   const handleView = (it: any) => {
@@ -102,7 +110,6 @@ export default function HistoryPage() {
       </section>
 
       <Footer />
-      <ChatWidget />
     </div>
   );
 }

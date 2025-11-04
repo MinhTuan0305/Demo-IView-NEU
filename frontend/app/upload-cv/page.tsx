@@ -9,6 +9,7 @@ import ChatWidget from '@/components/ChatWidget';
 export default function UploadCVPage() {
   const router = useRouter();
   const [file, setFile] = useState<File | null>(null);
+  const [jdFile, setJdFile] = useState<File | null>(null);
   const [jobTitle, setJobTitle] = useState('');
   const [level, setLevel] = useState('');
   const [loading, setLoading] = useState(false);
@@ -30,6 +31,9 @@ export default function UploadCVPage() {
       formData.append('cv_file', file);
       formData.append('job_title', jobTitle);
       formData.append('level', level);
+      if (jdFile) {
+        formData.append('jd_file', jdFile);
+      }
 
       // Call Next.js proxy route to avoid CORS and capture redirect
       const res = await fetch('/api/upload-cv', {
@@ -60,7 +64,7 @@ export default function UploadCVPage() {
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="max-w-2xl mx-auto px-5 py-10">
+      <main className="max-w-2xl mx-auto px-5 py-10 relative">
         <h1 className="text-3xl font-semibold mb-8">Tạo Câu Hỏi Phỏng Vấn</h1>
         
         <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-sm p-8 space-y-6">
@@ -82,6 +86,20 @@ export default function UploadCVPage() {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0065ca]"
               required
             />
+          </div>
+
+          <div>
+            <label htmlFor="jd_file" className="block font-medium mb-2">
+              (Tuỳ chọn) Upload JD/Mô tả công việc (PDF hoặc TXT)
+            </label>
+            <input
+              type="file"
+              id="jd_file"
+              accept=".pdf,.txt,.md"
+              onChange={(e) => setJdFile(e.target.files?.[0] || null)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0065ca]"
+            />
+            <p className="text-xs text-gray-500 mt-1">Nếu không có JD, bạn có thể bỏ qua bước này.</p>
           </div>
 
           <div>
@@ -130,7 +148,14 @@ export default function UploadCVPage() {
       </main>
 
       <Footer />
-      <ChatWidget />
+      {loading && (
+        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-8 shadow-lg flex flex-col items-center">
+            <div className="w-12 h-12 border-4 border-[#0065ca] border-t-transparent rounded-full animate-spin mb-4"></div>
+            <div className="text-[#0065ca] font-semibold">Hệ thống đang tạo câu hỏi, vui lòng chờ...</div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

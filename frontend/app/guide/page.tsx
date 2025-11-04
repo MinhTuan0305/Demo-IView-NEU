@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import ChatWidget from '@/components/ChatWidget';
 
 export default function GuidePage() {
   return (
@@ -76,7 +75,6 @@ export default function GuidePage() {
       </main>
 
       <Footer />
-      <ChatWidget />
     </div>
   );
 }

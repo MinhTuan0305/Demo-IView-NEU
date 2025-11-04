@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import ChatWidget from '@/components/ChatWidget';
 import Link from 'next/link';
 
 export default function Home() {
@@ -111,7 +110,6 @@ export default function Home() {
       </section>
 
       <Footer />
-      <ChatWidget />
     </div>
   );
 }
