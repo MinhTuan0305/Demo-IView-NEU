@@ -501,7 +501,32 @@ def latest_questions_file():
 
 @app.route('/api/results')
 def api_results():
-    """JSON: list evaluation result files with basic metadata."""
+    """JSON: list evaluation results. Prefer Supabase; fallback to files in outputs/evaluate_results."""
+    client = _get_supabase()
+    if client:
+        try:
+            # Try order by created_at desc if available; fallback to id desc
+            try:
+                res = client.table('evaluate_results').select('*').order('created_at', desc=True).execute()
+            except Exception:
+                res = client.table('evaluate_results').select('*').order('id', desc=True).execute()
+            data = getattr(res, 'data', []) or []
+            items = []
+            for row in data:
+                rid = row.get('id')
+                result = row.get('result') or {}
+                summary = result.get('summary') if isinstance(result, dict) else None
+                # Expose a pseudo filename so frontend routes remain working
+                items.append({
+                    'filename': f"id:{rid}",
+                    'modified': row.get('created_at') or row.get('id') or 0,
+                    'summary': summary,
+                })
+            return jsonify(items)
+        except Exception:
+            pass
+
+    # Fallback: read from files
     results_dir = Path('outputs/evaluate_results')
     items = []
     if results_dir.exists():
@@ -523,6 +548,23 @@ def api_results():
 @app.route('/api/view_result/<filename>')
 def api_view_result(filename):
     try:
+        # Support DB id-based access: filename like "id:123"
+        if filename.startswith('id:'):
+            client = _get_supabase()
+            if client:
+                try:
+                    rid = int(filename.split(':', 1)[1])
+                except Exception:
+                    return jsonify({'error': 'invalid id'}), 400
+                try:
+                    res = client.table('evaluate_results').select('*').eq('id', rid).single().execute()
+                    row = getattr(res, 'data', None)
+                    if not row:
+                        return jsonify({'error': 'not found'}), 404
+                    result_data = row.get('result') or {}
+                    return jsonify(result_data)
+                except Exception:
+                    return jsonify({'error': 'db error'}), 500
         filepath = Path('outputs/evaluate_results') / filename
         if not filepath.exists():
             # try accent-insensitive + resolver
@@ -549,6 +591,23 @@ def api_view_result_qs():
     hint = request.args.get('hint', '')
     if not hint:
         return jsonify({'error': 'missing hint'}), 400
+    # Support DB id-based access: hint like "id:123"
+    if hint.startswith('id:'):
+        client = _get_supabase()
+        if client:
+            try:
+                rid = int(hint.split(':', 1)[1])
+            except Exception:
+                return jsonify({'error': 'invalid id'}), 400
+            try:
+                res = client.table('evaluate_results').select('*').eq('id', rid).single().execute()
+                row = getattr(res, 'data', None)
+                if not row:
+                    return jsonify({'error': 'not found'}), 404
+                result_data = row.get('result') or {}
+                return jsonify(result_data)
+            except Exception:
+                return jsonify({'error': 'db error'}), 500
     # Reuse resolver then open
     results_dir = Path('outputs/evaluate_results')
     files = list(results_dir.glob('*.json'))
@@ -570,6 +629,48 @@ def api_view_result_qs():
 @app.route('/api/history')
 def api_history():
     """Danh sách các phiên phỏng vấn (bao gồm pending nếu chưa có kết quả)"""
+    client = _get_supabase()
+    if client:
+        try:
+            # Fetch interview logs; newest first
+            try:
+                res_logs = client.table('interview_logs').select('*').order('created_at', desc=True).execute()
+            except Exception:
+                res_logs = client.table('interview_logs').select('*').order('id', desc=True).execute()
+            logs = getattr(res_logs, 'data', []) or []
+            items = []
+            for lg in logs:
+                log_id = lg.get('id')
+                # Try to find matching evaluate_result
+                try:
+                    res_eval = client.table('evaluate_results').select('id,result').eq('interview_log_id', log_id).single().execute()
+                    ev = getattr(res_eval, 'data', None)
+                except Exception:
+                    ev = None
+                status = 'done' if ev else 'pending'
+                entry = {
+                    'log_file': f"id:{log_id}",
+                    'result_file': f"id:{ev.get('id')}" if ev else None,
+                    'status': status,
+                    'modified': lg.get('created_at') or lg.get('id') or 0,
+                }
+                if ev and isinstance(ev.get('result'), dict):
+                    entry['summary'] = ev['result'].get('summary')
+                else:
+                    # basic summary from log
+                    resp = lg.get('responses') if isinstance(lg.get('responses'), list) else []
+                    entry['summary'] = {
+                        'candidate_name': lg.get('candidate_name'),
+                        'interview_date': lg.get('interview_date'),
+                        'questions_scored': len(resp),
+                        'type': 'job'
+                    }
+                items.append(entry)
+            return jsonify(items)
+        except Exception:
+            pass
+
+    # Fallback to filesystem
     logs_dir = Path('outputs/interview_logs')
     results_dir = Path('outputs/evaluate_results')
     items = []
@@ -584,7 +685,6 @@ def api_history():
                 'status': status,
                 'modified': log.stat().st_mtime,
             }
-            # Try enrich summary from result if available
             if result_path.exists():
                 try:
                     with open(result_path, 'r', encoding='utf-8') as fp:
@@ -593,7 +693,6 @@ def api_history():
                 except Exception:
                     pass
             else:
-                # basic summary from log
                 try:
                     with open(log, 'r', encoding='utf-8') as fp:
                         data = json.load(fp)
@@ -614,6 +713,23 @@ def api_result_status():
     log_file = request.args.get('log')
     if not log_file:
         return jsonify({'error': 'missing log'}), 400
+    # DB mode: log_file like "id:<log_id>"
+    if log_file.startswith('id:'):
+        client = _get_supabase()
+        if client:
+            try:
+                lid = int(log_file.split(':', 1)[1])
+            except Exception:
+                return jsonify({'error': 'invalid id'}), 400
+            try:
+                res = client.table('evaluate_results').select('id').eq('interview_log_id', lid).single().execute()
+                row = getattr(res, 'data', None)
+                if row and row.get('id') is not None:
+                    return jsonify({'ready': True, 'result_file': f"id:{row.get('id')}"})
+                return jsonify({'ready': False})
+            except Exception:
+                return jsonify({'ready': False})
+    # Fallback filesystem
     result_name = log_file.replace('.json', '_results.json')
     result_path = Path('outputs/evaluate_results') / result_name
     if result_path.exists():
