@@ -11,3 +11,4 @@ pathlib2
 flask
 werkzeug
 pdf2image
+supabase

@@ -1,0 +1,62 @@
+{
+    "candidate_name": "Tuấn",
+    "id": "14",
+    "interview_date": "2025-11-04 17:21:31",
+    "responses": [
+        {
+            "id": 1,
+            "question": "Good morning, Le Minh Tuan. Thank you for coming in today. Could you please start by introducing yourself and telling us a bit about your academic and professional background?",
+            "response": "a"
+        },
+        {
+            "id": 2,
+            "question": "Every individual has unique strengths and areas for development. Could you share what you consider your greatest strengths are, and perhaps one or two areas you're actively working on to improve?",
+            "response": "a"
+        },
+        {
+            "id": 3,
+            "question": "Your CV shows a strong interest and experience in data transformation and data engineering. Given this background, could you explain why you are applying for a Senior Frontend Developer position with our company?",
+            "response": "a"
+        },
+        {
+            "id": 4,
+            "question": "You mentioned being comfortable working in team environments. Can you describe a challenging situation you faced while collaborating on a project or during your data engineering experience, and how you contributed to resolving it?",
+            "response": "a"
+        },
+        {
+            "id": 5,
+            "question": "Your summary highlights a passion for self-learning and adaptability. Given your current academic focus on Data Transformation and past experience in Data Engineering, what specifically motivates you to transition into and pursue a Senior Frontend Developer role, and what steps are you actively taking to acquire the necessary senior-level frontend skills?",
+            "response": "a"
+        },
+        {
+            "id": 6,
+            "question": "As a Senior Frontend Developer, ensuring web applications are accessible and adhere to best practices is paramount. Could you explain what 'semantic HTML' means to you, how you would utilize ARIA attributes effectively, and provide an example of a common accessibility pitfall and how you would prevent it in a complex application?",
+            "response": "a"
+        },
+        {
+            "id": 7,
+            "question": "Imagine you're tasked with leading the development of a new, large-scale Single-Page Application (SPA) that needs to be highly performant, maintainable, and scalable over several years. Describe your high-level architectural approach for such a project. What key design patterns, component strategies, or state management considerations would you prioritize, and why?",
+            "response": "a"
+        },
+        {
+            "id": 8,
+            "question": "A critical part of a Senior Frontend Developer's role is performance optimization and debugging. If a user reports that a critical page in your application loads unacceptably slowly, walk me through your diagnostic process from initial report to implementing a solution. What tools and techniques would you employ to identify and resolve performance bottlenecks?",
+            "response": "a"
+        },
+        {
+            "id": 9,
+            "question": "Your work experience at FSS involved Data Engineering, including creating data pipelines with SQL Oracle and supporting data extraction. Could you elaborate on a specific technical challenge you faced while developing these data pipelines and how you applied your problem-solving skills to overcome it, emphasizing any considerations for data quality or security?",
+            "response": "a"
+        },
+        {
+            "id": 10,
+            "question": "For your 'Travel Destination Research Tracker' project, you used Python for web scraping and organized data in Airtable. Can you describe how you handled potential issues like dynamic content, website structure changes, or anti-scraping measures during data collection? And if you were to build a frontend interface for this project today, how would you design it to enhance user experience for comparing and choosing destinations, especially considering the different data points you collected?",
+            "response": "a"
+        },
+        {
+            "id": 11,
+            "question": "Imagine our company is planning to develop a highly interactive and real-time collaborative whiteboarding tool, similar to Miro or FigJam. As a Senior Frontend Developer, what would be your initial high-level architectural design considerations for the frontend? What are the biggest technical challenges you anticipate in building such a feature, and how would you propose addressing them?",
+            "response": "a"
+        }
+    ]
+}

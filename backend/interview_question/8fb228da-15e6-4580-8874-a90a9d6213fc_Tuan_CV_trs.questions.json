@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "question": "Good morning, Le Minh Tuan. Thank you for coming in today. Could you please start by introducing yourself and telling us a bit about your academic and professional background?",
+    "category": "opening",
+    "purpose": "Allow the candidate to introduce themselves and set the stage for the interview."
+  },
+  {
+    "id": 2,
+    "question": "Every individual has unique strengths and areas for development. Could you share what you consider your greatest strengths are, and perhaps one or two areas you're actively working on to improve?",
+    "category": "opening",
+    "purpose": "Assess self-awareness and alignment with job requirements, as well as an eagerness for growth."
+  },
+  {
+    "id": 3,
+    "question": "Your CV shows a strong interest and experience in data transformation and data engineering. Given this background, could you explain why you are applying for a Senior Frontend Developer position with our company?",
+    "category": "opening",
+    "purpose": "Understand the candidate's motivation for pursuing a Frontend role, especially given their current academic and professional focus, and how they see themselves fitting a senior-level position."
+  },
+  {
+    "id": 4,
+    "question": "You mentioned being comfortable working in team environments. Can you describe a challenging situation you faced while collaborating on a project or during your data engineering experience, and how you contributed to resolving it?",
+    "category": "behavioral",
+    "purpose": "Assess teamwork, problem-solving within a group, and conflict resolution skills."
+  },
+  {
+    "id": 5,
+    "question": "Your summary highlights a passion for self-learning and adaptability. Given your current academic focus on Data Transformation and past experience in Data Engineering, what specifically motivates you to transition into and pursue a Senior Frontend Developer role, and what steps are you actively taking to acquire the necessary senior-level frontend skills?",
+    "category": "behavioral",
+    "purpose": "Understand the candidate's career aspirations, proactive learning approach, and how they are addressing the skill gap for a senior frontend role."
+  },
+  {
+    "id": 6,
+    "question": "As a Senior Frontend Developer, ensuring web applications are accessible and adhere to best practices is paramount. Could you explain what 'semantic HTML' means to you, how you would utilize ARIA attributes effectively, and provide an example of a common accessibility pitfall and how you would prevent it in a complex application?",
+    "category": "technical",
+    "purpose": "Evaluate understanding of core web principles, accessibility, and semantic structuring, critical for senior roles.",
+    "focus": "Web Accessibility, Semantic HTML"
+  },
+  {
+    "id": 7,
+    "question": "Imagine you're tasked with leading the development of a new, large-scale Single-Page Application (SPA) that needs to be highly performant, maintainable, and scalable over several years. Describe your high-level architectural approach for such a project. What key design patterns, component strategies, or state management considerations would you prioritize, and why?",
+    "category": "technical",
+    "purpose": "Assess architectural thinking, understanding of design for complex, scalable systems, and leadership in frontend development, appropriate for a senior level.",
+    "focus": "Frontend Architecture, SPA Design, Scalability"
+  },
+  {
+    "id": 8,
+    "question": "A critical part of a Senior Frontend Developer's role is performance optimization and debugging. If a user reports that a critical page in your application loads unacceptably slowly, walk me through your diagnostic process from initial report to implementing a solution. What tools and techniques would you employ to identify and resolve performance bottlenecks?",
+    "category": "technical",
+    "purpose": "Assess practical problem-solving skills, knowledge of optimization techniques, and debugging methodologies crucial for senior roles.",
+    "focus": "Frontend Performance, Debugging"
+  },
+  {
+    "id": 9,
+    "question": "Your work experience at FSS involved Data Engineering, including creating data pipelines with SQL Oracle and supporting data extraction. Could you elaborate on a specific technical challenge you faced while developing these data pipelines and how you applied your problem-solving skills to overcome it, emphasizing any considerations for data quality or security?",
+    "category": "cv_based",
+    "purpose": "Gain deeper insight into the candidate's practical experience in data engineering, problem-solving, and attention to detail, linking to listed strengths."
+  },
+  {
+    "id": 10,
+    "question": "For your 'Travel Destination Research Tracker' project, you used Python for web scraping and organized data in Airtable. Can you describe how you handled potential issues like dynamic content, website structure changes, or anti-scraping measures during data collection? And if you were to build a frontend interface for this project today, how would you design it to enhance user experience for comparing and choosing destinations, especially considering the different data points you collected?",
+    "category": "cv_based",
+    "purpose": "Understand specific project challenges, evaluate practical problem-solving, and prompt the candidate to think about frontend implications for their data projects."
+  },
+  {
+    "id": 11,
+    "question": "Imagine our company is planning to develop a highly interactive and real-time collaborative whiteboarding tool, similar to Miro or FigJam. As a Senior Frontend Developer, what would be your initial high-level architectural design considerations for the frontend? What are the biggest technical challenges you anticipate in building such a feature, and how would you propose addressing them?",
+    "category": "creative",
+    "purpose": "Test strategic thinking, ability to break down complex problems into manageable parts, and foresight regarding advanced frontend development challenges."
+  }
+]

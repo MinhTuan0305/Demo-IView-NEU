@@ -1,0 +1,116 @@
+{
+  "summary": {
+    "candidate_name": "Minh",
+    "interview_date": "2025-11-04 16:53:09",
+    "average_overall_score": 25.6,
+    "questions_scored": 10,
+    "overall_feedback": {
+      "overall_score": 5,
+      "strengths": "Điểm mạnh duy nhất có thể nhận thấy từ phần giới thiệu bản thân là ứng viên có nền tảng học vấn về Công nghệ thông tin và thể hiện sự hứng thú với phát triển frontend cũng như mong muốn đảm nhận vai trò lãnh đạo. Ứng viên cũng có kinh nghiệm ban đầu trong kỹ thuật dữ liệu và phát triển backend, cho thấy khả năng làm việc full-stack.",
+      "weaknesses": "Ứng viên thể hiện sự thiếu chuyên nghiệp nghiêm trọng khi không trả lời được hầu hết các câu hỏi phỏng vấn. Các câu trả lời từ câu 2 đến câu 11 đều cực kỳ ngắn gọn, không liên quan hoặc lặp lại hoàn toàn phần giới thiệu bản thân. Điều này cho thấy sự thiếu chuẩn bị, khả năng giao tiếp kém, không thể trình bày kiến thức chuyên môn về frontend, kỹ năng lãnh đạo hay kinh nghiệm giải quyết vấn đề. Không có thông tin nào đủ để đánh giá năng lực cho vị trí Lead Frontend Developer.",
+      "hiring_recommendation": "Không phù hợp"
+    }
+  },
+  "details": {
+    "1": {
+      "correctness": 9,
+      "coverage": 10,
+      "reasoning": 9,
+      "creativity": 7,
+      "communication": 10,
+      "attitude": 10,
+      "overall_score": 92,
+      "feedback": "Ứng viên Lê Minh Tuấn đã trình bày một cách xuất sắc về bản thân và hành trình học tập, nghề nghiệp. Câu trả lời rất rõ ràng, mạch lạc và chuyên nghiệp, thể hiện khả năng giao tiếp tuyệt vời. Các ý chính về học vấn, kinh nghiệm chuyên môn (từ kỹ thuật dữ liệu/backend đến full-stack và frontend), động lực chuyển đổi, và mục tiêu nghề nghiệp trong tương lai đều được bao phủ đầy đủ và có lý do logic. Thái độ tự tin và tích cực của ứng viên cũng là một điểm cộng lớn. Việc ứng viên chủ động hỏi liệu có cần điều chỉnh câu trả lời theo công ty/vai trò cụ thể cũng thể hiện sự chuyên nghiệp và linh hoạt. Mặc dù câu trả lời chưa thực sự nổi bật về sự sáng tạo trong cách diễn đạt, nhưng nó hoàn toàn đáp ứng được kỳ vọng cho một câu hỏi mở đầu phỏng vấn và tạo ấn tượng rất tốt."
+    },
+    "2": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 0,
+      "attitude": 2,
+      "overall_score": 1,
+      "feedback": "Ứng viên chỉ trả lời bằng một lời chào (hello) mà không cung cấp bất kỳ thông tin nào liên quan đến câu hỏi về điểm mạnh và các lĩnh vực cần cải thiện. Điều này cho thấy ứng viên hoàn toàn chưa trả lời yêu cầu của câu hỏi."
+    },
+    "4": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 7,
+      "attitude": 10,
+      "overall_score": 15,
+      "feedback": "Ứng viên đã không trả lời trực tiếp câu hỏi được đặt ra về việc giải quyết một bất đồng kỹ thuật trong nhóm. Thay vào đó, ứng viên đã giới thiệu về bản thân, kinh nghiệm và định hướng nghề nghiệp, giống như đang trả lời câu hỏi 'Hãy giới thiệu về bản thân bạn'. Do đó, các tiêu chí về tính chính xác, mức độ bao quát, lý luận và tính sáng tạo liên quan đến câu hỏi phỏng vấn đã không được thể hiện. Tuy nhiên, ứng viên có thái độ rất chuyên nghiệp, cách trình bày rõ ràng, mạch lạc và tự tin, cho thấy kỹ năng giao tiếp tốt khi không bị lạc đề."
+    },
+    "5": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 1,
+      "communication": 3,
+      "attitude": 7,
+      "overall_score": 18,
+      "feedback": "Ứng viên đã không trả lời trực tiếp câu hỏi phỏng vấn. Thay vì chia sẻ một ví dụ cụ thể về thách thức kỹ thuật phức tạp và cách sử dụng khả năng tự học để vượt qua, ứng viên lại trình bày một bản giới thiệu chung về bản thân, kinh nghiệm và định hướng nghề nghiệp. Điều này cho thấy ứng viên chưa lắng nghe kỹ câu hỏi hoặc đã chuẩn bị một câu trả lời chung không phù hợp. Mặc dù cách trình bày rõ ràng, mạch lạc và thái độ tích cực, nhưng nội dung hoàn toàn lạc đề so với yêu cầu của câu hỏi."
+    },
+    "6": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 1,
+      "attitude": 10,
+      "overall_score": 18,
+      "feedback": "Ứng viên đã đưa ra một phần giới thiệu bản thân rất tốt, rõ ràng và thể hiện thái độ tích cực. Tuy nhiên, câu trả lời này hoàn toàn không đi vào trọng tâm câu hỏi phỏng vấn về vai trò của Semantic HTML, tầm quan trọng của nó đối với khả năng tiếp cận (accessibility) và khả năng bảo trì (maintainability). Ứng viên đã nhầm lẫn giữa việc giới thiệu bản thân và việc trả lời câu hỏi kỹ thuật."
+    },
+    "7": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 8,
+      "attitude": 10,
+      "overall_score": 35,
+      "feedback": "Ứng viên đã có một phần giới thiệu bản thân rất chuyên nghiệp, mạch lạc và thể hiện thái độ tích cực. Tuy nhiên, ứng viên đã không trả lời trực tiếp vào câu hỏi về cách tiếp cận thiết kế kiến trúc cho một ứng dụng frontend mới. Thay vào đó, phản hồi tập trung vào kinh nghiệm cá nhân và định hướng nghề nghiệp. Trong một buổi phỏng vấn kỹ thuật, điều quan trọng là phải giải quyết trực tiếp câu hỏi được đặt ra, đặc biệt là các câu hỏi chuyên môn."
+    },
+    "8": {
+      "correctness": 1,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 8,
+      "attitude": 10,
+      "overall_score": 15,
+      "feedback": "Ứng viên đã trình bày một phần giới thiệu bản thân rất rõ ràng, chuyên nghiệp và nhiệt huyết. Thái độ tích cực và khả năng giao tiếp của ứng viên là điểm mạnh. Tuy nhiên, câu trả lời này hoàn toàn không đi vào trọng tâm của câu hỏi phỏng vấn kỹ thuật. Câu hỏi yêu cầu ứng viên liên hệ các khái niệm về luồng dữ liệu, biến đổi và bảo mật từ kỹ thuật dữ liệu sang cách một ứng dụng frontend tương tác với API backend và quản lý dữ liệu người dùng. Ứng viên đã không đề cập hay giải thích bất kỳ khía cạnh kỹ thuật nào liên quan đến các khái niệm này trong ngữ cảnh được hỏi, mà thay vào đó là tóm tắt kinh nghiệm và định hướng sự nghiệp."
+    },
+    "9": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 8,
+      "attitude": 9,
+      "overall_score": 12,
+      "feedback": "Ứng viên đã có một phần giới thiệu bản thân rất chuyên nghiệp, tự tin và thể hiện thái độ tích cực. Kỹ năng giao tiếp và trình bày của ứng viên rõ ràng, mạch lạc. Tuy nhiên, câu trả lời hoàn toàn không đề cập đến dự án 'Travel Destination Research Tracker' như đã được hỏi. Ứng viên dường như đã nhầm lẫn câu hỏi về dự án cụ thể với một câu hỏi giới thiệu bản thân tổng quát, do đó không cung cấp bất kỳ thông tin nào về quy trình thiết kế, các thách thức khi web scraping, tổ chức dữ liệu hay bài học kinh nghiệm từ dự án được yêu cầu."
+    },
+    "10": {
+      "correctness": 1,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 1,
+      "communication": 4,
+      "attitude": 9,
+      "overall_score": 25,
+      "feedback": "Ứng viên đã trả lời bằng một phần giới thiệu chung về bản thân và kinh nghiệm, tuy nhiên không trực tiếp giải quyết câu hỏi phỏng vấn. Câu hỏi yêu cầu ứng viên chia sẻ về bài học quan trọng nhất từ kinh nghiệm tại FSS và giá trị của nó trong vai trò Lead developer, đặc biệt liên quan đến động lực nhóm hoặc thực thi dự án. Ứng viên đã không đề cập đến FSS, bài học cụ thể, hay liên kết với vai trò lãnh đạo và các khía cạnh về nhóm/dự án. Mặc dù cách trình bày rõ ràng và thái độ tích cực, nhưng việc không trả lời đúng trọng tâm câu hỏi là một điểm trừ lớn."
+    },
+    "11": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 5,
+      "attitude": 10,
+      "overall_score": 25,
+      "feedback": "Ứng viên đã đưa ra một phần giới thiệu bản thân rất tốt, thể hiện thái độ tích cực, kinh nghiệm liên quan đến cả backend và frontend, cùng với kỹ năng trình bày rõ ràng, mạch lạc. Tuy nhiên, câu trả lời này hoàn toàn không giải quyết được câu hỏi phỏng vấn kỹ thuật được đặt ra. Câu hỏi yêu cầu ứng viên trình bày cách ưu tiên, điều tra và giảm thiểu một lỗi frontend nghiêm trọng dưới áp lực, nhưng ứng viên đã trả lời nhầm sang câu hỏi 'Hãy giới thiệu về bản thân'. Do đó, các tiêu chí về độ chính xác, mức độ bao quát, lập luận và sự sáng tạo trong việc giải quyết vấn đề kỹ thuật đều không được thể hiện."
+    }
+  }
+}

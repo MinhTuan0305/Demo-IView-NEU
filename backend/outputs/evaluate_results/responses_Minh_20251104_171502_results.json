@@ -1,0 +1,126 @@
+{
+  "summary": {
+    "candidate_name": "Minh",
+    "interview_date": "2025-11-04 17:15:02",
+    "average_overall_score": 1.09,
+    "questions_scored": 11,
+    "overall_feedback": {
+      "overall_score": 0,
+      "strengths": "Ứng viên không cung cấp bất kỳ thông tin nào trong buổi phỏng vấn, do đó không thể xác định được điểm mạnh hay năng lực liên quan đến vị trí ứng tuyển.",
+      "weaknesses": "Điểm yếu lớn nhất và hiển nhiên là việc ứng viên không phản hồi bất kỳ câu hỏi nào trong suốt buổi phỏng vấn. Điều này thể hiện sự thiếu hụt nghiêm trọng về kỹ năng giao tiếp, sự chuẩn bị, hoặc khả năng thể hiện bản thân, khiến việc đánh giá chuyên môn và tiềm năng trở nên bất khả thi. Mọi câu trả lời chỉ là 'á' hoặc 'a', không cung cấp bất kỳ nội dung nào để xem xét.",
+      "hiring_recommendation": "Không phù hợp"
+    }
+  },
+  "details": {
+    "1": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 0,
+      "attitude": 0,
+      "overall_score": 0,
+      "feedback": "Ứng viên chỉ đưa ra một ký tự 'á' và không cung cấp bất kỳ thông tin nào liên quan đến câu hỏi phỏng vấn. Không có nội dung nào được cung cấp để đánh giá các tiêu chí mong đợi như giới thiệu bản thân, nền tảng, hoặc kinh nghiệm sự nghiệp. Do đó, tất cả các tiêu chí đều được chấm điểm 0."
+    },
+    "2": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 0,
+      "attitude": 1,
+      "overall_score": 1,
+      "feedback": "Ứng viên chỉ cung cấp một ký tự ('a') và không trả lời câu hỏi. Điều này khiến giám khảo không thể đánh giá bất kỳ tiêu chí nào liên quan đến nội dung hoặc kỹ năng."
+    },
+    "3": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 0,
+      "attitude": 1,
+      "overall_score": 0,
+      "feedback": "Câu trả lời 'a' của ứng viên không cung cấp bất kỳ thông tin nào liên quan đến câu hỏi. Do đó, không thể đánh giá được sự thu hút của ứng viên đối với vị trí Lead Frontend Developer hay cách các kỹ năng hiện tại của họ phù hợp với yêu cầu của vai trò này."
+    },
+    "4": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 0,
+      "attitude": 0,
+      "overall_score": 0,
+      "feedback": "Ứng viên chỉ trả lời 'a', không cung cấp bất kỳ thông tin nào liên quan đến câu hỏi. Câu trả lời không thể hiện được kinh nghiệm, vai trò, cách xử lý hay kết quả của việc điều hướng bất đồng kỹ thuật trong nhóm. Tất cả các tiêu chí đánh giá đều không được đáp ứng, cho thấy ứng viên hoàn toàn không trả lời câu hỏi."
+    },
+    "5": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 0,
+      "attitude": 0,
+      "overall_score": 0,
+      "feedback": "Ứng viên đã không cung cấp bất kỳ nội dung nào để trả lời câu hỏi. Câu trả lời chỉ là 'a', không thể hiện được kinh nghiệm, quá trình học hỏi hay kết quả như yêu cầu."
+    },
+    "6": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 0,
+      "attitude": 0,
+      "overall_score": 0,
+      "feedback": "Ứng viên chỉ đưa ra câu trả lời là một ký tự 'a' và không giải quyết bất kỳ phần nào của câu hỏi. Không có nội dung để đánh giá về độ chính xác, mức độ bao phủ, lập luận hay sự sáng tạo. Cách trình bày không rõ ràng và không truyền tải thông tin gì liên quan đến câu hỏi. Thái độ không thể đánh giá là tích cực khi không có câu trả lời."
+    },
+    "7": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 0,
+      "attitude": 1,
+      "overall_score": 5,
+      "feedback": "Ứng viên đã trả lời 'a', đây không phải là một câu trả lời đầy đủ hoặc có nghĩa cho câu hỏi phỏng vấn. Do đó, không có thông tin nào có thể được đánh giá theo các tiêu chí đã đặt ra."
+    },
+    "8": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 0,
+      "attitude": 0,
+      "overall_score": 0,
+      "feedback": "Ứng viên chỉ cung cấp một ký tự 'a' và không đưa ra bất kỳ thông tin hay nội dung nào liên quan đến câu hỏi phỏng vấn. Do đó, không thể đánh giá các tiêu chí về kiến thức, quy trình hay kỹ năng giao tiếp."
+    },
+    "9": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 0,
+      "attitude": 1,
+      "overall_score": 0,
+      "feedback": "Ứng viên đã không cung cấp bất kỳ nội dung nào để đánh giá. Câu trả lời 'a' không liên quan đến câu hỏi và không thể hiện sự hiểu biết hay kinh nghiệm."
+    },
+    "10": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 0,
+      "attitude": 1,
+      "overall_score": 5,
+      "feedback": "Ứng viên chỉ trả lời 'a', không cung cấp bất kỳ nội dung nào để đánh giá các tiêu chí. Do đó, không có ý chính nào được đề cập, không có lập luận hay ví dụ nào được đưa ra. Câu trả lời không có giá trị để đánh giá kỹ năng."
+    },
+    "11": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 0,
+      "attitude": 1,
+      "overall_score": 1,
+      "feedback": "Ứng viên chỉ đưa ra câu trả lời là 'a', không cung cấp bất kỳ thông tin hay nội dung nào liên quan đến câu hỏi. Do đó, không thể đánh giá được sự hiểu biết, kỹ năng giải quyết vấn đề, hay khả năng giao tiếp của ứng viên trong tình huống này. Câu trả lời không thể hiện được bất kỳ ý chính nào được mong đợi."
+    }
+  }
+}

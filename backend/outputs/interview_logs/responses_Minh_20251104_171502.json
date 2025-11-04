@@ -1,0 +1,62 @@
+{
+    "candidate_name": "Minh",
+    "id": "20",
+    "interview_date": "2025-11-04 17:15:02",
+    "responses": [
+        {
+            "id": 1,
+            "question": "Good morning/afternoon, Le Minh Tuan. Thank you for coming in today. To start, could you please introduce yourself and tell us a bit about your background and what brought you to this point in your career?",
+            "response": "á"
+        },
+        {
+            "id": 2,
+            "question": "Every professional has unique strengths and areas for development. Could you share what you consider your greatest strengths, particularly as they relate to a technical role, and also discuss an area where you're actively working to improve?",
+            "response": "a"
+        },
+        {
+            "id": 3,
+            "question": "Given your academic background in Information Technology & Data Transformation and your experience with data-centric roles, what specifically attracts you to a Lead Frontend Developer position here, and how do you see your current skills aligning with the requirements of this senior role?",
+            "response": "a"
+        },
+        {
+            "id": 4,
+            "question": "As a Lead, you'll often encounter situations where team members have differing technical opinions or approaches. Can you describe a time when you had to navigate such a disagreement within a team? What was your role, how did you handle it, and what was the outcome?",
+            "response": "a"
+        },
+        {
+            "id": 5,
+            "question": "We value continuous learning and problem-solving, which you've highlighted as strengths. Could you share an experience where you faced a significant technical challenge in a project or work environment that required you to learn a new concept or technology rapidly? How did you approach the learning process, and what was the result?",
+            "response": "a"
+        },
+        {
+            "id": 6,
+            "question": "Given your mention of HTML and your eagerness to learn, let's discuss fundamental web development from a Lead perspective. If you were leading a project, how would you ensure the Frontend team consistently produces semantic and accessible HTML, and why are these aspects crucial for modern web applications?",
+            "response": "a"
+        },
+        {
+            "id": 7,
+            "question": "Your CV indicates proficiency with data handling and tools like SQL and Power BI. As a Lead Frontend Developer, you would often need to interact with backend APIs and display complex data structures efficiently. How would you design the data flow from an API to the user interface, considering performance, state management, and user experience, even if you haven't directly implemented it in a Frontend framework yet?",
+            "response": "a"
+        },
+        {
+            "id": 8,
+            "question": "While we understand your current experience leans towards data, as a Lead Frontend Developer, you would be responsible for guiding the team on adopting new frameworks or tools. If your team needed to choose between different JavaScript frameworks (e.g., React, Angular, Vue) for a new large-scale project, what process would you lead them through to make an informed decision, considering factors beyond just 'what's popular'?",
+            "response": "a"
+        },
+        {
+            "id": 9,
+            "question": "You mentioned your work experience at FSS - Financial Software Solutions, where you gained exposure to ETL workflows, data security, and creating data pipelines. While this is data-focused, how do you believe the structured environment, understanding of data security considerations, or the process of building robust pipelines could be beneficial or transferable to a Lead Frontend Developer role, especially when thinking about building secure and scalable user interfaces?",
+            "response": "a"
+        },
+        {
+            "id": 10,
+            "question": "In your 'Travel Destination Research Tracker' project, you web scraped data and organized it in Airtable. If you were to develop a user-facing Frontend application for this project, how would you approach designing the user interface to allow users to 'easily compare and choose travel destinations'? What kind of interactive features would you prioritize, and how would you handle filtering and displaying the organized data?",
+            "response": "a"
+        },
+        {
+            "id": 11,
+            "question": "Imagine you are leading a Frontend team tasked with building a new, highly interactive dashboard for a critical business application. Halfway through the project, the primary stakeholder demands a significant change to the core navigation and layout, which would require extensive rework. As a Lead, how would you manage this situation, balancing stakeholder expectations, team morale, project timelines, and technical integrity?",
+            "response": "a"
+        }
+    ]
+}

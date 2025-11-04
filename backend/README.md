@@ -35,15 +35,20 @@ cd interview-ai-main
 pip install -r requirements.txt
 ```
 
-### 2. Configure API Key
+### 2. Configure Environment (Gemini + Supabase)
 
-Create a `.env` file in the project root:
+Create a `.env` file in the `backend/` directory with the following content:
 
 ```bash
-# Copy the template
-cp env_template.txt .env
+# ==== Supabase ====
+# Get from Supabase → Project Settings → API
+SUPABASE_URL=https://YOUR_PROJECT_REF.supabase.co
+# Prefer SERVICE_ROLE_KEY for server-side only (never expose to client)
+SUPABASE_SERVICE_ROLE_KEY=YOUR_SERVICE_ROLE_KEY
+# Optional (for testing if not using service role)
+# SUPABASE_ANON_KEY=YOUR_ANON_KEY
 
-# Edit .env file and add your API key
+# ==== Gemini API ====
 GEMINI_API_KEY=your_actual_gemini_api_key_here
 ```
 

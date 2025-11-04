@@ -8,6 +8,17 @@ from werkzeug.utils import secure_filename
 import sys
 from unicodedata import normalize as uni_normalize
 import re
+import threading
+import os
+from typing import Optional, Dict, Any
+
+# Supabase client
+from dotenv import load_dotenv
+try:
+    from supabase import create_client, Client  # type: ignore
+except Exception:
+    create_client = None  # type: ignore
+    Client = None  # type: ignore
 
 # Import các module từ thư mục src
 sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
@@ -65,6 +76,69 @@ def _slug_name(name: str) -> str:
     n = n.lower()
     n = re.sub(r'[^a-z0-9._-]+', '', n)
     return n
+
+# -------------------- Supabase helpers --------------------
+_supabase: Optional["Client"] = None
+
+def _get_supabase() -> Optional["Client"]:
+    global _supabase
+    if _supabase is not None:
+        return _supabase
+    try:
+        load_dotenv()
+        url = os.getenv('SUPABASE_URL')
+        key = os.getenv('SUPABASE_SERVICE_ROLE_KEY') or os.getenv('SUPABASE_ANON_KEY')
+        if not url or not key or create_client is None:
+            return None
+        _supabase = create_client(url, key)
+        return _supabase
+    except Exception:
+        return None
+
+def _db_upsert_candidate(candidate_id: str, candidate_name: str) -> None:
+    client = _get_supabase()
+    if not client:
+        return
+    try:
+        client.table('candidates').upsert({
+            'candidate_id': candidate_id,
+            'candidate_name': candidate_name,
+        }, on_conflict='candidate_id').execute()
+    except Exception:
+        pass
+
+def _db_insert_interview_log(payload: Dict[str, Any]) -> Optional[int]:
+    client = _get_supabase()
+    if not client:
+        return None
+    try:
+        data = {
+            'candidate_id': payload.get('id'),
+            'candidate_name': payload.get('candidate_name'),
+            'interview_date': payload.get('interview_date'),
+            'responses': payload.get('responses'),  # JSONB
+        }
+        res = client.table('interview_logs').insert(data).execute()
+        # Expect returning id
+        if getattr(res, 'data', None) and isinstance(res.data, list) and res.data:
+            row = res.data[0]
+            return int(row.get('id')) if isinstance(row.get('id'), (int,)) else None
+    except Exception:
+        return None
+    return None
+
+def _db_insert_evaluate_result(interview_log_id: Optional[int], result: Dict[str, Any]) -> None:
+    client = _get_supabase()
+    if not client:
+        return
+    try:
+        data = {
+            'interview_log_id': interview_log_id,
+            'result': result,  # JSONB
+        }
+        client.table('evaluate_results').insert(data).execute()
+    except Exception:
+        pass
 
 @app.route('/')
 def index():
@@ -182,7 +256,7 @@ def submit_interview():
         "responses": responses
     }
     
-    # Lưu file kết quả
+    # Lưu file kết quả (giữ cơ chế file để tương thích, đồng thời ghi DB)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     safe_name = _safe_filename(interview_results['candidate_name'])
     filename = f"responses_{safe_name}_{timestamp}.json"
@@ -204,16 +278,31 @@ def submit_interview():
     print(f"[SUBMIT] Đã nhận bài phỏng vấn: {filename} | Số câu trả lời: {num_responses}")
     print(f"[SUBMIT] Đẩy tác vụ chấm điểm nền... input={filepath}")
 
-    def _run_eval(path, result_name):
+    # Upsert ứng viên và lưu interview vào Supabase
+    try:
+        _db_upsert_candidate(candidate_id=candidate_id, candidate_name=candidate_name)
+        db_log_id = _db_insert_interview_log(interview_results)
+    except Exception:
+        db_log_id = None
+
+    def _run_eval(path, result_name, interview_log_id):
         try:
             evaluate_interview(path)
             print(f"[EVAL] Hoàn tất chấm điểm -> outputs/evaluate_results/{result_name}")
+            # Đọc file kết quả để lưu DB (nếu có)
+            try:
+                result_path = os.path.join('outputs/evaluate_results', result_name)
+                with open(result_path, 'r', encoding='utf-8') as rf:
+                    result_json = json.load(rf)
+                _db_insert_evaluate_result(interview_log_id, result_json)
+            except Exception:
+                traceback.print_exc()
         except Exception:
             print("[EVAL][ERROR] Lỗi khi đánh giá (thread):")
             traceback.print_exc()
 
     # chạy chấm điểm ở thread nền để trả response ngay
-    t = threading.Thread(target=_run_eval, args=(filepath, filename.replace('.json', '_results.json')))
+    t = threading.Thread(target=_run_eval, args=(filepath, filename.replace('.json', '_results.json'), db_log_id))
     t.daemon = True
     t.start()
 
