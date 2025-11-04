@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "question": "Good morning, Minh Tuan. Thank you for coming in today. To start, please introduce yourself and tell us a bit about your academic and professional journey so far.",
+    "category": "opening",
+    "purpose": "Allow the candidate to present themselves, their background, and initial communication style."
+  },
+  {
+    "id": 2,
+    "question": "Everyone has unique strengths and areas for development. Could you please share what you consider your greatest strengths, particularly as they relate to a leadership role in product management, and one or two areas you are actively working on improving?",
+    "category": "opening",
+    "purpose": "Assess self-awareness, identify key transferable skills, and understand the candidate's approach to personal growth relevant to a leadership position."
+  },
+  {
+    "id": 3,
+    "question": "Your background is primarily in Information Technology and Data Engineering, and you are currently a third-year student. We are looking to fill a Lead Product Manager position. Could you elaborate on why you are pursuing a Product Manager role, and specifically why a 'Lead' level position at this stage of your career?",
+    "category": "opening",
+    "purpose": "Understand the candidate's motivation for the PM role, gauge their understanding of the 'Lead' level responsibilities, and assess their career aspirations and readiness."
+  },
+  {
+    "id": 4,
+    "question": "As a Lead Product Manager, you'll often need to influence and align diverse teams—engineering, design, sales, marketing—who may have conflicting priorities. Can you describe a time when you had to bring different stakeholders or team members together to achieve a shared goal, especially when there were disagreements? What was your approach, and what was the outcome?",
+    "category": "behavioral",
+    "purpose": "Evaluate leadership, influence, conflict resolution, and communication skills crucial for a Lead PM role."
+  },
+  {
+    "id": 5,
+    "question": "Product development often involves navigating uncertainty and making decisions with incomplete information. Tell me about a time when you had to make a significant decision on a project or initiative without having all the data or insights you would have liked. How did you approach that situation, what factors did you consider, and what was the result?",
+    "category": "behavioral",
+    "purpose": "Assess strategic decision-making under ambiguity, risk assessment, and adaptability—key traits for a Lead PM."
+  },
+  {
+    "id": 6,
+    "question": "Given your strong background in data engineering and IT, imagine you are the Lead Product Manager for a new travel product feature that heavily relies on user data and third-party integrations. How would you approach defining the data requirements, ensuring data governance, and addressing data privacy compliance from a product strategy perspective?",
+    "category": "technical",
+    "purpose": "Evaluate the candidate's ability to apply their data expertise to strategic product planning, considering governance and privacy at a leadership level.",
+    "focus": "Data Strategy, Data Governance, Data Privacy"
+  },
+  {
+    "id": 7,
+    "question": "You have experience with SQL and data visualization tools like Power BI. As a Lead Product Manager, how would you go about defining and tracking key performance indicators (KPIs) for a new travel product launch? Walk us through how you would design analytical dashboards and use the data to not only report performance but also inform strategic decisions and future product iterations.",
+    "category": "technical",
+    "purpose": "Assess the candidate's understanding of product analytics, KPI definition, and their ability to leverage data for strategic product management and continuous improvement.",
+    "focus": "Product Analytics, KPI Definition, Data-driven Strategy"
+  },
+  {
+    "id": 8,
+    "question": "Thinking about the dynamic nature of the travel industry, if you were leading the development of a new API for real-time personalized travel recommendations, what key architectural and technical design considerations would you prioritize for scalability, reliability, and seamless integration with various internal and external systems? How would you balance these technical requirements with the overarching product usability and business goals?",
+    "category": "technical",
+    "purpose": "Gauge the candidate's understanding of technical architecture, system design principles (scalability, reliability, integration), and their ability to make trade-offs between technical constraints and product vision at a leadership level.",
+    "focus": "API Design, Scalability, Technical Trade-offs"
+  },
+  {
+    "id": 9,
+    "question": "During your Data Engineering internship at FSS, you mentioned developing knowledge of ETL workflows and data security considerations. Could you elaborate on a specific instance or a type of challenge you encountered related to data security or data quality within an ETL pipeline, and how you ensured the integrity and security of the data?",
+    "category": "cv_based",
+    "purpose": "Deep dive into specific experience from the CV, focusing on practical application of data engineering knowledge and problem-solving in a real-world context."
+  },
+  {
+    "id": 10,
+    "question": "Your 'Travel Destination Research Tracker' project involved web scraping and organizing data in Airtable to help users compare destinations. If you were tasked with evolving this into a full-fledged commercial product, how would you approach gathering further user feedback, identifying the next set of features, and validating those feature ideas before committing to development?",
+    "category": "cv_based",
+    "purpose": "Connect the candidate's personal project to core product management principles like user research, feature prioritization, and validation, demonstrating their product thinking beyond technical execution."
+  },
+  {
+    "id": 11,
+    "question": "Imagine you are the Lead Product Manager for a well-established travel booking platform. A new competitor just launched a highly innovative AI-powered travel planning assistant that is rapidly gaining market share, threatening your existing user base. How would you strategize our immediate response and develop a long-term product vision to not only counter this threat but also regain market leadership?",
+    "category": "creative",
+    "purpose": "Test strategic thinking, competitive analysis, crisis management, and the ability to define a long-term product vision under pressure—critical skills for a Lead PM."
+  }
+]

@@ -1,0 +1,62 @@
+{
+    "candidate_name": "db",
+    "id": "1",
+    "interview_date": "2025-11-04 21:27:06",
+    "responses": [
+        {
+            "id": 1,
+            "question": "Good morning, Le Minh Tuan. Thank you for coming in today. Could you please start by introducing yourself and telling us a bit about your academic background and what brings you here?",
+            "response": "i dont know"
+        },
+        {
+            "id": 2,
+            "question": "Every individual has unique qualities. Can you share with us what you consider your greatest strengths, and conversely, what areas you believe you need to develop further?",
+            "response": "i dont know"
+        },
+        {
+            "id": 3,
+            "question": "Your application mentions your passion for games and interactive software. Could you elaborate on why you are particularly interested in the 'Game Dev' position here at Rocket Studio, especially given your expressed interest in a 'Tester Intern' role in your cover letter?",
+            "response": "i dont know"
+        },
+        {
+            "id": 4,
+            "question": "You've mentioned being comfortable working in team environments. Can you describe a time when you collaborated on a project, perhaps an academic one or during your work experience at FSS, where you faced a significant challenge as a team? How did you contribute to overcoming it?",
+            "response": "i dont know"
+        },
+        {
+            "id": 5,
+            "question": "As an intern, there will be many opportunities to learn and adapt. Can you tell me about a time when you had to learn a completely new technology or tool quickly for a project or task? What was your approach, and what was the outcome?",
+            "response": "i dont know"
+        },
+        {
+            "id": 6,
+            "question": "You have 'Basic C++/C#' listed in your skills. For an intern role in game development, what do you understand as the fundamental differences between a scripting language like Python and a compiled language like C++ or C# in the context of game development, and why are languages like C++ or C# often preferred for core game engines?",
+            "response": "i dont know"
+        },
+        {
+            "id": 7,
+            "question": "Given your experience with manual software testing and creating test documentation, if you were asked to test a new game feature, let's say a character's jump ability, what key aspects would you focus on? How would you design a simple test case for it?",
+            "response": "i dont know"
+        },
+        {
+            "id": 8,
+            "question": "You've worked with SQL and developed knowledge of ETL workflows. While this is not directly game development, how do you think principles like data integrity, efficiency in data handling, or even basic database design could indirectly relate to aspects of game development or managing game-related data?",
+            "response": "i dont know"
+        },
+        {
+            "id": 9,
+            "question": "Let's discuss your 'Hotel Booking System Testing' personal project. Could you walk me through the most challenging part of designing and executing test cases for this system, and how you ensured comprehensive coverage for a specific module like 'Booking Process'?",
+            "response": "i dont know"
+        },
+        {
+            "id": 10,
+            "question": "Your experience at FSS involved 'creating data pipelines to collect, clean, and transform raw data'. Can you elaborate on a specific challenge you faced when cleaning or transforming data from various sources using SQL Oracle, and how you resolved it?",
+            "response": "i dont know"
+        },
+        {
+            "id": 11,
+            "question": "Imagine our studio is developing a new mobile game, and you're part of a small team responsible for an upcoming patch. A critical bug is reported that crashes the game for 10% of users right before a major in-game event. However, reproducing the bug is inconsistent, and the deadline for the patch is in 2 days. As an intern, how would you approach this situation? What steps would you take, and who would you communicate with?",
+            "response": "i dont know"
+        }
+    ]
+}

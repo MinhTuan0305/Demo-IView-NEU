@@ -1,6 +1,6 @@
-# AI-Powered Interview Question Generator & Evaluation System
+# Backend (Flask) – AI Interview & Supabase
 
-An intelligent system that generates personalized interview questions from CV files using Google Gemini AI and provides automated evaluation of candidate responses.
+Flask backend cung cấp API tạo câu hỏi phỏng vấn từ CV/JD, nộp bài phỏng vấn và chấm điểm AI. Hỗ trợ lưu trữ bằng Supabase (DB-first) và fallback file cục bộ khi DB chưa sẵn sàng.
 
 ## 🚀 Features
 
@@ -21,9 +21,10 @@ The system consists of three main components:
 
 ## 🛠️ Prerequisites
 
-- **Python 3.9+**
-- **Google Gemini API Key** - Get yours from [Google AI Studio](https://makersuite.google.com/app/apikey)
-- **Tesseract OCR** - For text extraction from images and PDFs
+- Python 3.10+
+- Google Gemini API Key – lấy tại: https://aistudio.google.com/app/apikey
+- (Khuyến nghị) Supabase Project – dùng cho lưu trữ DB
+- Tesseract OCR (nếu muốn OCR ảnh/PDF)
 
 ## 🔧 Setup
 
@@ -35,19 +36,17 @@ cd interview-ai-main
 pip install -r requirements.txt
 ```
 
-### 2. Configure API Key
+### 2. Cấu hình `.env` (đặt trong thư mục `backend`)
 
-Create a `.env` file in the project root:
-
-```bash
-# Copy the template
-cp env_template.txt .env
-
-# Edit .env file and add your API key
-GEMINI_API_KEY=your_actual_gemini_api_key_here
+```env
+SUPABASE_URL=https://<PROJECT-REF>.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=<SERVICE_ROLE_KEY>
+# (tùy chọn) SUPABASE_ANON_KEY=<ANON_KEY>
+GEMINI_API_KEY=<YOUR_GEMINI_KEY>
 ```
 
-**⚠️ Security Note:** Never commit the `.env` file to version control. It's already included in `.gitignore`.
+- Kiểm tra biến env: `GET /api/health/env` → các key trả `true`.
+- Kiểm tra DB: `GET /api/health/db` → `{ "ok": true }`.
 
 ### Installing Tesseract OCR
 
@@ -68,17 +67,12 @@ brew install tesseract
 sudo apt-get install tesseract-ocr
 ```
 
-## 📦 Installation
+## 📦 Cài đặt & chạy nhanh
 
-1. **Clone the repository:**
 ```bash
-git clone <repository-url>
-cd Generate_questions_Altered
-```
-
-2. **Install dependencies:**
-```bash
+cd backend
 pip install -r requirements.txt
+python app.py
 ```
 
 3. **Optional: Install PDF processing dependencies:**
@@ -93,63 +87,19 @@ pip install pdf2image
 2. **Place CV files:**
 Put your CV files (PDF or images) in the `CV/` directory.
 
-## 🎯 Usage
+## 🎯 API chính
 
-### Step 1: Generate Interview Questions
+1) Tạo câu hỏi từ CV/JD (frontend gọi):
+- `POST /api/upload_cv` (multipart) → fields: `cv_file`, optional `jd_file`, `job_title`, `level`.
+- Lấy câu hỏi: `GET /api/questions/<filename>`; resolver: `GET /api/resolve_questions_file?hint=...`, `GET /api/latest_questions_file`.
 
-Generate personalized interview questions from CV files:
+2) Nộp bài phỏng vấn (frontend gửi JSON):
+- `POST /submit_interview` → trả `{ queued: true, log_file: "id:<log_id>" | "responses_*.json" }`.
+- Luồng chờ: `GET /api/result_status?log=id:<log_id>` (DB) hoặc `log=responses_*.json` (file).
 
-```bash
-# Basic usage
-python generate_questions.py --job "Data Scientist" --level "Senior"
-
-# With custom directories
-python generate_questions.py --job "Software Engineer" --level "Junior" --cv_dir CV --out interview_question
-
-# Interactive mode (if parameters not provided)
-python generate_questions.py
-```
-
-**Parameters:**
-- `--job`: Target job position (e.g., "Data Scientist", "Software Engineer")
-- `--level`: Candidate level ("Intern", "Fresher", "Junior", "Senior", "Lead")
-- `--cv_dir`: Directory containing CV files (default: "CV")
-- `--out`: Output directory for generated questions (default: "interview_question")
-
-**Output:** JSON file with 9 structured interview questions in `interview_question/` directory.
-
-### Step 2: Conduct Interactive Interview
-
-Run the interview session with generated questions:
-
-```bash
-python ask.py
-```
-
-The script will:
-- Automatically find the latest generated questions file
-- Prompt for candidate name
-- Present each question sequentially
-- Record responses with timestamps
-- Save results to `outputs/interview_logs/`
-
-### Step 3: Evaluate Responses
-
-Score candidate responses using AI evaluation:
-
-```bash
-# Chấm điểm tất cả file phỏng vấn trong interview_logs
-cd src/interview
-python evaluate.py
-
-```
-
-**Features:**
-- ✨ **Tự động xử lý tất cả file**: Script sẽ tự động tìm và chấm điểm tất cả file JSON trong `outputs/interview_logs/`
-- 🔍 **Thông báo tiến trình**: Hiển thị danh sách file được tìm thấy và tiến trình xử lý
-- 🛡️ **Xử lý lỗi**: Tiếp tục xử lý file khác nếu một file gặp lỗi
-- 📊 **Kết quả riêng biệt**: Mỗi file phỏng vấn sẽ có file kết quả chấm điểm riêng
-- 🎯 **Đánh giá tổng thể**: AI phân tích toàn bộ cuộc phỏng vấn để đưa ra đánh giá tổng thể, điểm mạnh, điểm cần cải thiện và khuyến nghị tuyển dụng
+3) Xem lịch sử/kết quả:
+- Lịch sử: `GET /api/history` (ưu tiên DB – join với `evaluate_results`).
+- Kết quả: `GET /api/view_result?hint=id:<result_id>` (DB) hoặc `GET /api/view_result/<filename>` (file).
 
 **Evaluation Criteria:**
 - **Correctness**: Accuracy compared to expected key points
@@ -167,22 +117,18 @@ python evaluate.py
 - **Đánh giá tổng thể**: Phân tích AI về điểm mạnh, điểm cần cải thiện
 - **Khuyến nghị tuyển dụng**: Gợi ý về việc có nên tuyển dụng ứng viên hay không
 
-## 📁 Project Structure
+## 📁 Thư mục quan trọng
 
 ```
-Generate_questions_Altered/
-├── CV/                          # Input CV files
-├── CV mẫu/                      # Sample CV images
-├── interview_question/          # Generated interview questions
-│   └── *.questions.json        # Question files
+backend/
+├── interview_question/          # Câu hỏi sinh ra (.questions.json)
 ├── outputs/
-│   ├── interview_logs/         # Interview session recordings
-│   └── evaluate_results/      # AI evaluation results
-├── generate_questions.py       # Question generation script
-├── ask.py                      # Interactive interview script
-├── evaluate.py                 # Response evaluation script
-├── requirements.txt            # Python dependencies
-└── README.md                   # This file
+│   ├── interview_logs/          # Log phỏng vấn (fallback file)
+│   └── evaluate_results/        # Kết quả chấm (fallback file)
+├── src/interview/               # generate_questions / ask / evaluate
+├── app.py                       # Flask app (API)
+├── requirements.txt
+└── README.md
 ```
 
 ## 🔧 Technical Details

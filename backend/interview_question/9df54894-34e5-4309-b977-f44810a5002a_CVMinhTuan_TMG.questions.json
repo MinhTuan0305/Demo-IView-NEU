@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "question": "Le Minh Tuan, thank you for coming in today. Can you please start by introducing yourself and telling us a bit about your background and what led you to pursue Information Technology?",
+    "category": "opening",
+    "purpose": "Allow the candidate to introduce themselves, setting the stage for the interview and assessing their communication skills and ability to summarize their background."
+  },
+  {
+    "id": 2,
+    "question": "Every individual has unique strengths and areas for development. What would you consider your top 2-3 strengths, and what is one weakness you are actively working to improve? And if possible, how do these relate to the skills needed for this Product Manager Intern role?",
+    "category": "opening",
+    "purpose": "Assess self-awareness, alignment of skills with the role, and willingness to improve. Look for critical thinking and honesty."
+  },
+  {
+    "id": 3,
+    "question": "You've expressed a strong interest in applying technology and data to the travel and tourism industry in your summary. Could you elaborate on what specifically attracted you to the Travel Agency Product Manager Intern position with us, and what you hope to gain from this experience?",
+    "category": "opening",
+    "purpose": "Evaluate candidate's motivation, understanding of the role, and genuine interest in the company and industry. Assesses research and career goals."
+  },
+  {
+    "id": 4,
+    "question": "Tell me about a time when you encountered a significant challenge or unexpected obstacle while working on a team project, either academic or professional. How did you and your team approach the problem, what was your specific contribution, and what was the outcome?",
+    "category": "behavioral",
+    "purpose": "Assess problem-solving skills, resilience, teamwork, and ability to navigate difficult situations within a collaborative environment. The CV highlights 'problem-solving' and 'comfortable working in team environments'."
+  },
+  {
+    "id": 5,
+    "question": "As an intern, you'll often need to quickly adapt to new tools, processes, or project requirements. Can you describe a situation where you had to learn a completely new tool, technology, or concept on the fly for a project? How did you approach the learning process, and what was the result?",
+    "category": "behavioral",
+    "purpose": "Evaluate self-learning abilities, adaptability, and initiative, which are crucial for an intern role where continuous learning is expected. The CV mentions 'quick to learn new systems' and 'self-learning'."
+  },
+  {
+    "id": 6,
+    "question": "Imagine our travel agency wants to understand why a particular travel package isn't selling as well as expected. As an Intern, how might you use your SQL skills to query existing customer booking data to identify potential factors or trends that could explain this, such as popular travel times, destination preferences, or pricing patterns?",
+    "category": "technical",
+    "purpose": "Assess practical application of SQL for product insights and data-driven decision making, tailored to an intern level understanding of analysis.",
+    "focus": "SQL / Data Analysis for Product"
+  },
+  {
+    "id": 7,
+    "question": "Your 'Travel Destination Research Tracker' project involved web scraping with Python. For a Travel Agency Product Manager role, how could you leverage this skill to gather competitive intelligence – for example, to monitor competitor pricing for similar travel packages or identify emerging destinations they are offering?",
+    "category": "technical",
+    "purpose": "Evaluate the candidate's ability to apply their Python web scraping skills to real-world product management challenges, specifically competitive analysis and market research.",
+    "focus": "Python / Web Scraping / Market Research"
+  },
+  {
+    "id": 8,
+    "question": "You mentioned gaining exposure to Power BI and Google Sheets for data visualization. If you were tasked with creating a simple dashboard to track the performance of a new promotional campaign for a travel product, what 3-4 key metrics would you include, and why are they important to measure the campaign's success?",
+    "category": "technical",
+    "purpose": "Assess understanding of key performance indicators (KPIs) relevant to product and marketing success, and basic ability to think about data visualization for reporting.",
+    "focus": "Data Visualization / KPIs / Product Metrics"
+  },
+  {
+    "id": 9,
+    "question": "During your Data Engineering Intern role at FSS, you were involved in creating data pipelines and supporting data extraction. Can you describe a specific instance where you encountered an issue with data quality or consistency in the data you were extracting or transforming? How did you identify it, and what steps did you take to resolve or mitigate it?",
+    "category": "cv_based",
+    "purpose": "Deep dive into specific work experience, assess problem-solving within a technical context, and understand their awareness of data quality challenges, which is relevant for trusting data used in product decisions.",
+    "focus": "Data Engineering / Data Quality"
+  },
+  {
+    "id": 10,
+    "question": "Let's talk more about your 'Travel Destination Research Tracker' project. Could you walk me through the specific problem you identified for users, your thought process in choosing Python for web scraping and Airtable for organization, and what was the most surprising or valuable insight you gained from the data you collected?",
+    "category": "cv_based",
+    "purpose": "Understand the candidate's project methodology, user-centric thinking, and practical application of tools like Python and Airtable in a relevant domain. Directly links to the target industry and their summary interest.",
+    "focus": "Project Deep Dive / User Focus / Data Application"
+  },
+  {
+    "id": 11,
+    "question": "Imagine our travel agency wants to launch a new eco-tourism package targeting young travelers. As a Product Manager Intern, how would you go about researching and gathering initial ideas for what this package should include, considering factors like sustainability, unique experiences, and affordability?",
+    "category": "creative",
+    "purpose": "Test problem-solving, critical thinking, and initial market research capabilities relevant to developing a new travel product. Assesses their ability to think holistically about a product offering."
+  }
+]

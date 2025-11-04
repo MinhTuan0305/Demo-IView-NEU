@@ -16,9 +16,10 @@ npm run dev
 
 Ứng dụng sẽ chạy tại [http://localhost:3000](http://localhost:3000)
 
-## Cấu hình
+## Kết nối Backend
 
-Tạo file `.env.local` từ `.env.example` và cấu hình:
+Frontend proxy tới Flask backend ở `http://localhost:5000` thông qua các route `/api/*` nội bộ, nên không bắt buộc `.env.local`.
+Nếu cần override, có thể thêm:
 
 ```
 NEXT_PUBLIC_API_URL=http://localhost:5000
@@ -38,9 +39,10 @@ npm start
 - `lib/` - Utilities và API client
 - `public/` - Static assets (images, logos)
 
-## Kết nối với Backend
+## Lưu ý vận hành
 
-Frontend kết nối với Flask backend tại `http://localhost:5000`. Đảm bảo backend đang chạy trước khi sử dụng frontend.
+- Sau khi nộp bài, trang `/wait/[log]` sẽ tự động chuyển sang `/results/[filename]` khi có kết quả.
+- Một số tính năng Academic/Exams đang ở trạng thái bảo trì (hiển thị popup và điều hướng về trang chủ).
 
 ## Tính năng
 

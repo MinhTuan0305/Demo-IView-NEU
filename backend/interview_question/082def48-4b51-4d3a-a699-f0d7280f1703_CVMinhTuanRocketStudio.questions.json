@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "question": "Good morning, Le Minh Tuan. Thank you for coming in today. Could you please start by introducing yourself and telling us a bit about your academic background and what brings you here?",
+    "category": "opening",
+    "purpose": "Allow the candidate to introduce themselves and set the stage for the interview."
+  },
+  {
+    "id": 2,
+    "question": "Every individual has unique qualities. Can you share with us what you consider your greatest strengths, and conversely, what areas you believe you need to develop further?",
+    "category": "opening",
+    "purpose": "Assess self-awareness, highlight key skills, and identify areas for growth."
+  },
+  {
+    "id": 3,
+    "question": "Your application mentions your passion for games and interactive software. Could you elaborate on why you are particularly interested in the 'Game Dev' position here at Rocket Studio, especially given your expressed interest in a 'Tester Intern' role in your cover letter?",
+    "category": "opening",
+    "purpose": "Understand the candidate's motivation, alignment with the role, and clarify any perceived discrepancies between the job title and their stated interest."
+  },
+  {
+    "id": 4,
+    "question": "You've mentioned being comfortable working in team environments. Can you describe a time when you collaborated on a project, perhaps an academic one or during your work experience at FSS, where you faced a significant challenge as a team? How did you contribute to overcoming it?",
+    "category": "behavioral",
+    "purpose": "Evaluate teamwork, problem-solving, and communication skills in a collaborative setting."
+  },
+  {
+    "id": 5,
+    "question": "As an intern, there will be many opportunities to learn and adapt. Can you tell me about a time when you had to learn a completely new technology or tool quickly for a project or task? What was your approach, and what was the outcome?",
+    "category": "behavioral",
+    "purpose": "Assess self-learning, adaptability, and initiative, which are crucial for an intern in a dynamic field like game development."
+  },
+  {
+    "id": 6,
+    "question": "You have 'Basic C++/C#' listed in your skills. For an intern role in game development, what do you understand as the fundamental differences between a scripting language like Python and a compiled language like C++ or C# in the context of game development, and why are languages like C++ or C# often preferred for core game engines?",
+    "category": "technical",
+    "purpose": "Assess fundamental programming language understanding relevant to game development at an intern level.",
+    "focus": "Programming Languages (Python, C++/C#) & Game Dev Context"
+  },
+  {
+    "id": 7,
+    "question": "Given your experience with manual software testing and creating test documentation, if you were asked to test a new game feature, let's say a character's jump ability, what key aspects would you focus on? How would you design a simple test case for it?",
+    "category": "technical",
+    "purpose": "Evaluate practical understanding of software testing principles, test case design, and critical thinking relevant to game testing.",
+    "focus": "Software Testing / QA Fundamentals"
+  },
+  {
+    "id": 8,
+    "question": "You've worked with SQL and developed knowledge of ETL workflows. While this is not directly game development, how do you think principles like data integrity, efficiency in data handling, or even basic database design could indirectly relate to aspects of game development or managing game-related data?",
+    "category": "technical",
+    "purpose": "Assess the candidate's ability to transfer and apply knowledge from one domain (Data Engineering) to another (Game Development), and to think broadly about data's role.",
+    "focus": "Data Concepts & Transferable Skills"
+  },
+  {
+    "id": 9,
+    "question": "Let's discuss your 'Hotel Booking System Testing' personal project. Could you walk me through the most challenging part of designing and executing test cases for this system, and how you ensured comprehensive coverage for a specific module like 'Booking Process'?",
+    "category": "cv_based",
+    "purpose": "Deep dive into the candidate's practical testing experience, problem-solving during project execution, and understanding of test coverage."
+  },
+  {
+    "id": 10,
+    "question": "Your experience at FSS involved 'creating data pipelines to collect, clean, and transform raw data'. Can you elaborate on a specific challenge you faced when cleaning or transforming data from various sources using SQL Oracle, and how you resolved it?",
+    "category": "cv_based",
+    "purpose": "Understand the candidate's specific contributions, technical challenges faced, and problem-solving within their work experience."
+  },
+  {
+    "id": 11,
+    "question": "Imagine our studio is developing a new mobile game, and you're part of a small team responsible for an upcoming patch. A critical bug is reported that crashes the game for 10% of users right before a major in-game event. However, reproducing the bug is inconsistent, and the deadline for the patch is in 2 days. As an intern, how would you approach this situation? What steps would you take, and who would you communicate with?",
+    "category": "creative",
+    "purpose": "Assess problem-solving under pressure, communication skills, critical thinking, and understanding of a real-world development scenario."
+  }
+]

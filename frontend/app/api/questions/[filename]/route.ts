@@ -3,8 +3,9 @@ import { NextRequest } from 'next/server';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-export async function GET(_req: NextRequest, { params }: { params: { filename: string } }) {
-  const { filename } = params;
+export async function GET(_req: NextRequest, ctx: { params: Promise<{ filename: string }> | { filename: string } }) {
+  const p = (ctx.params as any);
+  const { filename } = typeof p.then === 'function' ? await (p as Promise<{ filename: string }>) : (p as { filename: string });
   try {
     const fetchJson = async (url: string) => {
       const r = await fetch(url);

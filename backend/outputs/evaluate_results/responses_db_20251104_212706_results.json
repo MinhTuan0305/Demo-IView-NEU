@@ -1,0 +1,148 @@
+{
+  "summary": {
+    "candidate_name": "db",
+    "interview_date": "2025-11-04 21:27:06",
+    "average_overall_score": 4.64,
+    "questions_scored": 11,
+    "overall_feedback": {
+      "overall_score": 0,
+      "strengths": "Ứng viên không cung cấp bất kỳ thông tin nào để đánh giá điểm mạnh. Do đó, không thể xác định được bất kỳ điểm mạnh nào trong buổi phỏng vấn này.",
+      "weaknesses": "Ứng viên thể hiện sự thiếu chuẩn bị nghiêm trọng và hoàn toàn không thể trả lời bất kỳ câu hỏi nào được đặt ra. Điều này cho thấy sự thiếu kiến thức cơ bản liên quan đến vị trí ứng tuyển, kỹ năng giao tiếp kém hiệu quả, và có thể là thiếu sự quan tâm hoặc động lực. Ứng viên không trình bày được về bản thân, kinh nghiệm, kỹ năng chuyên môn hay khả năng giải quyết vấn đề.",
+      "hiring_recommendation": "Không phù hợp"
+    }
+  },
+  "details": {
+    "1": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 0,
+      "attitude": 0,
+      "overall_score": 0,
+      "feedback": "Ứng viên đã trả lời 'i don't know' (tôi không biết) cho câu hỏi giới thiệu bản thân, học vấn và lý do ứng tuyển. Câu trả lời này hoàn toàn không đáp ứng được yêu cầu của câu hỏi phỏng vấn cơ bản nhất, không cung cấp bất kỳ thông tin nào và thể hiện thái độ thiếu chuẩn bị, thiếu chuyên nghiệp và không tích cực. Điều này là không thể chấp nhận được trong một buổi phỏng vấn.",
+      "question": "Good morning, Le Minh Tuan. Thank you for coming in today. Could you please start by introducing yourself and telling us a bit about your academic background and what brings you here?",
+      "answer": "i dont know"
+    },
+    "2": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 1,
+      "attitude": 1,
+      "overall_score": 3,
+      "feedback": "Ứng viên đã không đưa ra được bất kỳ thông tin nào về điểm mạnh hay lĩnh vực cần phát triển của bản thân. Câu trả lời 'i dont know' thể hiện sự thiếu tự nhận thức, thiếu chuẩn bị cho buổi phỏng vấn và không có khả năng tham gia vào một câu hỏi cơ bản về bản thân. Điều này cho thấy thái độ chưa tích cực và thiếu sự nghiêm túc trong việc tìm hiểu về vị trí cũng như bản thân.",
+      "question": "Every individual has unique qualities. Can you share with us what you consider your greatest strengths, and conversely, what areas you believe you need to develop further?",
+      "answer": "i dont know"
+    },
+    "3": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 0,
+      "attitude": 0,
+      "overall_score": 0,
+      "feedback": "Ứng viên đã trả lời 'i dont know' (tôi không biết) cho câu hỏi yêu cầu giải thích về sở thích và sự mâu thuẫn trong hồ sơ của chính mình. Câu trả lời này thể hiện sự thiếu chuẩn bị nghiêm trọng, không có khả năng tự đánh giá hoặc bày tỏ động lực cá nhân. Điều này không cung cấp bất kỳ thông tin nào để đánh giá các tiêu chí mong đợi và thể hiện thái độ không phù hợp trong phỏng vấn.",
+      "question": "Your application mentions your passion for games and interactive software. Could you elaborate on why you are particularly interested in the 'Game Dev' position here at Rocket Studio, especially given your expressed interest in a 'Tester Intern' role in your cover letter?",
+      "answer": "i dont know"
+    },
+    "4": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 1,
+      "attitude": 1,
+      "overall_score": 3,
+      "feedback": "Ứng viên không trả lời câu hỏi. Việc trả lời 'i dont know' cho thấy ứng viên chưa chuẩn bị hoặc không thể nhớ lại kinh nghiệm liên quan. Đây là một điểm yếu lớn vì khả năng kể lại kinh nghiệm làm việc nhóm và giải quyết thử thách là rất quan trọng.",
+      "question": "You've mentioned being comfortable working in team environments. Can you describe a time when you collaborated on a project, perhaps an academic one or during your work experience at FSS, where you faced a significant challenge as a team? How did you contribute to overcoming it?",
+      "answer": "i dont know"
+    },
+    "5": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 1,
+      "attitude": 1,
+      "overall_score": 5,
+      "feedback": "Ứng viên không cung cấp bất kỳ thông tin nào để trả lời câu hỏi. Câu trả lời 'i dont know' cho thấy sự thiếu chuẩn bị hoặc không có kinh nghiệm liên quan để chia sẻ. Điều này không thể hiện khả năng học hỏi và thích nghi nhanh chóng, vốn là trọng tâm của câu hỏi. Thái độ không tích cực và không có nỗ lực để giải thích hoặc đưa ra một ví dụ thay thế.",
+      "question": "As an intern, there will be many opportunities to learn and adapt. Can you tell me about a time when you had to learn a completely new technology or tool quickly for a project or task? What was your approach, and what was the outcome?",
+      "answer": "i dont know"
+    },
+    "6": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 9,
+      "attitude": 1,
+      "overall_score": 16,
+      "feedback": "Ứng viên đã trả lời \"i dont know\", cho thấy sự thiếu hiểu biết hoàn toàn về câu hỏi và các khái niệm cơ bản về ngôn ngữ lập trình biên dịch (compiled languages) và ngôn ngữ kịch bản (scripting languages) trong bối cảnh phát triển game. Điều này mâu thuẫn trực tiếp với kỹ năng \"Basic C++/C#\" đã được liệt kê trong hồ sơ của ứng viên và là một dấu hiệu đáng lo ngại cho một vai trò thực tập sinh. Mặc dù câu trả lời rất rõ ràng và ngắn gọn trong cách trình bày, nhưng nội dung không cung cấp bất kỳ thông tin hữu ích nào về chủ đề được hỏi, thể hiện sự thiếu chuẩn bị hoặc hiểu biết. Thái độ trả lời như vậy không được đánh giá cao trong một buổi phỏng vấn kỹ thuật.",
+      "question": "You have 'Basic C++/C#' listed in your skills. For an intern role in game development, what do you understand as the fundamental differences between a scripting language like Python and a compiled language like C++ or C# in the context of game development, and why are languages like C++ or C# often preferred for core game engines?",
+      "answer": "i dont know"
+    },
+    "7": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 1,
+      "attitude": 1,
+      "overall_score": 5,
+      "feedback": "Ứng viên không cung cấp bất kỳ thông tin nào liên quan đến câu hỏi. Câu trả lời 'tôi không biết' thể hiện sự thiếu chuẩn bị hoặc không có khả năng tư duy giải quyết vấn đề tại chỗ. Mặc dù thẳng thắn, nhưng trong bối cảnh phỏng vấn kỹ thuật, câu trả lời này không thể hiện được kinh nghiệm hay kỹ năng cần thiết để kiểm thử một tính năng. Cần có sự chủ động hơn trong việc đưa ra cách tiếp cận hoặc đặt câu hỏi làm rõ nếu không chắc chắn.",
+      "question": "Given your experience with manual software testing and creating test documentation, if you were asked to test a new game feature, let's say a character's jump ability, what key aspects would you focus on? How would you design a simple test case for it?",
+      "answer": "i dont know"
+    },
+    "8": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 1,
+      "attitude": 3,
+      "overall_score": 7,
+      "feedback": "Ứng viên đã trả lời 'i dont know', thể hiện không có kiến thức hoặc khả năng liên hệ các nguyên tắc SQL/ETL với phát triển game. Câu trả lời không cung cấp bất kỳ nội dung nào, bỏ lỡ hoàn toàn cơ hội trình bày tư duy logic, sự sáng tạo hoặc khả năng phân tích vấn đề. Dù câu trả lời ngắn gọn và dễ hiểu, nó không đáp ứng yêu cầu truyền đạt thông tin hoặc giải pháp. Thái độ trung lập nhưng không thể hiện sự chủ động hoặc cố gắng giải quyết vấn đề.",
+      "question": "You've worked with SQL and developed knowledge of ETL workflows. While this is not directly game development, how do you think principles like data integrity, efficiency in data handling, or even basic database design could indirectly relate to aspects of game development or managing game-related data?",
+      "answer": "i dont know"
+    },
+    "9": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 1,
+      "attitude": 1,
+      "overall_score": 2,
+      "feedback": "Ứng viên không cung cấp bất kỳ thông tin nào để đánh giá các tiêu chí về correctness, coverage, reasoning và creativity. Câu trả lời 'i dont know' cho thấy sự thiếu chuẩn bị nghiêm trọng hoặc không có khả năng thảo luận về dự án cá nhân của mình, điều này là một điểm trừ lớn trong phỏng vấn kỹ thuật. Mặc dù câu trả lời rõ ràng (communication) và không thể hiện thái độ tiêu cực (attitude), nhưng nó hoàn toàn không đáp ứng yêu cầu của câu hỏi.",
+      "question": "Let's discuss your 'Hotel Booking System Testing' personal project. Could you walk me through the most challenging part of designing and executing test cases for this system, and how you ensured comprehensive coverage for a specific module like 'Booking Process'?",
+      "answer": "i dont know"
+    },
+    "10": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 1,
+      "attitude": 1,
+      "overall_score": 5,
+      "feedback": "Ứng viên không cung cấp bất kỳ thông tin nào để trả lời câu hỏi. Việc trả lời 'i dont know' cho một câu hỏi liên quan trực tiếp đến kinh nghiệm đã được đề cập trong hồ sơ cho thấy sự thiếu chuẩn bị, thiếu khả năng trình bày kinh nghiệm hoặc thiếu kinh nghiệm thực tế trong lĩnh vực được hỏi. Điều này là một điểm trừ nghiêm trọng trong một buổi phỏng vấn kỹ thuật.",
+      "question": "Your experience at FSS involved 'creating data pipelines to collect, clean, and transform raw data'. Can you elaborate on a specific challenge you faced when cleaning or transforming data from various sources using SQL Oracle, and how you resolved it?",
+      "answer": "i dont know"
+    },
+    "11": {
+      "correctness": 0,
+      "coverage": 0,
+      "reasoning": 0,
+      "creativity": 0,
+      "communication": 1,
+      "attitude": 1,
+      "overall_score": 5,
+      "feedback": "Ứng viên chỉ trả lời 'i dont know', thể hiện sự thiếu kiến thức hoặc kỹ năng để tiếp cận tình huống được đưa ra. Câu trả lời này không đề cập đến bất kỳ ý chính nào mong đợi, không đưa ra lý do, giải thích hay bất kỳ bước hành động nào. Mặc dù câu trả lời ngắn gọn và rõ ràng, nhưng nó không cung cấp bất kỳ nội dung nào có giá trị cho một câu hỏi phỏng vấn kỹ thuật. Thái độ trung thực khi thừa nhận không biết là tốt, nhưng trong một buổi phỏng vấn, kỳ vọng là ứng viên sẽ cố gắng đưa ra một số bước ban đầu, thể hiện khả năng tư duy giải quyết vấn đề hoặc ít nhất là cách họ sẽ tìm kiếm sự giúp đỡ.",
+      "question": "Imagine our studio is developing a new mobile game, and you're part of a small team responsible for an upcoming patch. A critical bug is reported that crashes the game for 10% of users right before a major in-game event. However, reproducing the bug is inconsistent, and the deadline for the patch is in 2 days. As an intern, how would you approach this situation? What steps would you take, and who would you communicate with?",
+      "answer": "i dont know"
+    }
+  }
+}

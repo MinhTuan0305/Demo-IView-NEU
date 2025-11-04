@@ -22,7 +22,7 @@ export default function WaitPage() {
         const s = await api.getResultStatus(log);
         if (cancelled) return;
         if (s?.ready && s?.result_file) {
-          window.location.href = `/api/view-result/${encodeURIComponent(s.result_file)}`;
+          router.push(`/results/${encodeURIComponent(s.result_file)}`);
           return;
         }
         setCount((c) => c + 1);
@@ -35,7 +35,7 @@ export default function WaitPage() {
 
     tick();
     return () => { cancelled = true; };
-  }, [log, count]);
+  }, [log, count, router]);
 
   return (
     <div className="min-h-screen">

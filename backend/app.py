@@ -9,6 +9,15 @@ import sys
 from unicodedata import normalize as uni_normalize
 import re
 import threading
+from typing import Optional, Dict, Any
+
+# Supabase client
+from dotenv import load_dotenv
+try:
+    from supabase import create_client, Client  # type: ignore
+except Exception:
+    create_client = None  # type: ignore
+    Client = None  # type: ignore
 
 # Import các module từ thư mục src
 sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
@@ -67,6 +76,98 @@ def _slug_name(name: str) -> str:
     n = n.lower()
     n = re.sub(r'[^a-z0-9._-]+', '', n)
     return n
+
+# -------------------- Supabase helpers --------------------
+def _load_env() -> None:
+    """Load environment variables from current working dir and alongside this file."""
+    try:
+        load_dotenv(override=True)
+    except Exception:
+        pass
+    try:
+        from pathlib import Path as _P
+        env_path = _P(__file__).with_name('.env')
+        if env_path.exists():
+            load_dotenv(dotenv_path=str(env_path), override=True)
+    except Exception:
+        pass
+_supabase: Optional["Client"] = None
+
+def _get_supabase() -> Optional["Client"]:
+    global _supabase
+    if _supabase is not None:
+        return _supabase
+    try:
+        _load_env()
+        url = os.getenv('SUPABASE_URL')
+        key = os.getenv('SUPABASE_SERVICE_ROLE_KEY') or os.getenv('SUPABASE_ANON_KEY')
+        if create_client is None:
+            print('[SUPABASE] SDK not available (pip install supabase).')
+            return None
+        if not url:
+            print('[SUPABASE] Missing SUPABASE_URL in environment.')
+            return None
+        if not key:
+            print('[SUPABASE] Missing SUPABASE_SERVICE_ROLE_KEY or SUPABASE_ANON_KEY in environment.')
+            return None
+        _supabase = create_client(url, key)
+        return _supabase
+    except Exception as e:
+        print('[SUPABASE] create_client failed:', e)
+        return None
+
+def _db_ordered_select(client: "Client", table: str, fields: str = '*'):
+    """Select rows ordered by created_at desc; fallback to id desc."""
+    try:
+        return client.table(table).select(fields).order('created_at', desc=True).execute()
+    except Exception:
+        return client.table(table).select(fields).order('id', desc=True).execute()
+
+def _db_upsert_candidate(candidate_id: str, candidate_name: str) -> None:
+    client = _get_supabase()
+    if not client:
+        return
+    try:
+        client.table('candidates').upsert({
+            'candidate_id': candidate_id,
+            'candidate_name': candidate_name,
+        }, on_conflict='candidate_id').execute()
+    except Exception:
+        pass
+
+def _db_insert_interview_log(payload: Dict[str, Any]) -> Optional[int]:
+    client = _get_supabase()
+    if not client:
+        return None
+    try:
+        data = {
+            'candidate_id': payload.get('id'),
+            'candidate_name': payload.get('candidate_name'),
+            'interview_date': payload.get('interview_date'),
+            'responses': payload.get('responses'),  # JSONB
+        }
+        res = client.table('interview_logs').insert(data).execute()
+        if getattr(res, 'data', None) and isinstance(res.data, list) and res.data:
+            row = res.data[0]
+            return int(row.get('id')) if isinstance(row.get('id'), (int,)) else None
+    except Exception as e:
+        print('[SUPABASE][INSERT interview_logs] error:', e)
+        return None
+    return None
+
+def _db_insert_evaluate_result(interview_log_id: Optional[int], result: Dict[str, Any]) -> None:
+    client = _get_supabase()
+    if not client:
+        return
+    try:
+        data = {
+            'interview_log_id': interview_log_id,
+            'result': result,  # JSONB
+        }
+        client.table('evaluate_results').insert(data).execute()
+    except Exception as e:
+        print('[SUPABASE][INSERT evaluate_results] error:', e)
+        pass
 
 @app.route('/')
 def index():
@@ -198,19 +299,20 @@ def submit_interview():
         "responses": responses
     }
     
-    # Lưu file kết quả
+    # Tạo tên file (chỉ để dùng cho pipeline chấm điểm) và ghi ra thư mục tạm, không dùng outputs/interview_logs
+    import tempfile
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     safe_name = _safe_filename(interview_results['candidate_name'])
     filename = f"responses_{safe_name}_{timestamp}.json"
-    filepath = os.path.join('outputs/interview_logs', filename)
-    
+    tmp_dir = tempfile.mkdtemp(prefix='iview_')
+    filepath = os.path.join(tmp_dir, filename)
     try:
         with open(filepath, 'w', encoding='utf-8') as f:
             json.dump(interview_results, f, ensure_ascii=False, indent=4)
     except Exception as e:
-        print("[SUBMIT][ERROR] Không thể ghi file log:", e)
+        print("[SUBMIT][ERROR] Không thể ghi file tạm:", e)
         traceback.print_exc()
-        return jsonify({'error': 'cannot write log', 'message': str(e)}), 500
+        return jsonify({'error': 'cannot write temp log', 'message': str(e)}), 500
     
     # Log thông tin nhận được
     try:
@@ -220,16 +322,63 @@ def submit_interview():
     print(f"[SUBMIT] Đã nhận bài phỏng vấn: {filename} | Số câu trả lời: {num_responses}")
     print(f"[SUBMIT] Đẩy tác vụ chấm điểm nền... input={filepath}")
 
-    def _run_eval(path, result_name):
+    # Upsert ứng viên và lưu interview vào Supabase
+    db_error = None
+    try:
+        _db_upsert_candidate(candidate_id=candidate_id, candidate_name=candidate_name)
+        db_log_id = _db_insert_interview_log(interview_results)
+    except Exception as e:
+        db_log_id = None
+        db_error = str(e)
+    use_db = db_log_id is not None
+
+    def _run_eval(path, result_name, interview_log_id, tmp_directory, use_db_mode):
         try:
             evaluate_interview(path)
             print(f"[EVAL] Hoàn tất chấm điểm -> outputs/evaluate_results/{result_name}")
+            # Đọc và lưu kết quả vào Supabase nếu có
+            if use_db_mode:
+                try:
+                    result_path = os.path.join('outputs/evaluate_results', result_name)
+                    with open(result_path, 'r', encoding='utf-8') as rf:
+                        result_json = json.load(rf)
+                    _db_insert_evaluate_result(interview_log_id, result_json)
+                    # Xóa file kết quả sau khi đã lưu DB để không lưu trên filesystem
+                    try:
+                        os.remove(result_path)
+                    except Exception:
+                        pass
+                except Exception:
+                    traceback.print_exc()
         except Exception:
             print("[EVAL][ERROR] Lỗi khi đánh giá (thread):")
             traceback.print_exc()
+        finally:
+            # Dọn file tạm nếu dùng DB (đã copy vào DB, không cần giữ)
+            if use_db_mode:
+                try:
+                    try:
+                        os.remove(path)
+                    except Exception:
+                        pass
+                    import shutil
+                    shutil.rmtree(tmp_directory, ignore_errors=True)
+                except Exception:
+                    pass
 
     # chạy chấm điểm ở thread nền để trả response ngay
-    t = threading.Thread(target=_run_eval, args=(filepath, filename.replace('.json', '_results.json')))
+    # Nếu không dùng DB: chuyển file tạm sang outputs/interview_logs để giữ lại lịch sử file
+    if not use_db:
+        try:
+            import shutil
+            os.makedirs('outputs/interview_logs', exist_ok=True)
+            dest = os.path.join('outputs/interview_logs', filename)
+            shutil.move(filepath, dest)
+            filepath = dest
+        except Exception:
+            pass
+
+    t = threading.Thread(target=_run_eval, args=(filepath, filename.replace('.json', '_results.json'), db_log_id, tmp_dir, use_db))
     t.daemon = True
     t.start()
 
@@ -237,7 +386,10 @@ def submit_interview():
         'success': True,
         'queued': True,
         'message': 'Đã nhận bài và đang chấm điểm',
-        'log_file': filename
+        'log_file': (f"id:{db_log_id}" if use_db else filename),
+        'use_db': use_db,
+        'db_log_id': db_log_id,
+        'db_error': db_error
     }), 200
 
 @app.route('/results')
@@ -442,7 +594,26 @@ def latest_questions_file():
 
 @app.route('/api/results')
 def api_results():
-    """JSON: list evaluation result files with basic metadata."""
+    """JSON: list evaluation results from Supabase; fallback to files if DB unavailable."""
+    client = _get_supabase()
+    if client:
+        try:
+            res = _db_ordered_select(client, 'evaluate_results')
+            data = getattr(res, 'data', []) or []
+            items = []
+            for row in data:
+                rid = row.get('id')
+                result = row.get('result') or {}
+                summary = result.get('summary') if isinstance(result, dict) else None
+                items.append({
+                    'filename': f"id:{rid}",
+                    'modified': row.get('created_at') or row.get('id') or 0,
+                    'summary': summary,
+                })
+            return jsonify(items)
+        except Exception:
+            pass
+    # fallback
     results_dir = Path('outputs/evaluate_results')
     items = []
     if results_dir.exists():
@@ -464,25 +635,33 @@ def api_results():
 @app.route('/api/view_result/<filename>')
 def api_view_result(filename):
     try:
+        # DB id-based access
+        if filename.startswith('id:'):
+            client = _get_supabase()
+            if not client:
+                return jsonify({'error': 'Supabase not configured'}), 500
+            try:
+                rid = int(filename.split(':', 1)[1])
+            except Exception:
+                return jsonify({'error': 'invalid id'}), 400
+            try:
+                res = client.table('evaluate_results').select('*').eq('id', rid).single().execute()
+                row = getattr(res, 'data', None)
+                if not row:
+                    return jsonify({'error': 'not found'}), 404
+                result_data = row.get('result') or {}
+                return jsonify(result_data)
+            except Exception as e:
+                return jsonify({'error': 'db error', 'detail': str(e)}), 500
+        # Filesystem fallback
         filepath = Path('outputs/evaluate_results') / filename
-        if not filepath.exists():
-            # try accent-insensitive + resolver
-            results_dir = Path('outputs/evaluate_results')
-            files = list(results_dir.glob('*.json'))
-            slug_target = _slug_name(filename)
-            for f in files:
-                if _slug_name(f.name) == slug_target:
-                    filepath = f
-                    break
         if not filepath.exists():
             return jsonify({'error': 'File không tồn tại'}), 404
         with open(filepath, 'r', encoding='utf-8') as f:
             result_data = json.load(f)
         return jsonify(result_data)
-    except FileNotFoundError:
-        return jsonify({'error': 'File không tồn tại'}), 404
     except json.JSONDecodeError:
-        return jsonify({'error': 'File không hợp lệ'}), 400
+        return jsonify({'error': 'Invalid JSON in DB'}), 500
 
 @app.route('/api/view_result')
 def api_view_result_qs():
@@ -490,16 +669,27 @@ def api_view_result_qs():
     hint = request.args.get('hint', '')
     if not hint:
         return jsonify({'error': 'missing hint'}), 400
-    # Reuse resolver then open
+    if hint.startswith('id:'):
+        client = _get_supabase()
+        if not client:
+            return jsonify({'error': 'Supabase not configured'}), 500
+        try:
+            rid = int(hint.split(':', 1)[1])
+        except Exception:
+            return jsonify({'error': 'invalid id'}), 400
+        try:
+            res = client.table('evaluate_results').select('*').eq('id', rid).single().execute()
+            row = getattr(res, 'data', None)
+            if not row:
+                return jsonify({'error': 'not found'}), 404
+            result_data = row.get('result') or {}
+            return jsonify(result_data)
+        except Exception as e:
+            return jsonify({'error': 'db error', 'detail': str(e)}), 500
+    # filesystem
     results_dir = Path('outputs/evaluate_results')
-    files = list(results_dir.glob('*.json'))
-    # Try exact, slug, contains
-    target = None
-    for f in files:
-        if f.name == hint or _slug_name(f.name) == _slug_name(hint) or hint in f.name or _slug_name(hint) in _slug_name(f.name):
-            target = f
-            break
-    if not target:
+    target = results_dir / hint
+    if not target.exists():
         return jsonify({'error': 'File không tồn tại'}), 404
     try:
         with open(target, 'r', encoding='utf-8') as f:
@@ -510,45 +700,88 @@ def api_view_result_qs():
 
 @app.route('/api/history')
 def api_history():
-    """Danh sách các phiên phỏng vấn (bao gồm pending nếu chưa có kết quả). Trả JSON ngay cả khi có lỗi."""
-    try:
-        logs_dir = Path('outputs') / 'interview_logs'
-        results_dir = Path('outputs') / 'evaluate_results'
-        items = []
-        if logs_dir.exists():
-            for log in logs_dir.glob('*.json'):
-                result_name = log.name.replace('.json', '_results.json')
-                result_path = results_dir / result_name
-                status = 'done' if result_path.exists() else 'pending'
+    """Danh sách các phiên phỏng vấn từ Supabase; fallback filesystem."""
+    client = _get_supabase()
+    if client:
+        try:
+            res_logs = _db_ordered_select(client, 'interview_logs')
+            logs = getattr(res_logs, 'data', []) or []
+            items = []
+            for lg in logs:
+                log_id = lg.get('id')
+                ev = None
+                try:
+                    res_eval = (
+                        client
+                        .table('evaluate_results')
+                        .select('id,result,created_at')
+                        .eq('interview_log_id', log_id)
+                        .order('created_at', desc=True)
+                        .limit(1)
+                        .execute()
+                    )
+                    data_list = getattr(res_eval, 'data', None) or []
+                    if isinstance(data_list, list) and data_list:
+                        ev = data_list[0]
+                except Exception:
+                    ev = None
+                status = 'done' if ev else 'pending'
                 entry = {
-                    'log_file': log.name,
-                    'result_file': result_name if result_path.exists() else None,
+                    'log_file': f"id:{log_id}",
+                    'result_file': f"id:{ev.get('id')}" if ev else None,
                     'status': status,
-                    'modified': log.stat().st_mtime,
+                    'modified': lg.get('created_at') or lg.get('id') or 0,
                 }
-                if result_path.exists():
-                    try:
-                        data = json.loads(result_path.read_text(encoding='utf-8'))
-                        entry['summary'] = data.get('summary')
-                    except Exception as e:
-                        print('[HISTORY][WARN] parse result failed', result_name, e)
+                if ev and isinstance(ev.get('result'), dict):
+                    entry['summary'] = ev['result'].get('summary')
                 else:
-                    try:
-                        data = json.loads(log.read_text(encoding='utf-8'))
+                    resp = lg.get('responses') if isinstance(lg.get('responses'), list) else []
+                    entry['summary'] = {
+                        'candidate_name': lg.get('candidate_name'),
+                        'interview_date': lg.get('interview_date'),
+                        'questions_scored': len(resp),
+                        'type': 'job'
+                    }
+                items.append(entry)
+            return jsonify(items)
+        except Exception:
+            pass
+    # filesystem
+    logs_dir = Path('outputs') / 'interview_logs'
+    results_dir = Path('outputs') / 'evaluate_results'
+    items = []
+    if logs_dir.exists():
+        for log in logs_dir.glob('*.json'):
+            result_name = log.name.replace('.json', '_results.json')
+            result_path = results_dir / result_name
+            status = 'done' if result_path.exists() else 'pending'
+            entry = {
+                'log_file': log.name,
+                'result_file': result_name if result_path.exists() else None,
+                'status': status,
+                'modified': log.stat().st_mtime,
+            }
+            if result_path.exists():
+                try:
+                    with open(result_path, 'r', encoding='utf-8') as fp:
+                        data = json.load(fp)
+                        entry['summary'] = data.get('summary')
+                except Exception:
+                    pass
+            else:
+                try:
+                    with open(log, 'r', encoding='utf-8') as fp:
+                        data = json.load(fp)
                         entry['summary'] = {
                             'candidate_name': data.get('candidate_name'),
                             'interview_date': data.get('interview_date'),
                             'type': 'job'
                         }
-                    except Exception as e:
-                        print('[HISTORY][WARN] parse log failed', log.name, e)
-                items.append(entry)
-        items.sort(key=lambda x: x.get('modified', 0), reverse=True)
-        return jsonify(items)
-    except Exception as e:
-        print('[HISTORY][ERROR]', e)
-        traceback.print_exc()
-        return jsonify({'error': str(e)}), 500
+                except Exception:
+                    pass
+            items.append(entry)
+    items.sort(key=lambda x: x.get('modified', 0), reverse=True)
+    return jsonify(items)
 
 @app.route('/api/result_status')
 def api_result_status():
@@ -556,6 +789,33 @@ def api_result_status():
     log_file = request.args.get('log')
     if not log_file:
         return jsonify({'error': 'missing log'}), 400
+    if log_file.startswith('id:'):
+        client = _get_supabase()
+        if not client:
+            return jsonify({'error': 'Supabase not configured'}), 500
+        try:
+            lid = int(log_file.split(':', 1)[1])
+        except Exception:
+            return jsonify({'error': 'invalid id'}), 400
+        try:
+            res = (
+                client
+                .table('evaluate_results')
+                .select('id,created_at')
+                .eq('interview_log_id', lid)
+                .order('created_at', desc=True)
+                .limit(1)
+                .execute()
+            )
+            lst = getattr(res, 'data', None) or []
+            if isinstance(lst, list) and lst:
+                rid = lst[0].get('id')
+                if rid is not None:
+                    return jsonify({'ready': True, 'result_file': f"id:{rid}"})
+            return jsonify({'ready': False})
+        except Exception:
+            return jsonify({'ready': False})
+    # Filesystem fallback
     result_name = log_file.replace('.json', '_results.json')
     result_path = Path('outputs/evaluate_results') / result_name
     if result_path.exists():
@@ -596,6 +856,37 @@ def resolve_result_file():
         if hint in f.name or _slug_name(hint) in _slug_name(f.name):
             return jsonify({'match': f.name})
     return jsonify({'error': 'not found'}), 404
+
+@app.route('/api/health/db')
+def health_db():
+    """Simple DB health endpoint to help diagnose env/policy issues."""
+    client = _get_supabase()
+    if not client:
+        return jsonify({'ok': False, 'reason': 'client_none'}), 500
+    try:
+        # minimal query
+        res = client.table('interview_logs').select('id').limit(1).execute()
+        _ = getattr(res, 'data', None)
+        return jsonify({'ok': True})
+    except Exception as e:
+        return jsonify({'ok': False, 'reason': 'query_failed', 'detail': str(e)}), 500
+
+@app.route('/api/health/env')
+def health_env():
+    """Expose which env vars are visible (keys only, values redacted)."""
+    try:
+        url = bool(os.getenv('SUPABASE_URL'))
+        srk = bool(os.getenv('SUPABASE_SERVICE_ROLE_KEY'))
+        ak = bool(os.getenv('SUPABASE_ANON_KEY'))
+        gem = bool(os.getenv('GEMINI_API_KEY'))
+        return jsonify({
+            'SUPABASE_URL': url,
+            'SUPABASE_SERVICE_ROLE_KEY': srk,
+            'SUPABASE_ANON_KEY': ak,
+            'GEMINI_API_KEY': gem,
+        })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

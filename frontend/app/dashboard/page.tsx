@@ -45,8 +45,27 @@ export default function DashboardPage() {
     days.push(label);
     dayKeyToCounts.set(key, { academic: 0, job: 0 });
   }
+  const toDate = (it: any) => {
+    const mod = it?.modified;
+    if (typeof mod === 'number' && isFinite(mod)) {
+      // seconds vs milliseconds
+      const ms = mod > 1e12 ? mod : mod * 1000;
+      const d = new Date(ms);
+      if (!isNaN(d.getTime())) return d;
+    }
+    if (typeof mod === 'string') {
+      const d = new Date(mod);
+      if (!isNaN(d.getTime())) return d;
+    }
+    const iv = it?.summary?.interview_date;
+    if (typeof iv === 'string') {
+      const d = new Date(iv);
+      if (!isNaN(d.getTime())) return d;
+    }
+    return new Date();
+  };
   items.forEach((it) => {
-    const m = it.modified ? new Date(it.modified * 1000) : new Date();
+    const m = toDate(it);
     const key = m.toISOString().slice(0, 10);
     if (dayKeyToCounts.has(key)) {
       const type = (it.summary?.type || 'job') as 'academic' | 'job';
@@ -140,13 +159,13 @@ export default function DashboardPage() {
                 {items.slice(0, 5).map((it, idx) => {
                   const s = it.summary || {};
                   const title = s?.title || s?.candidate_name || it.filename;
-                  const time = s?.interview_date || new Date((it.modified ?? 0) * 1000).toLocaleString('vi-VN');
+                  const time = s?.interview_date || toDate(it).toLocaleString('vi-VN');
                   const avg = s?.average_overall_score ?? s?.overall_score ?? '-';
                   return (
                     <tr key={idx}>
                       <td className="px-6 py-4 text-sm">{title}</td>
                       <td className="px-6 py-4 text-sm">{time}</td>
-                      <td className="px-6 py-4 text-sm">{typeof avg === 'number' ? `${avg.toFixed(1)} / 100` : avg}</td>
+                      <td className="px-6 py-4 text-sm">{typeof avg === 'number' ? `${avg.toFixed(1)} / 10` : avg}</td>
                     </tr>
                   );
                 })}

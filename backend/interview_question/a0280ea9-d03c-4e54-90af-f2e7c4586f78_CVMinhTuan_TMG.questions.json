@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "question": "Could you please start by introducing yourself and telling us a bit about your academic background and interests?",
+    "category": "opening",
+    "purpose": "Allow the candidate to introduce themselves and set the context for the interview."
+  },
+  {
+    "id": 2,
+    "question": "Every individual has unique strengths and areas for development. Could you share what you consider to be your greatest strengths and perhaps one area you're actively working on to improve?",
+    "category": "opening",
+    "purpose": "Assess self-awareness and ability to reflect on personal and professional growth."
+  },
+  {
+    "id": 3,
+    "question": "You're a third-year IT student with a strong data background and a keen interest in the travel and tourism industry. What specifically drew you to apply for a Product Manager Intern role, and what do you hope to learn or contribute in this position?",
+    "category": "opening",
+    "purpose": "Understand the candidate's motivation for the specific role and their understanding of Product Management, connecting it to their stated interests."
+  },
+  {
+    "id": 4,
+    "question": "You mentioned being comfortable working in team environments and gained exposure to a structured work environment during your Data Engineering internship. Can you tell me about a time when you faced a significant challenge while working as part of a team, and how you contributed to overcoming it?",
+    "category": "behavioral",
+    "purpose": "Evaluate teamwork, problem-solving, and collaboration skills in a professional or academic setting."
+  },
+  {
+    "id": 5,
+    "question": "Your CV highlights 'self-learning,' being 'eager to learn,' and possessing an 'adaptable mindset.' Can you describe a situation where you had to quickly learn a completely new technology, tool, or concept to complete a project or task, and what was your approach to mastering it?",
+    "category": "behavioral",
+    "purpose": "Assess adaptability, initiative, and the ability to acquire new skills, which is crucial for an intern role."
+  },
+  {
+    "id": 6,
+    "question": "Product Managers heavily rely on data to make informed decisions. Given your proficiency in SQL, Power BI, and data analysis experience, how would you approach using data to validate a hypothesis about a potential new product feature or to understand user behavior for an existing one?",
+    "category": "technical",
+    "purpose": "Evaluate understanding of how data analysis tools (SQL, BI) can support product decision-making at an intern level, linking their technical skills to product strategy.",
+    "focus": "Data-driven Product Decisions / SQL / Analytics"
+  },
+  {
+    "id": 7,
+    "question": "You've gained knowledge of ETL workflows and created data pipelines during your Data Engineering internship. As a Product Manager Intern, how do you think understanding concepts like data pipelines and data transformation could be valuable when working with engineering teams to define data requirements or troubleshoot data-related issues for a new product or feature?",
+    "category": "technical",
+    "purpose": "Assess the candidate's ability to connect their data engineering background to the needs and communication challenges of product management, especially concerning data infrastructure.",
+    "focus": "ETL / Data Pipelines & Product Development"
+  },
+  {
+    "id": 8,
+    "question": "Imagine you are launching a simple new feature, for example, a 'favorite' button for an item on an e-commerce website. What are some key metrics you would define to measure its success from both a user and business perspective, and how would you go about tracking these metrics?",
+    "category": "technical",
+    "purpose": "Gauge understanding of product success metrics, analytical thinking, and basic measurement strategy relevant to a PM role.",
+    "focus": "Product Metrics / Analytics & Measurement"
+  },
+  {
+    "id": 9,
+    "question": "Your 'Travel Destination Research Tracker' project aligns perfectly with your stated interest in the travel and tourism industry. Could you elaborate on the core problem you were trying to solve for users with this project, the key design decisions you made, and what impact you hoped it would have on their travel planning?",
+    "category": "cv_based",
+    "purpose": "Deep dive into a highly relevant project, assessing problem-solving, user focus, design thinking, and impact analysis."
+  },
+  {
+    "id": 10,
+    "question": "During your Data Engineering Intern role at FSS, you mentioned supporting data extraction and reporting. Can you share a specific instance where your work in data extraction or reporting provided a valuable insight or directly helped inform a decision for a stakeholder or team member?",
+    "category": "cv_based",
+    "purpose": "Understand practical application of data skills and impact within a professional setting, linking data work to stakeholder value and decision support."
+  },
+  {
+    "id": 11,
+    "question": "You expressed a passion for enhancing travel experiences through technology. If you were tasked with improving the experience of international travelers trying to find and book authentic local experiences (e.g., cooking classes, guided tours by locals) in an unfamiliar city, what's one innovative digital feature you would propose for a travel app, and how would you determine if it's a valuable idea worth building?",
+    "category": "creative",
+    "purpose": "Test creativity, product intuition, user empathy, and ability to think critically about problem validation and feature prioritization for a hypothetical product feature, within their area of interest."
+  }
+]

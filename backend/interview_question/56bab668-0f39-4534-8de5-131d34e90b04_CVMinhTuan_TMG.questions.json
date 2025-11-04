@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "question": "Please start by introducing yourself and telling us a bit about your background and aspirations.",
+    "category": "opening",
+    "purpose": "To allow the candidate to introduce themselves, set the tone, and provide an overview of their background and career goals."
+  },
+  {
+    "id": 2,
+    "question": "Could you share with us what you consider to be your key strengths and perhaps one or two areas you're actively working on to improve?",
+    "category": "opening",
+    "purpose": "To assess self-awareness, identify core competencies, and understand the candidate's commitment to personal and professional development."
+  },
+  {
+    "id": 3,
+    "question": "What specifically attracted you to the Travel Agency Product Manager position, and how do you see your skills and experiences aligning with the responsibilities of this role?",
+    "category": "opening",
+    "purpose": "To gauge the candidate's motivation for the specific role and company, and how well they connect their background to the job requirements."
+  },
+  {
+    "id": 4,
+    "question": "Can you describe a situation, perhaps from your internship or academic projects, where you had to work closely within a team to overcome a significant challenge or achieve a complex goal? What was your role, and what was the outcome?",
+    "category": "behavioral",
+    "purpose": "To assess teamwork, collaboration, problem-solving skills, and the candidate's contribution to group success.",
+    "focus": "Teamwork, Problem-solving"
+  },
+  {
+    "id": 5,
+    "question": "As a third-year student with a strong interest in learning, tell me about a time you encountered a new technology or concept for a project and had to quickly learn it on your own. What was the learning process like, and what was the result?",
+    "category": "behavioral",
+    "purpose": "To evaluate the candidate's self-learning ability, adaptability, and proactive approach to acquiring new skills, which is crucial for a fresher.",
+    "focus": "Self-learning, Adaptability"
+  },
+  {
+    "id": 6,
+    "question": "Given your experience with SQL and data visualization tools like Power BI and Excel, how would you approach analyzing customer booking data for a travel agency to identify popular destinations, peak travel times, or potential bottlenecks in the booking process?",
+    "category": "technical",
+    "purpose": "To assess the candidate's foundational understanding of data analysis and their ability to apply technical skills to derive business insights relevant to a Product Manager role.",
+    "focus": "Data Analysis, SQL, Visualization"
+  },
+  {
+    "id": 7,
+    "question": "You've worked with creating data pipelines and understanding ETL workflows. If you were tasked with gathering customer feedback data (e.g., from surveys, reviews) for a travel product, what would be some initial considerations for collecting, cleaning, and making this unstructured data usable for product insights?",
+    "category": "technical",
+    "purpose": "To evaluate the candidate's conceptual understanding of the data lifecycle, including handling different data types, relevant to a Product Manager needing to understand data sources.",
+    "focus": "Data Collection, ETL Concepts, Unstructured Data"
+  },
+  {
+    "id": 8,
+    "question": "Your 'Travel Destination Research Tracker' project involved web scraping travel information using Python. From a Product Manager's perspective, beyond just destination data, what other types of information could be valuable to scrape from competitors or industry sites, and how would you envision using that data to inform product decisions?",
+    "category": "technical",
+    "purpose": "To gauge the candidate's ability to extend their technical skills (Python, web scraping) into strategic product management activities like market research and competitive analysis.",
+    "focus": "Python, Web Scraping, Market Research"
+  },
+  {
+    "id": 9,
+    "question": "Your 'Travel Destination Research Tracker' project really stands out given our industry. Could you walk us through the problem you were trying to solve for users, and how your choice of tools like Python for scraping and Airtable for organization directly addressed that problem?",
+    "category": "cv_based",
+    "purpose": "To delve deeper into a highly relevant project, assessing problem-solving, user-centric thinking, and rationale behind tool selection, crucial for a Product Manager.",
+    "focus": "Project relevance, Problem-solving, User focus"
+  },
+  {
+    "id": 10,
+    "question": "During your Data Engineering Internship at FSS, you mentioned gaining foundational knowledge of financial and banking operations and understanding data security. How do you think the structured thinking, attention to detail, and exposure to critical business operations you gained there would be valuable in managing a travel product, especially when dealing with sensitive customer data or complex booking logic?",
+    "category": "cv_based",
+    "purpose": "To understand how the candidate translates previous work experience and transferable skills (attention to detail, understanding business logic, data security) to the specific challenges of a Product Manager role in travel.",
+    "focus": "Transferable skills, Business understanding, Data security"
+  },
+  {
+    "id": 11,
+    "question": "Imagine our travel agency is considering launching a completely new type of travel product – say, 'personalized, AI-curated adventure trips.' As a Product Manager, what steps would you take to validate this idea, understand its potential market, and decide whether it's worth pursuing further?",
+    "category": "creative",
+    "purpose": "To assess the candidate's problem-solving, critical thinking, market research instincts, and ability to think strategically about product validation and innovation, even at a fresher level.",
+    "focus": "Product validation, Market research, Strategic thinking"
+  }
+]
